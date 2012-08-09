@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,9 +67,6 @@
 
 <h1>Apigee API Overview</h1>
 
-=======
-<p>[toc]</p>
->>>>>>> a5ce9d99c4bfd3bc81082b8850d47493e5c0c90d
 <p>The Apigee Enterprise API enables you to create, configure, manage, and administer the RESTful resources exposed by Apigee Enterprise.</p>
 <p>The Apigee API is the same one used by Apigee Enterprise user interface. You can even think of the Apigee Enterprise Web UI as a reference implementation of the Enterprise API (albeit an amazingly robust and full-featured one).</p>
 <p>Often you can perform the same action in the UI as via the API. However, the API provides access to all capabilities of Apigee Enterprise, and even lets you do some things a bit differently and more flexibly than the UI does, since the API is not constrained by the same UX needs as a human interface. It's important to be aware that you can do some things using the API that are not supported by the UI. Thus, some changes you make via the API may not be reflected in the UI.</p>
@@ -92,11 +88,7 @@
 	<li><strong>API product:</strong> A bundle of <em>resources</em> with an optional associated <strong>service plan</strong> and an <strong>OAuth scope</strong>. (We use "resource" to follow the WADL example—another common term is "methods.") API products form the basis of access control with Apigee. They enable you to bundle your API resources into packages that are consumed by developers. You can have one API, and multiple API Products configured on top of it, such as a "Free Introductory API&nbsp;&nbsp;Product"&nbsp;and a "Premium API Product", for example.</li>
 	<li><strong>Environment:</strong> Every organization (including yours) is provisioned with two environments, one <span style="font-family: courier new,courier,monospace;">test</span> and one <span style="font-family: courier new,courier,monospace;">prod</span>. The naming is arbitrary—you can use these environments however you wish, and Apigee makes no assumptions about your SDLC requirements. You can deploy an API proxy to either environment. Typically you configure your API in the test environment, trace API calls and refine the API, and then deploy it to the prod environment for public consumption. (Note that the two environments have different URLs, which are defined as "virtualhosts."</li>
 	<li><strong>Virtual host:</strong> The hosts which define the base URL for the APIs managed by Apigee. Every organization has one or more virtual hosts per environment. Usually, for each environment, you have one virtual host running on port 80 and another on port 443 to support SSL. To modify your virtual hosts, contact Apigee support.</li>
-<<<<<<< HEAD
 	<li><strong>Key:</strong> Sometimes called a <em>consumer key</em> or an <em>API key</em>, this key is presented to Apigee at runtime by an app. The key is used to determine whether the app is allowed to access a particular resource. Note that keys belong to apps and have associated API products. Depending on how you configure your API product, keys can be approved manually or automatically.</li>
-=======
-	<li><strong>Key:</strong> Sometimes called a <em>consumer key</em> or an <em>API key</em>, this key is presented to Apigee at runtime by an app. The key is&nbsp;used to determine whether the app is allowed to access a particular resource. Note that keys belong to apps and have associated API products. Depending on how you configure your API product, keys can be approved manually or automatically.</li>
->>>>>>> a5ce9d99c4bfd3bc81082b8850d47493e5c0c90d
 	<li><strong>Access token:</strong> An OAuth construct addressed in the Apigee OAuth documentation.</li>
 	<li><strong>Authorization code: </strong>An OAuth construct addressed in the Apigee OAuth documentation.</li>
 </ul>
@@ -109,18 +101,13 @@
 	<li><strong>Analytics and Insights:</strong> Monitor and analyze how your APIs are being consumed.</li>
 	<li><strong>Apigee Account Provisioning:</strong> You can integrate Apigee with your enterprise provisioning systems. APIs are available for adding, deleting, and managing users within your Apigee organization.</li>
 	<li><strong>Developer Portal Apps:</strong> Managing the front-end for your developer program by building apps that register developers, and that enable those developers to register their apps, obtain API keys, and get Analytics.</li>
-<<<<<<< HEAD
 	<li><strong>Software Development Lifecycle Apps:</strong> The core of the Apigee system are APIs which are managed by a proxy "facade." These proxies provide pipeline processing of the messages that flow to and from your APIs. API proxies are bundles of configurations and (sometimes scripts and code) and thus require a development process. The API enables you to implement apps or scripts that implement the SLDC best suited to your organization.</li>
-=======
-	<li><strong>Software Development Lifecycle Apps:</strong> The core of the Apigee system are APIs which are managed by a proxy "facade." These proxies provide pipeline processing of the messages that flow to and from your APIs. API proxies are bundles of configurations and (sometimes scripts and code) and thus require a development process.&nbsp;The API enables you to implement apps or scripts that implement the SLDC best suited to your organization.</li>
->>>>>>> a5ce9d99c4bfd3bc81082b8850d47493e5c0c90d
 </ul>
 <h2><a class="jumplink" name="Tools"></a>Tools</h2>
 <p>All you need to use the API is an account within the organization set up on Apigee Enterprise.</p>
 <p>The only tool you require is an HTTP client. For the purposes of this document, we rely on cURL, a command-line HTTP client. Feel free to use any HTTP client you prefer. Or simply use the Apigee console.</p>
 <p>cURL is available here: <a href="http://curl.haxx.se/">http://curl.haxx.se/</a></p>
 <p>Apigee also provides an optional deployment script (written in Python) to assist in&nbsp;importing and deploying APIs.</p>
-<<<<<<< HEAD
 
 <table>
 
@@ -161,5 +148,3 @@
 </html>
 
 <!-- Localized -->
-=======
->>>>>>> a5ce9d99c4bfd3bc81082b8850d47493e5c0c90d
