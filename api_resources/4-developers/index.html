@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee Enterprise API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Ypsjzh/R/ruUIGc02PgqRyk/31ZL6NZQx2LrszgQ5Bk=" name="csrf-token" />
-    <link href="/assets/application-a2cf2fc60e7f628224d6179e9acb6bde.css" media="all" rel="stylesheet" type="text/css" />
-    <script src="/assets/application-3d91ebb39ac1bf40fce53b1fddef09ec.js" type="text/javascript"></script>
+<meta content="tOy4vxawFgYsHGn7ZvgeQL+qmhRyP5wZaNw8L91GZMc=" name="csrf-token" />
+    <link href="../../assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link rel="shortcut icon" href="http://apigee.com/sites/default/files/apigee_favicon.ico">
+    <link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="../images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 
   </head>
 
@@ -28,14 +29,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-		<a class="brand" href="#">Apigee Enterprise API</a>
+		<div class="brand"><a href="../../categories/index.html">Apigee API</a></div>
 
         <div class="container">
             <ul class="nav">
-	          <li><a href="/quick_starts">Quick Starts</a></li>
-              <li><a href="/api_resources">API Resources</a></li>
-              <li><a href="/api_methods">API Methods</a></li>
-              <li><a href="/parameters">Parameters</a></li>
+	          <li><a href="../../quick_starts/index.html">Quick Starts</a></li>
+              <li><a href="../index.html">API Resources</a></li>
+              <li><a href="../../api_methods/index.html">API Methods</a></li>
+              <li><a href="../../parameters/index.html">Parameters</a></li>
             </ul>
         </div>
       </div>
@@ -95,39 +96,10 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		
 		<div class="lead">
 		<hr />
-		List Developers
-	       <a href="/api_methods/9-list-developers" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/9-list-developers/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/9-list-developers" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
-
-		
-		
-		<div id="well"><pre>/developers</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Lists all developers by email address (the unique key for developers in Apigee)</td></tr>
-
-
-
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table>
-	<tbody>
-		
-		<div class="lead">
-		<hr />
 		Create a Developer
-	       <a href="/api_methods/32-create-a-developer" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/32-create-a-developer/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/32-create-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/32-create-a-developer/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/32-create-a-developer/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/32-create-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -153,10 +125,68 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		
 		<div class="lead">
 		<hr />
+		Delete a Developer
+	       <a href="../../api_methods/39-delete-a-developer/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/39-delete-a-developer/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/39-delete-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
+
+		
+		
+		<div id="well"><pre>/developers/{developerName}</pre></div>		
+		
+		<tr>
+  <tr>
+	
+	  <tr><td><strong>Verb:</strong></td>
+	  <td><span class="label label-success">DELETE</span></td></tr>
+	
+	
+ <td><strong>Description:</strong></td>
+  <td>Deletes a Developer from an Organization</td></tr>
+
+
+
+  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table>
+	<tbody>
+		
+		<div class="lead">
+		<hr />
+		DUPLICATE: DELETE
+	       <a href="../../api_methods/36-duplicate-delete/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/36-duplicate-delete/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/36-duplicate-delete" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
+
+		
+		
+		<div id="well"><pre>/developers?app={appName}</pre></div>		
+		
+		<tr>
+  <tr>
+	
+	  <tr><td><strong>Verb:</strong></td>
+	  <td><span class="label label-success">GET</span></td></tr>
+	
+	
+ <td><strong>Description:</strong></td>
+  <td>Get the Developer associated with an App</td></tr>
+
+
+
+  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table>
+	<tbody>
+		
+		<div class="lead">
+		<hr />
 		Get a Developer 
-	       <a href="/api_methods/34-get-a-developer" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/34-get-a-developer/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/34-get-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/34-get-a-developer/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/34-get-a-developer/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/34-get-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -183,9 +213,9 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		<div class="lead">
 		<hr />
 		Get Count of Apps by Developer
-	       <a href="/api_methods/35-get-count-of-apps-by-developer" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/35-get-count-of-apps-by-developer/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/35-get-count-of-apps-by-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/35-get-count-of-apps-by-developer/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/35-get-count-of-apps-by-developer/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/35-get-count-of-apps-by-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -199,7 +229,7 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Get a count of Apps by Developer</td></tr>
+  <td>Get a count of apps by developer email address.</td></tr>
 
 
 
@@ -211,10 +241,10 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		
 		<div class="lead">
 		<hr />
-		Getting Developer for an App
-	       <a href="/api_methods/36-getting-developer-for-an-app" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/36-getting-developer-for-an-app/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/36-getting-developer-for-an-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+		Get Developer of an App
+	       <a href="../../api_methods/138-get-developer-of-an-app/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/138-get-developer-of-an-app/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/138-get-developer-of-an-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -228,7 +258,7 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Get the Developer associated with an App</td></tr>
+  <td>Gets the developer profile by app name</td></tr>
 
 
 
@@ -240,10 +270,10 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		
 		<div class="lead">
 		<hr />
-		Getting developers by registration date
-	       <a href="/api_methods/37-getting-developers-by-registration-date" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/37-getting-developers-by-registration-date/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/37-getting-developers-by-registration-date" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+		Get developers by registration date
+	       <a href="../../api_methods/37-get-developers-by-registration-date/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/37-get-developers-by-registration-date/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/37-get-developers-by-registration-date" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -257,7 +287,7 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Returns a list of developers whose profiles were created for a specific date.</td></tr>
 
 
 
@@ -269,14 +299,14 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		
 		<div class="lead">
 		<hr />
-		Update a Developer
-	       <a href="/api_methods/38-update-a-developer" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/38-update-a-developer/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/38-update-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+		List Developers
+	       <a href="../../api_methods/9-list-developers/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/9-list-developers/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/9-list-developers" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
-		<div id="well"><pre>/developers/{developerName}</pre></div>		
+		<div id="well"><pre>/developers</pre></div>		
 		
 		<tr>
   <tr>
@@ -286,36 +316,7 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
-
-
-
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table>
-	<tbody>
-		
-		<div class="lead">
-		<hr />
-		Delete a Developer
-	       <a href="/api_methods/39-delete-a-developer" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/39-delete-a-developer/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/39-delete-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
-
-		
-		
-		<div id="well"><pre>/developers/{developerName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes a Developer from an Organization</td></tr>
+  <td>Lists all developers by email address (the unique key for developers in Apigee)</td></tr>
 
 
 
@@ -328,9 +329,9 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		<div class="lead">
 		<hr />
 		Set a Developer's Status
-	       <a href="/api_methods/40-set-a-developer-s-status" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/40-set-a-developer-s-status/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/40-set-a-developer-s-status" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/40-set-a-developer-s-status/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/40-set-a-developer-s-status/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/40-set-a-developer-s-status" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -356,24 +357,24 @@ Developers build apps that access your APIs. Apps are provisioned with keys and 
 		
 		<div class="lead">
 		<hr />
-		Get Developer of an App
-	       <a href="/api_methods/138-get-developer-of-an-app" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/138-get-developer-of-an-app/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/138-get-developer-of-an-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+		Update a Developer
+	       <a href="../../api_methods/38-update-a-developer/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/38-update-a-developer/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/38-update-a-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
-		<div id="well"><pre>/developers?app={appName}</pre></div>		
+		<div id="well"><pre>/developers/{developerName}</pre></div>		
 		
 		<tr>
   <tr>
 	
 	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">GET</span></td></tr>
+	  <td><span class="label label-success">PUT</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Gets the Developer profile by App name</td></tr>
+  <td>Update an existing developer profile with new values or additional attributes.</td></tr>
 
 
 
@@ -387,9 +388,9 @@ Schema:
 
 <div id="well"><pre></pre></div>
 
-<div class="form-actions">
+<!-- <div class="form-actions">
   <a href="/api_resources" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.back">Back</span></a>
-  <!-- <a href="/api_resources/4-developers/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a> -->
+  <a href="/api_resources/4-developers/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a>  -->
 
 </div>
 
@@ -404,7 +405,9 @@ Schema:
     </div> <!-- /container -->
 
     <!-- Placed at the end of the document so the pages load faster -->
-     <script src="/assets/application-3d91ebb39ac1bf40fce53b1fddef09ec.js" type="text/javascript"></script> 
+     <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script> 
 
   </body>
 </html>
+
+<!-- Localized -->

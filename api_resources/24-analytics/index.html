@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee Enterprise API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Ypsjzh/R/ruUIGc02PgqRyk/31ZL6NZQx2LrszgQ5Bk=" name="csrf-token" />
-    <link href="/assets/application-a2cf2fc60e7f628224d6179e9acb6bde.css" media="all" rel="stylesheet" type="text/css" />
-    <script src="/assets/application-3d91ebb39ac1bf40fce53b1fddef09ec.js" type="text/javascript"></script>
+<meta content="tOy4vxawFgYsHGn7ZvgeQL+qmhRyP5wZaNw8L91GZMc=" name="csrf-token" />
+    <link href="../../assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link rel="shortcut icon" href="http://apigee.com/sites/default/files/apigee_favicon.ico">
+    <link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="../images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 
   </head>
 
@@ -28,14 +29,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-		<a class="brand" href="#">Apigee Enterprise API</a>
+		<div class="brand"><a href="../../categories/index.html">Apigee API</a></div>
 
         <div class="container">
             <ul class="nav">
-	          <li><a href="/quick_starts">Quick Starts</a></li>
-              <li><a href="/api_resources">API Resources</a></li>
-              <li><a href="/api_methods">API Methods</a></li>
-              <li><a href="/parameters">Parameters</a></li>
+	          <li><a href="../../quick_starts/index.html">Quick Starts</a></li>
+              <li><a href="../index.html">API Resources</a></li>
+              <li><a href="../../api_methods/index.html">API Methods</a></li>
+              <li><a href="../../parameters/index.html">Parameters</a></li>
             </ul>
         </div>
       </div>
@@ -61,7 +62,7 @@
  <tr>
 	
   <td>Provides metrics gathered on APIs and related entities in Apigee</td></tr>
-  <td>Apigee collects statistic on API traffic as it flow from apps to APIs. Statistics collected include API call information (like URL, IP, and User id) latency, errors, and so on. You can add other information by defining policies that identify message elements of interest for collection. For example, statistics can be collected from message headers, query parameters, portions of the request and response extracted from XML or JSON, and so on.  The statistics collected are used to generate out-of-the-box reports. You can also generate reports tailored to your needs by tracking key value pairs specific to your traffic.  Apigee Analytics helps you to view long-term usage trends. You can segment your audience by top developers and apps. You can understand the usage by using the API method to know where to invest, and create custom reports on business-level information. All data is pushed to Analytics where it is persisted by the Analytics server in the background. Data aggregation jobs compile various built-in or custom reports:
+  <td>Apigee collects statistics, or metrics, on API traffic as it flows from apps to APIs. The statistics Apigee collects includes API call information (such as URL, IP address, and user id), total response time, backend response time, maximum response time, error rate, and data exchanged. You can augment the metrics collected by Apigee with custom app- or business-specific data by defining policies that extract, collate, and compute analytics on the custom data that you define. Custom metrics can be collected from message headers, query parameters, as well as the content of XML or JSON request or response messages. The statistics collected are used to generate reports, which can be tailored to your needs by collecting metrics specific to your APIs and the apps that use them. Analytics enables you to view long-term usage trends, segment consumers by top developers and apps, and manage your APIs as a business.
 
 Usage by API (built-in)
 Usage by app (built-in)
@@ -83,13 +84,13 @@ Usage by Customizing the API</td></tr>
 		<div class="lead">
 		<hr />
 		Get API Statistics
-	       <a href="/api_methods/71-get-api-statistics" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/71-get-api-statistics/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/71-get-api-statistics" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/71-get-api-statistics/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/71-get-api-statistics/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/71-get-api-statistics" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
-		<div id="well"><pre>/environments/{environmentName}/stats/apis</pre></div>		
+		<div id="well"><pre>/environments/{envname}/stats/apis?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}&amp;sortby={metrics}&amp;sort={order}</pre></div>		
 		
 		<tr>
   <tr>
@@ -111,14 +112,14 @@ Usage by Customizing the API</td></tr>
 		
 		<div class="lead">
 		<hr />
-		Get Statistics for Top APIs
-	       <a href="/api_methods/72-get-statistics-for-top-apis" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/72-get-statistics-for-top-apis/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/72-get-statistics-for-top-apis" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+		Get Custom Report
+	       <a href="../../api_methods/78-get-custom-report/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/78-get-custom-report/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/78-get-custom-report" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
-		<div id="well"><pre>/environments/{environmentName}/stats/apis</pre></div>		
+		<div id="well"><pre>/environments/{environmentName}/stats/{customVariable}</pre></div>		
 		
 		<tr>
   <tr>
@@ -128,7 +129,7 @@ Usage by Customizing the API</td></tr>
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Returns 5 APIs with the highest number of active end users (app end users with throughput) in the last 24 hours. </td></tr>
+  <td>Enables the generation of a custom report that incorporates dimensions, measures, and filters.</td></tr>
 
 
 
@@ -141,9 +142,9 @@ Usage by Customizing the API</td></tr>
 		<div class="lead">
 		<hr />
 		Get Statistics for an API Resource
-	       <a href="/api_methods/73-get-statistics-for-an-api-resource" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/73-get-statistics-for-an-api-resource/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/73-get-statistics-for-an-api-resource" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/73-get-statistics-for-an-api-resource/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/73-get-statistics-for-an-api-resource/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/73-get-statistics-for-an-api-resource" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -157,7 +158,94 @@ Usage by Customizing the API</td></tr>
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Returns metrics for the resources (URIs) configured on an API</td></tr>
+
+
+
+  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table>
+	<tbody>
+		
+		<div class="lead">
+		<hr />
+		Get Statistics for an Environment
+	       <a href="../../api_methods/77-get-statistics-for-an-environment/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/77-get-statistics-for-an-environment/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/77-get-statistics-for-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
+
+		
+		
+		<div id="well"><pre>/environments/{environmentName}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></div>		
+		
+		<tr>
+  <tr>
+	
+	  <tr><td><strong>Verb:</strong></td>
+	  <td><span class="label label-success">GET</span></td></tr>
+	
+	
+ <td><strong>Description:</strong></td>
+  <td>Gets statistics for a specified time range for the environment specified. Available staistics are message count, error count, and API count.</td></tr>
+
+
+
+  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table>
+	<tbody>
+		
+		<div class="lead">
+		<hr />
+		Get Statistics for API Products
+	       <a href="../../api_methods/159-get-statistics-for-api-products/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/159-get-statistics-for-api-products/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/159-get-statistics-for-api-products" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
+
+		
+		
+		<div id="well"><pre>/environments/{environmentName}/stats/apiproducts</pre></div>		
+		
+		<tr>
+  <tr>
+	
+	  <tr><td><strong>Verb:</strong></td>
+	  <td><span class="label label-success">GET</span></td></tr>
+	
+	
+ <td><strong>Description:</strong></td>
+  <td>Returns statistics for APi products across all APIs</td></tr>
+
+
+
+  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table>
+	<tbody>
+		
+		<div class="lead">
+		<hr />
+		Get Statistics for Top APIs
+	       <a href="../../api_methods/72-get-statistics-for-top-apis/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/72-get-statistics-for-top-apis/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/72-get-statistics-for-top-apis" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
+
+		
+		
+		<div id="well"><pre>/environments/{environmentName}/stats/apis</pre></div>		
+		
+		<tr>
+  <tr>
+	
+	  <tr><td><strong>Verb:</strong></td>
+	  <td><span class="label label-success">GET</span></td></tr>
+	
+	
+ <td><strong>Description:</strong></td>
+  <td>Returns 5 APIs with the highest number of active end users (app end users with throughput) in the last 24 hours.</td></tr>
 
 
 
@@ -170,9 +258,9 @@ Usage by Customizing the API</td></tr>
 		<div class="lead">
 		<hr />
 		Get Statistics for top Apps
-	       <a href="/api_methods/74-get-statistics-for-top-apps" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/74-get-statistics-for-top-apps/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/74-get-statistics-for-top-apps" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/74-get-statistics-for-top-apps/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/74-get-statistics-for-top-apps/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/74-get-statistics-for-top-apps" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -186,7 +274,7 @@ Usage by Customizing the API</td></tr>
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Use the GET method to retrieve the metrics for the first five apps for a given customer in a specific organization and environment.  </td></tr>
+  <td>Use the GET method to retrieve the metrics for the first five apps for a given customer in a specific organization and environment.</td></tr>
 
 
 
@@ -199,9 +287,9 @@ Usage by Customizing the API</td></tr>
 		<div class="lead">
 		<hr />
 		Get Statistics for top Developers
-	       <a href="/api_methods/75-get-statistics-for-top-developers" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/75-get-statistics-for-top-developers/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/75-get-statistics-for-top-developers" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/75-get-statistics-for-top-developers/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/75-get-statistics-for-top-developers/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/75-get-statistics-for-top-developers" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -228,9 +316,9 @@ Usage by Customizing the API</td></tr>
 		<div class="lead">
 		<hr />
 		Get Statistics on all API traffic
-	       <a href="/api_methods/76-get-statistics-on-all-api-traffic" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/76-get-statistics-on-all-api-traffic/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/76-get-statistics-on-all-api-traffic" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
+	       <a href="../../api_methods/76-get-statistics-on-all-api-traffic/index.html" class="btn btn-mini">Detail</a>
+		   <a href="../../api_methods/76-get-statistics-on-all-api-traffic/edit/index.html" class="btn btn-mini">Edit</a>
+		    <!-- <a href="/api_methods/76-get-statistics-on-all-api-traffic" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
 
 		
 		
@@ -250,64 +338,6 @@ Usage by Customizing the API</td></tr>
 
   <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-
-<table>
-	<tbody>
-		
-		<div class="lead">
-		<hr />
-		Get Statistics for an Environment
-	       <a href="/api_methods/77-get-statistics-for-an-environment" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/77-get-statistics-for-an-environment/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/77-get-statistics-for-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
-
-		
-		
-		<div id="well"><pre>/environments/{environmentName}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets statistics for a specified time range for the environment specified. Available staistics are message count, error count, and API count.</td></tr>
-
-
-
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table>
-	<tbody>
-		
-		<div class="lead">
-		<hr />
-		Get Custom Report
-	       <a href="/api_methods/78-get-custom-report" class="btn btn-mini">Detail</a>
-		    <!-- <a href="/api_methods/78-get-custom-report/edit" class="btn btn-mini">Edit</a>
-		    <!-- <a href="/api_methods/78-get-custom-report" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> --> -->
-
-		
-		
-		<div id="well"><pre>/environments/{environmentName}/stats/{customVariable}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Enables the generation of a custom report that incorporates dimensions, measures, and filters.</td></tr>
-
-
-
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
 </tbody>
 </table>
 
@@ -316,9 +346,9 @@ Schema:
 
 <div id="well"><pre></pre></div>
 
-<div class="form-actions">
+<!-- <div class="form-actions">
   <a href="/api_resources" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.back">Back</span></a>
-  <!-- <a href="/api_resources/24-analytics/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a> -->
+  <a href="/api_resources/24-analytics/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a>  -->
 
 </div>
 
@@ -333,7 +363,9 @@ Schema:
     </div> <!-- /container -->
 
     <!-- Placed at the end of the document so the pages load faster -->
-     <script src="/assets/application-3d91ebb39ac1bf40fce53b1fddef09ec.js" type="text/javascript"></script> 
+     <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script> 
 
   </body>
 </html>
+
+<!-- Localized -->

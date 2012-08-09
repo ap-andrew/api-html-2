@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee Enterprise API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Ypsjzh/R/ruUIGc02PgqRyk/31ZL6NZQx2LrszgQ5Bk=" name="csrf-token" />
-    <link href="/assets/application-a2cf2fc60e7f628224d6179e9acb6bde.css" media="all" rel="stylesheet" type="text/css" />
-    <script src="/assets/application-3d91ebb39ac1bf40fce53b1fddef09ec.js" type="text/javascript"></script>
+<meta content="tOy4vxawFgYsHGn7ZvgeQL+qmhRyP5wZaNw8L91GZMc=" name="csrf-token" />
+    <link href="../../assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link rel="shortcut icon" href="http://apigee.com/sites/default/files/apigee_favicon.ico">
+    <link href="../../favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="../images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 
   </head>
 
@@ -28,14 +29,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-		<a class="brand" href="#">Apigee Enterprise API</a>
+		<div class="brand"><a href="../../categories/index.html">Apigee API</a></div>
 
         <div class="container">
             <ul class="nav">
-	          <li><a href="/quick_starts">Quick Starts</a></li>
-              <li><a href="/api_resources">API Resources</a></li>
-              <li><a href="/api_methods">API Methods</a></li>
-              <li><a href="/parameters">Parameters</a></li>
+	          <li><a href="../../quick_starts/index.html">Quick Starts</a></li>
+              <li><a href="../../api_resources/index.html">API Resources</a></li>
+              <li><a href="../index.html">API Methods</a></li>
+              <li><a href="../../parameters/index.html">Parameters</a></li>
             </ul>
         </div>
       </div>
@@ -48,7 +49,10 @@
            <div class="span12">
 			<div>
 </div>
-            <p>
+            
+
+
+<p>
 <h1>Update API Product :: /apiproducts/{apiproductName}</h1> 
 </p>
 
@@ -68,14 +72,12 @@ PUT
 
 <p>
   <b>Doc:</b>
-  Call PUT on an existing API Product to update the API Product. You are only required to include the elements to be updated in the update request. 
+  Call PUT on an existing API Product to update the API Product. You are only required to include the elements to be updated in the update request.
 </p>
-
-
 
 <p>
   <b>Description:</b>
-  Updates an existing APi Product
+  This method updates an existing APi Product
 </p>
 
 <b> cURL:</b>
@@ -124,7 +126,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/api
 <td>Manual or Auto. If Manual, consumer key is generated and returned in 'pending' state. If manual consumer key generated and returned in 'Approved' state.</td>
 <td>N/A</td>
 <td>No</td>
-<td><a href="/request_elements/42" class="btn btn-mini">Detail</a></td>
+<td><a href="../../request_elements/42/index.html" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
 
@@ -136,7 +138,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/api
 <td>Arbitrary name/value pairs, most commonly used to store variables that define Rate Limit (Quota or Spike Arrest) settings for an API Product (otherwise known as a Service Plan)</td>
 <td>N/A</td>
 <td>No</td>
-<td><a href="/request_elements/43" class="btn btn-mini">Detail</a></td>
+<td><a href="../../request_elements/43/index.html" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
 
@@ -148,7 +150,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/api
 <td>The display name of the API Product, used in Apps that display the API Product to Developers</td>
 <td>N/A</td>
 <td>No</td>
-<td><a href="/request_elements/44" class="btn btn-mini">Detail</a></td>
+<td><a href="../../request_elements/44/index.html" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
 
@@ -160,7 +162,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/api
 <td>A comma separated list of API resources to be bundled in the API Product.</td>
 <td>N/A</td>
 <td>No</td>
-<td><a href="/request_elements/45" class="btn btn-mini">Detail</a></td>
+<td><a href="../../request_elements/45/index.html" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
 
@@ -206,55 +208,55 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/api
 <div class="response_element" id="response_element_138">
 <td>apiResources: </td>
 <td>A list of URIs (including wildcards) that represent the bundle of APIs permitted to consumers of this API Product</td>
-<td><a href="/response_elements/138" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/138/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_139">
 <td>approvalType: </td>
 <td>Determines the state of the consumer key generated for requesters of this API Product. For Auto, key are generated in &quot;Approved' state. For Manual, keys are approved in 'Pending' state. </td>
-<td><a href="/response_elements/139" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/139/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_140">
 <td>attributes: </td>
 <td>Any app-specific arbitrary attributes that may be used to define visibility of the API Product or runtime policy enforcement (such as setting for a rate-limiting policy.</td>
-<td><a href="/response_elements/140" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/140/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_141">
 <td>createdAt: </td>
 <td>Unix time</td>
-<td><a href="/response_elements/141" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/141/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_142">
 <td>createdBy: </td>
 <td>Apigee user account name of the individual who submitted the POST request that created this entity</td>
-<td><a href="/response_elements/142" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/142/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_143">
 <td>lastModifiedAt: </td>
 <td>Unix time</td>
-<td><a href="/response_elements/143" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/143/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_144">
 <td>lastModifiedBy: </td>
 <td>Apigee user account name of the individual who last modified this entity</td>
-<td><a href="/response_elements/144" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/144/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_145">
 <td>name: </td>
 <td>Name of the API Product</td>
-<td><a href="/response_elements/145" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/145/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_146">
 <td>scopes: </td>
 <td>Oauth scopes required in the Access Token(s) used to consime any of the API Reqsources (URIs) bundled in this API Product</td>
-<td><a href="/response_elements/146" class="btn btn-mini">Detail</a></td>
+<td><a href="../../response_elements/146/index.html" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr>
 </table></div>
@@ -296,7 +298,9 @@ Basic Auth
     </div> <!-- /container -->
 
     <!-- Placed at the end of the document so the pages load faster -->
-     <script src="/assets/application-3d91ebb39ac1bf40fce53b1fddef09ec.js" type="text/javascript"></script> 
+     <script src="../../assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script> 
 
   </body>
 </html>
+
+<!-- Localized -->
