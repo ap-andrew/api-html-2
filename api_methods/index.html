@@ -168,6 +168,9 @@ ASC
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 1, name: &quot;metadata&quot;, description: &quot;&quot;, required: nil, api_method_id: 71, created_at: &quot;2012-07-25 22:05:52&quot;, updated_at: &quot;2012-08-08 20:55:59&quot;&gt;, #&lt;ResponseElement id: 2, name: &quot;environments&quot;, description: &quot;Envionments in the organization where the statistic...&quot;, required: nil, api_method_id: 71, created_at: &quot;2012-07-25 22:05:52&quot;, updated_at: &quot;2012-08-08 20:55:59&quot;&gt;, #&lt;ResponseElement id: 3, name: &quot;metrics&quot;, description: &quot;The values returned for the specified dimension&quot;, required: nil, api_method_id: 71, created_at: &quot;2012-07-25 22:05:52&quot;, updated_at: &quot;2012-08-08 20:35:00&quot;&gt;, #&lt;ResponseElement id: 7, name: &quot;dimensions&quot;, description: &quot;&quot;, required: nil, api_method_id: 71, created_at: &quot;2012-07-25 22:05:52&quot;, updated_at: &quot;2012-08-08 20:55:59&quot;&gt;, #&lt;ResponseElement id: 10, name: &quot;metrics&quot;, description: &quot;Named metrics collected&quot;, required: nil, api_method_id: 71, created_at: &quot;2012-07-25 22:05:52&quot;, updated_at: &quot;2012-08-08 20:55:59&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{envname}/stats/apis?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}&amp;sortby={metrics}&amp;sort={order}</td>   
     	<td>Basic Auth</td>
@@ -245,6 +248,9 @@ ASC
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}/stats/{customVariable}</td>   
     	<td>Basic Auth</td>
@@ -319,6 +325,9 @@ ASC
   &quot;metaData&quot; : {
    }
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -401,6 +410,9 @@ ASC
   &quot;metaData&quot; : {
   }
 </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -490,6 +502,9 @@ ASC
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}/stats/apiproducts</td>   
     	<td>Basic Auth</td>
@@ -566,6 +581,9 @@ ASC
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}/stats/apis</td>   
     	<td>Basic Auth</td>
@@ -614,6 +632,9 @@ ASC
     ],
     &quot;metaData&quot;: {}
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -680,6 +701,9 @@ ASC
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}/stats/devs</td>   
     	<td>Basic Auth</td>
@@ -726,6 +750,9 @@ ASC
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environment_name}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</td>   
     	<td>Basic Auth</td>
@@ -752,13 +779,11 @@ ASC
 You need to:
 Name the API product
 Bundle Resources by defining resource paths (URIs)
-Define the "Service Plan" settings for quota (permitted requests per day/month) and/or spike arrest (permitted requests per second/minute).&nbsp; The service plan defines how much your developers can consume over time. At runtime, these variables are read by the Rate Limiting Policy applied to an API or Resource. Rate Limiting Variabes are set as API Product attributes:
+Define the &quot;Service Plan&quot; settings for quota (permitted requests per day/month) and/or spike arrest (permitted requests per second/minute).  The service plan defines how much your developers can consume over time. At runtime, these variables are read by the Rate Limiting Policy applied to an API or Resource. Rate Limiting Variabes are set as API Product attributes:
 developer.quota.limit - integer
 developer.quota.interval - integer
 developer.quota.timeunit second/minute/hour/day/month)
-You can also use attributes to set any arbitrary metadata that you need for monitoring or analytics.
-
-</span></td>
+You can also use attributes to set any arbitrary metadata that you need for monitoring or analytics.</span></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_16_curl_json' data-url='/api_methods/16-create-an-api-product' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u {myname:mypass} "https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts" </span></pre></div></td>
@@ -847,49 +872,70 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 204, name: &quot;apiResources&quot;, description: &quot;A comma separated list of API resources to be bundl...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 205, name: &quot;approvalType&quot;, description: &quot;Manual or Auto. If Manual, consumer key is generate...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 206, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value pairs, most commonly used to s...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 207, name: &quot;createdAt&quot;, description: &quot;UNIX time when the API Product was created&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 208, name: &quot;displayName&quot;, description: &quot;The display name of the API Product, used in Apps t...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 209, name: &quot;lastModifiedAt&quot;, description: &quot;UNIX time when the API Product was most recently up...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 210, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee username of the user who most recently updat...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 211, name: &quot;name&quot;, description: &quot;The internal name of the API Product&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;, #&lt;ResponseElement id: 212, name: &quot;createdby&quot;, description: &quot;Apigee username of the user who created the API Pro...&quot;, required: nil, api_method_id: 16, created_at: &quot;2012-07-27 20:50:12&quot;, updated_at: &quot;2012-07-27 20:50:12&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/apiproducts</td>   
     	<td>Basic Auth</td>
    </tr>
 	<tr>
-		<td colspan="1"><h4><span class='best_in_place' id='best_in_place_api_method_13_name' data-url='/api_methods/13-delete-an-api-poduct' data-object='api_method' data-attribute='name' data-type='input'>Delete an API Poduct</span></h4></td>
+		<td colspan="1"><h4><span class='best_in_place' id='best_in_place_api_method_13_name' data-url='/api_methods/13-delete-an-api-product' data-object='api_method' data-attribute='name' data-type='input'>Delete an API Product</span></h4></td>
 	    <td colspan="1"><h4>13</h4></td>
-		<td><a href="13-delete-an-api-poduct/index.html" class="btn btn-mini">Detail</a>
+		<td><a href="13-delete-an-api-product/index.html" class="btn btn-mini">Detail</a>
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_13_description' data-url='/api_methods/13-delete-an-api-poduct' data-object='api_method' data-attribute='description' data-type='textarea'>Deletes an API Product</span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_13_description' data-url='/api_methods/13-delete-an-api-product' data-object='api_method' data-attribute='description' data-type='textarea'>Deletes an API Product</span></td>
 		  
 	</tr>
 	<tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_13_doc' data-url='/api_methods/13-delete-an-api-poduct' data-object='api_method' data-attribute='doc' data-type='textarea'>Deletes an API product from an organization. Note that deleting an API product will cause app requests to the resources URIs)  defined in the API product to fail. Make sure you create a new API product to serve existing apps (unless your intention is disable access to the resources defined in the API product.)</span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_13_doc' data-url='/api_methods/13-delete-an-api-product' data-object='api_method' data-attribute='doc' data-type='textarea'>Deletes an API product from an organization. Note that deleting an API product will cause app requests to the resources URIs)  defined in the API product to fail. Make sure you create a new API product to serve existing apps (unless your intention is disable access to the resources defined in the API product.)</span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_13_curl_json' data-url='/api_methods/13-delete-an-api-poduct' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u {myname:mypass} "https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/{apiproductName}" </span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_13_curl_json' data-url='/api_methods/13-delete-an-api-product' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u {myname:mypass} "https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/{apiproductName}" </span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
-  &quot;apiResources&quot; : [ &quot;/v1/**&quot;, &quot;/v3/receiveSMS&quot;, &quot;/v2/*/send&quot; ],
+  &quot;apiResources&quot; : [ &quot;/weather&quot; ],
   &quot;approvalType&quot; : &quot;auto&quot;,
   &quot;attributes&quot; : [ {
-    &quot;name&quot; : &quot;RateLimit&quot;,
-    &quot;value&quot; : &quot;200&quot;
+    &quot;name&quot; : &quot;description&quot;,
+    &quot;value&quot; : &quot;Premium  API Product&quot;
   }, {
-    &quot;name&quot; : &quot;Threshold&quot;,
-    &quot;value&quot; : &quot;25&quot;
+    &quot;name&quot; : &quot;developer.quota.interval&quot;,
+    &quot;value&quot; : &quot;1&quot;
+  }, {
+    &quot;name&quot; : &quot;developer.quota.limit&quot;,
+    &quot;value&quot; : &quot;1&quot;
+  }, {
+    &quot;name&quot; : &quot;developer.quota.timeunit&quot;,
+    &quot;value&quot; : &quot;second&quot;
+  }, {
+    &quot;name&quot; : &quot;access&quot;,
+    &quot;value&quot; : &quot;external&quot;
+  }, {
+    &quot;name&quot; : &quot;apisDeployedIn&quot;,
+    &quot;value&quot; : &quot;test&quot;
+  }, {
+    &quot;name&quot; : &quot;servicePlan&quot;,
+    &quot;value&quot; : &quot;Premium&quot;
   } ],
-  &quot;createdAt&quot; : 1343052029205,
-  &quot;createdBy&quot; : &quot;Admin&quot;,
-  &quot;description&quot; : &quot;&quot;,
-  &quot;displayName&quot; : &quot;Sandbox Silver1&quot;,
-  &quot;lastModifiedAt&quot; : 1343052029692,
-  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
-  &quot;name&quot; : &quot;sandbox&quot;,
+  &quot;createdAt&quot; : 1344874372459,
+  &quot;createdBy&quot; : &quot;admin@apigee.com&quot;,
+  &quot;description&quot; : &quot;Premium API Product&quot;,
+  &quot;displayName&quot; : &quot;Premium API Product&quot;,
+  &quot;lastModifiedAt&quot; : 1344874372459,
+  &quot;lastModifiedBy&quot; : &quot;admin@apigee.com&quot;,
+  &quot;name&quot; : &quot;api_premium&quot;,
   &quot;scopes&quot; : [ ]
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 458, name: &quot;apiResources&quot;, description: &quot;A list of URIs bundled in the API product&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 459, name: &quot;approvalType&quot;, description: &quot;Approval mode for the API product: 'manual' or 'aut...&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 460, name: &quot;attributes&quot;, description: &quot;Name/value pairs used to extend the default API pro...&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 461, name: &quot;createdAt&quot;, description: &quot;Unix time when the API product was created&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 462, name: &quot;createdBy&quot;, description: &quot;User name for the Apigee who created the API produc...&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 463, name: &quot;description&quot;, description: &quot;Description of the API product&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 464, name: &quot;displayName&quot;, description: &quot;Display name of the API product&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 465, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the API product was last modified&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 466, name: &quot;lastModifiedBy&quot;, description: &quot;User name for the Apigee who last modified the API ...&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 467, name: &quot;name&quot;, description: &quot;Name of the API product&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;, #&lt;ResponseElement id: 468, name: &quot;scopes&quot;, description: &quot;Optional OAuth scopes included in teh API product f...&quot;, required: nil, api_method_id: 13, created_at: &quot;2012-08-13 19:50:31&quot;, updated_at: &quot;2012-08-13 19:50:31&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -937,6 +983,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 219, name: &quot;apiResources&quot;, description: &quot;A list of URIs (including wildcards) that represent...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 220, name: &quot;approvalType&quot;, description: &quot;Determines the state of the consumer key generated ...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 221, name: &quot;attributes&quot;, description: &quot;Any app-specific arbitrary attributes that may be u...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 222, name: &quot;createdAt&quot;, description: &quot;Unix time when the API Product was created&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 223, name: &quot;createdBy&quot;, description: &quot;Apigee user account name of the individual who subm...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 224, name: &quot;description&quot;, description: &quot;Human-readable description of the API Product&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 225, name: &quot;displayName&quot;, description: &quot;Friendly name to display to Developers, for example...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 226, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the API Product was most recently up...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 227, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee user account name of the individual who last...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 228, name: &quot;name&quot;, description: &quot;The name of the API Product&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;, #&lt;ResponseElement id: 229, name: &quot;scopes&quot;, description: &quot;Oauth scopes required in the Access Token(s) used t...&quot;, required: nil, api_method_id: 86, created_at: &quot;2012-07-27 21:25:24&quot;, updated_at: &quot;2012-07-27 21:25:24&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apiproducts</td>   
     	<td>Basic Auth</td>
@@ -966,6 +1015,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 137, name: &quot;value&quot;, description: &quot;The value of the returned data&quot;, required: nil, api_method_id: 10, created_at: &quot;2012-07-27 10:29:25&quot;, updated_at: &quot;2012-07-27 10:29:25&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apiproducts/{apiproductName}?query=count&amp;entity=keys/apps/developers/companies</td>   
     	<td>Basic Auth</td>
@@ -993,6 +1045,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		<td colspan="3"><div id="well"><pre>[ &quot;app1&quot;, “app2” ]</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apiproducts/{apiproductName}?query=list&amp;entity=keys/apps/developers/companies</td>   
     	<td>Basic Auth</td>
@@ -1018,6 +1073,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;development&quot;, &quot;sandbox&quot;, &quot;production&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1075,6 +1133,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 138, name: &quot;apiResources&quot;, description: &quot;A list of URIs (including wildcards) that represent...&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 20:44:21&quot;&gt;, #&lt;ResponseElement id: 139, name: &quot;approvalType&quot;, description: &quot;Determines the state of the consumer key generated ...&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 140, name: &quot;attributes&quot;, description: &quot;Any app-specific arbitrary attributes that may be u...&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 141, name: &quot;createdAt&quot;, description: &quot;Unix time&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 142, name: &quot;createdBy&quot;, description: &quot;Apigee user account name of the individual who subm...&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 143, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 144, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee user account name of the individual who last...&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 145, name: &quot;name&quot;, description: &quot;Name of the API Product&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 10:47:59&quot;&gt;, #&lt;ResponseElement id: 146, name: &quot;scopes&quot;, description: &quot;Oauth scopes required in the Access Token(s) used t...&quot;, required: nil, api_method_id: 12, created_at: &quot;2012-07-27 10:47:59&quot;, updated_at: &quot;2012-07-27 21:29:35&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/apiproducts/{apiproductName}</td>   
     	<td>Basic Auth</td>
@@ -1127,6 +1188,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 272, name: &quot;configurationVersion&quot;, description: &quot;The version of Apigee that the configuration is val...&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 273, name: &quot;contextInfo&quot;, description: &quot;Apigee generated contextual information about the e...&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 274, name: &quot;name&quot;, description: &quot;The name of the API&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 275, name: &quot;policies&quot;, description: &quot;Policies attached to the API &quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 276, name: &quot;proxyEndpoints&quot;, description: &quot;Named proxy endpoints (receiver) defined for the AP...&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 277, name: &quot;resources&quot;, description: &quot;Any code, scripts, XSLT files used by policies atta...&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 278, name: &quot;revision&quot;, description: &quot;The sequential numbered packages of code and config...&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 279, name: &quot;targetEndpoints&quot;, description: &quot;Named proxy endpoints (sender) defined for the API ...&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 280, name: &quot;targetServers&quot;, description: &quot;&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;, #&lt;ResponseElement id: 281, name: &quot;type&quot;, description: &quot;&quot;, required: nil, api_method_id: 15, created_at: &quot;2012-08-01 17:08:30&quot;, updated_at: &quot;2012-08-01 17:08:30&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/apis</td>   
     	<td>Basic Auth</td>
@@ -1167,6 +1231,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/apis/{apiname}</td>   
     	<td>Basic Auth</td>
@@ -1199,6 +1266,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
     &lt;Resources/&gt;
     &lt;TargetEndpoints/&gt;
 &lt;/APIProxy&gt;</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -1256,6 +1326,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 282, name: &quot;aPIProxy&quot;, description: &quot;The name of the API proxy&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 283, name: &quot;configuration&quot;, description: &quot;The basepath for this deployment (appended to the b...&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 284, name: &quot;steps&quot;, description: &quot;Any policy steps attached to the API proxy&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 285, name: &quot;environment&quot;, description: &quot;The environment where the API proxy is deployed ('t...&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 286, name: &quot;name&quot;, description: &quot;The revision name (always a number)&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 287, name: &quot;organization&quot;, description: &quot;The API provider's Apigee organization name&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 288, name: &quot;revision&quot;, description: &quot;The number of the revision&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 289, name: &quot;server&quot;, description: &quot;A set of servers deployed in support of the API pro...&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;, #&lt;ResponseElement id: 290, name: &quot;state&quot;, description: &quot;The state of the API proxy, either 'deployed' or 'u...&quot;, required: nil, api_method_id: 25, created_at: &quot;2012-08-01 17:49:07&quot;, updated_at: &quot;2012-08-01 17:49:07&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/apis/{apiName}/revisions/{revisionNumber}/deployments?action=deploy&amp;env={envName}&amp;basepath={/basepath}</td>   
     	<td>Basic Auth</td>
@@ -1281,6 +1354,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 2xx </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1313,6 +1389,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 230, name: &quot;name&quot;, description: &quot;Name of the API&quot;, required: nil, api_method_id: 104, created_at: &quot;2012-07-27 21:32:07&quot;, updated_at: &quot;2012-07-27 21:32:07&quot;&gt;, #&lt;ResponseElement id: 231, name: &quot;revision&quot;, description: &quot;Sequentially numbered packaged of code and configur...&quot;, required: nil, api_method_id: 104, created_at: &quot;2012-07-27 21:32:07&quot;, updated_at: &quot;2012-07-27 21:32:07&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apis/{apiName}</td>   
     	<td>Basic Auth</td>
@@ -1328,7 +1407,7 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		  
 	</tr>
 	<tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_24_doc' data-url='/api_methods/24-import-an-api' data-object='api_method' data-attribute='doc' data-type='textarea'>It's often beneficial to work do configuration of API proxies locally. This method enables developers to upload an API proxy as a ZIP file from the local machine to the targeted Apigee organization. Once imported, the API revision must be deployed before it can be accessed at runtime.</span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_24_doc' data-url='/api_methods/24-import-an-api' data-object='api_method' data-attribute='doc' data-type='textarea'> This method enables developers to upload an API proxy as a ZIP file from the local machine to the targeted Apigee organization. Once imported, the API revision must be deployed before it can be accessed at runtime.</span></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_24_curl_json' data-url='/api_methods/24-import-an-api' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/test/apis?action=import&name=passthrough -T {filename}.zip -H "Content-Type: application/octet-stream" -X POST </span></pre></div></td>
@@ -1348,7 +1427,7 @@ You can also use attributes to set any arbitrary metadata that you need for moni
   &quot;createdBy&quot; : &quot;orgAdmin&quot;,
   &quot;description&quot; : &quot;The smallest possible app&quot;,
   &quot;lastModifiedAt&quot; : 1342365988805,
-  &quot;lastModifiedBy&quot; : &quot;orgAdmin&quot;,
+  &quot;lastModifiedAt&quot; : &quot;orgAdmin&quot;,
   &quot;name&quot; : &quot;passthrough&quot;,
   &quot;policies&quot; : [ ],
   &quot;proxyEndpoints&quot; : [ &quot;default&quot; ],
@@ -1358,6 +1437,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
   &quot;targetServers&quot; : [ ],
   &quot;type&quot; : &quot;Application&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 357, name: &quot;configurationVersion&quot;, description: &quot;Version of the API proxy configuration&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 358, name: &quot;contextInfo&quot;, description: &quot;Descriptive information generated by Apigee&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 359, name: &quot;createdAt&quot;, description: &quot;Unix time when the entity was generated&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 360, name: &quot;createdBy&quot;, description: &quot;The user name of the Apigee user who created the en...&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 361, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the entity was last modified&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 362, name: &quot;lastModifiedAt&quot;, description: &quot;The user name of the Apigee user who last modified ...&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 363, name: &quot;name&quot;, description: &quot;The name of the API&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 364, name: &quot;policies&quot;, description: &quot;Policies contained in the API proxy&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 365, name: &quot;proxyEndpoints&quot;, description: &quot;The named proxy endpoint configuration for the API ...&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 366, name: &quot;resources&quot;, description: &quot;Resources (scripts, XSLT files, etc.) contained in ...&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 367, name: &quot;revision&quot;, description: &quot;The revision number of the API proxy package&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 368, name: &quot;targetEndpoints&quot;, description: &quot;The named target endpoint configuration for the API...&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 369, name: &quot;targetServers&quot;, description: &quot;Internal Apigee information&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;, #&lt;ResponseElement id: 370, name: &quot;type&quot;, description: &quot;Internal Apigee information (APIs are always type '...&quot;, required: nil, api_method_id: 24, created_at: &quot;2012-08-13 17:29:34&quot;, updated_at: &quot;2012-08-13 17:29:34&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -1385,6 +1467,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;api1&quot;, &quot;api2&quot;, &quot;api3&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1442,6 +1527,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 299, name: &quot;aPIProxy&quot;, description: &quot;The name of the API&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 300, name: &quot;configuration&quot;, description: &quot;Base path and policy steps that are configured for ...&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 301, name: &quot;environment&quot;, description: &quot;The environment where the APi was deployed&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 302, name: &quot;name&quot;, description: &quot;The name of the APi revision&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 303, name: &quot;organization&quot;, description: &quot;The organization of the API provider&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 304, name: &quot;revision&quot;, description: &quot;The revision number of the APi proxy&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 305, name: &quot;server&quot;, description: &quot;Information on Apigee servers deployed to service t...&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;, #&lt;ResponseElement id: 306, name: &quot;state&quot;, description: &quot;The state of the API: deployed or undeployed&quot;, required: nil, api_method_id: 26, created_at: &quot;2012-08-06 21:44:19&quot;, updated_at: &quot;2012-08-06 21:44:19&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apis/{apiName}/deployments?action=undeploy&amp;env={envName}&amp;revision={revision}</td>   
     	<td>Basic Auth</td>
@@ -1488,6 +1576,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/apis/{apiName}</td>   
     	<td>Basic Auth</td>
@@ -1526,6 +1617,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 232, name: &quot;apps&quot;, description: &quot;App family to which Developer Apps will be added&quot;, required: nil, api_method_id: 125, created_at: &quot;2012-07-27 21:54:44&quot;, updated_at: &quot;2012-07-27 21:54:44&quot;&gt;, #&lt;ResponseElement id: 233, name: &quot;name&quot;, description: &quot;App name of Developer App to add to App Family&quot;, required: nil, api_method_id: 125, created_at: &quot;2012-07-27 21:54:44&quot;, updated_at: &quot;2012-07-27 21:54:44&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/developers/{developerEmail}/appfamilies</td>   
     	<td>Basic Auth</td>
@@ -1554,6 +1648,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
   &quot;apps&quot; : [ &quot;app2.1&quot;, &quot;app1.1&quot; ],
   &quot;name&quot; : &quot;appfamily1&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -1586,6 +1683,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerEmail}/appfamilies/{appFamily}</td>   
     	<td>Basic Auth</td>
@@ -1611,6 +1711,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;appfamily1&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1643,6 +1746,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
     &quot;name&quot; : &quot;appfamily1&quot;
   } ]
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1697,6 +1803,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/developers/{developerEmail}/appfamilies/{appFamily}/app/{appName}</td>   
     	<td>Basic Auth</td>
@@ -1730,6 +1839,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
   &quot;apps&quot; : [ &quot;app1.1&quot;, &quot;app2.1&quot; ],
   &quot;name&quot; : &quot;appfamily1&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -1766,6 +1878,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		<td colspan="3"><div id="well"><pre>[ &quot;app2.1&quot;, &quot;app2.2&quot; ]</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apps?appfamily={appFamily}</td>   
     	<td>Basic Auth</td>
@@ -1791,6 +1906,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;app2.1&quot;, &quot;app2.2&quot;, &quot;MyTestApp&quot;, &quot;app3.1&quot;, &quot;app1.1&quot;, &quot;app3.2&quot;, &quot;app1.2&quot;, &quot;app4.1&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1820,6 +1938,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		<td colspan="3"><div id="well"><pre>[ &quot;app1.1&quot;, &quot;app3.2&quot;, &quot;app1.2&quot;, &quot;app4.1&quot; ]</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apps?apptype={appType}</td>   
     	<td>Basic Auth</td>
@@ -1845,6 +1966,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;app2.1&quot;, &quot;app2.2&quot;, &quot;MyTestApp&quot;]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -1902,6 +2026,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 84, name: &quot;name&quot;, description: &quot;Name of the company&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 85, name: &quot;displayName&quot;, description: &quot;Display name of the company&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 86, name: &quot;organization&quot;, description: &quot;Organization in which the company is created&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 87, name: &quot;status&quot;, description: &quot;Status of the company: 'active' or 'inactive'&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 20:03:33&quot;&gt;, #&lt;ResponseElement id: 88, name: &quot;attributes&quot;, description: &quot;Custom name/value atributes used ot extend the defa...&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 89, name: &quot;createdAt&quot;, description: &quot;Unix time when the entity was created&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 90, name: &quot;createdBy&quot;, description: &quot;Apigee username of the user who created the company...&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 91, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the entity was last modified&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;, #&lt;ResponseElement id: 92, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee username of the user who last modified the c...&quot;, required: nil, api_method_id: 117, created_at: &quot;2012-07-26 23:46:21&quot;, updated_at: &quot;2012-08-07 19:52:54&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/companies</td>   
     	<td>Basic Auth</td>
@@ -1942,6 +2069,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
   &quot;lastModifiedBy&quot; : &quot;Admin&quot;
 }
 </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 112, name: &quot;apps&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 113, name: &quot;name&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 114, name: &quot;displayName&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 115, name: &quot;organization&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 116, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 117, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 118, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 119, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 120, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;, #&lt;ResponseElement id: 121, name: &quot;lastModifiedBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 120, created_at: &quot;2012-07-26 23:59:37&quot;, updated_at: &quot;2012-07-26 23:59:37&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -1985,6 +2115,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 102, name: &quot;apps&quot;, description: &quot;Apps associated with the company&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 103, name: &quot;name&quot;, description: &quot;Name of the company&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 104, name: &quot;displayName&quot;, description: &quot;Display name of the company&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 105, name: &quot;organization&quot;, description: &quot;organization containing the company&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 106, name: &quot;status&quot;, description: &quot;Status of the company--active or inactive.&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 107, name: &quot;attributes&quot;, description: &quot;Arbitrary attribues that may be used to extend the ...&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 108, name: &quot;createdAt&quot;, description: &quot;UNIX time when the entity was created&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 109, name: &quot;createdBy&quot;, description: &quot;Apigee account user who created the entity&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 110, name: &quot;lastModifiedAt&quot;, description: &quot;UNIX time when the entity was last modified&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;, #&lt;ResponseElement id: 111, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee account user who last modified the entity&quot;, required: nil, api_method_id: 119, created_at: &quot;2012-07-26 23:56:32&quot;, updated_at: &quot;2012-08-06 20:24:15&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td> /companies/{companyName}</td>   
     	<td>Basic Auth</td>
@@ -2010,6 +2143,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -2066,6 +2202,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 415, name: &quot;company&quot;, description: &quot;Settings for the company&quot;, required: nil, api_method_id: 121, created_at: &quot;2012-08-13 18:51:42&quot;, updated_at: &quot;2012-08-13 18:51:42&quot;&gt;, #&lt;ResponseElement id: 416, name: &quot;apps&quot;, description: &quot;A list of apps registered by the company&quot;, required: nil, api_method_id: 121, created_at: &quot;2012-08-13 18:51:42&quot;, updated_at: &quot;2012-08-13 18:51:42&quot;&gt;, #&lt;ResponseElement id: 417, name: &quot;name&quot;, description: &quot;name of the company&quot;, required: nil, api_method_id: 121, created_at: &quot;2012-08-13 18:51:42&quot;, updated_at: &quot;2012-08-13 18:51:42&quot;&gt;, #&lt;ResponseElement id: 418, name: &quot;displayName&quot;, description: &quot;Display name of the company&quot;, required: nil, api_method_id: 121, created_at: &quot;2012-08-13 18:51:42&quot;, updated_at: &quot;2012-08-13 18:51:42&quot;&gt;, #&lt;ResponseElement id: 419, name: &quot;organization&quot;, description: &quot;Organization to which the company belongs&quot;, required: nil, api_method_id: 121, created_at: &quot;2012-08-13 18:51:42&quot;, updated_at: &quot;2012-08-13 18:51:42&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/organizations/{organizationname}/companies?expand=true</td>   
     	<td>Basic Auth</td>
@@ -2114,6 +2253,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 93, name: &quot;name&quot;, description: &quot;Name of the company&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 94, name: &quot;displayName&quot;, description: &quot;Display name of the company&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 95, name: &quot;organization&quot;, description: &quot;Apigee organization of the company&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 96, name: &quot;status&quot;, description: &quot;Status of the company: Active or Inactive&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 97, name: &quot;attributes&quot;, description: &quot;Arbitrary attributes that can be used to customize ...&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 98, name: &quot;createdAt&quot;, description: &quot;Unix time when the entity was created&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 99, name: &quot;createdBy&quot;, description: &quot;Apigee username of the user who created the company...&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 100, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the entity was last modified&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;, #&lt;ResponseElement id: 101, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee username of the user who last modified the c...&quot;, required: nil, api_method_id: 118, created_at: &quot;2012-07-26 23:51:50&quot;, updated_at: &quot;2012-08-06 20:58:36&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/companies/{companyName}</td>   
     	<td>Basic Auth</td>
@@ -2148,6 +2290,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/companies/{companyname}/appfamilies/</td>   
     	<td>Basic Auth</td>
@@ -2173,6 +2318,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -2202,6 +2350,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/companies/{companyName}/appfamilies/{appfamilyName}/app/{appName}</td>   
     	<td>Basic Auth</td>
@@ -2227,6 +2378,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -2256,6 +2410,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/companies/{companyName}/appfamilies</td>   
     	<td>Basic Auth</td>
@@ -2281,6 +2438,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -2315,6 +2475,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -2359,6 +2522,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 420, name: &quot;apiProducts&quot;, description: &quot;API products with which this company app key is ass...&quot;, required: nil, api_method_id: 51, created_at: &quot;2012-08-13 18:58:01&quot;, updated_at: &quot;2012-08-13 18:58:01&quot;&gt;, #&lt;ResponseElement id: 421, name: &quot;status&quot;, description: &quot;The status of the compnay app key's association wit...&quot;, required: nil, api_method_id: 51, created_at: &quot;2012-08-13 18:58:01&quot;, updated_at: &quot;2012-08-13 18:58:01&quot;&gt;, #&lt;ResponseElement id: 422, name: &quot;attributes&quot;, description: &quot;Name/value pair attributes used to extend the defau...&quot;, required: nil, api_method_id: 51, created_at: &quot;2012-08-13 18:58:01&quot;, updated_at: &quot;2012-08-13 18:58:01&quot;&gt;, #&lt;ResponseElement id: 423, name: &quot;consumerKey&quot;, description: &quot;The value of the consumer key&quot;, required: nil, api_method_id: 51, created_at: &quot;2012-08-13 18:58:01&quot;, updated_at: &quot;2012-08-13 18:58:01&quot;&gt;, #&lt;ResponseElement id: 424, name: &quot;consumerSecret&quot;, description: &quot;The consumer secret associated with this consumer k...&quot;, required: nil, api_method_id: 51, created_at: &quot;2012-08-13 18:58:01&quot;, updated_at: &quot;2012-08-13 18:58:01&quot;&gt;, #&lt;ResponseElement id: 425, name: &quot;status&quot;, description: &quot;The status of the consumer key&quot;, required: nil, api_method_id: 51, created_at: &quot;2012-08-13 18:58:01&quot;, updated_at: &quot;2012-08-13 18:58:01&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/companies/{companyName}/apps/{appName}/keys/{consumerKey}</td>   
     	<td>Basic Auth</td>
@@ -2401,6 +2567,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 426, name: &quot;apiProducts&quot;, description: &quot;API products with which the company app key is asso...&quot;, required: nil, api_method_id: 50, created_at: &quot;2012-08-13 19:01:06&quot;, updated_at: &quot;2012-08-13 19:01:06&quot;&gt;, #&lt;ResponseElement id: 427, name: &quot;status&quot;, description: &quot;The status of the association between the company a...&quot;, required: nil, api_method_id: 50, created_at: &quot;2012-08-13 19:01:06&quot;, updated_at: &quot;2012-08-13 19:01:06&quot;&gt;, #&lt;ResponseElement id: 428, name: &quot;attributes&quot;, description: &quot;Name/value pair attributes used to extend the defau...&quot;, required: nil, api_method_id: 50, created_at: &quot;2012-08-13 19:01:06&quot;, updated_at: &quot;2012-08-13 19:01:06&quot;&gt;, #&lt;ResponseElement id: 429, name: &quot;consumer key&quot;, description: &quot;The value of the consumer key&quot;, required: nil, api_method_id: 50, created_at: &quot;2012-08-13 19:01:06&quot;, updated_at: &quot;2012-08-13 19:01:06&quot;&gt;, #&lt;ResponseElement id: 430, name: &quot;consumer secret&quot;, description: &quot;The consumer secret associated with the consumer ke...&quot;, required: nil, api_method_id: 50, created_at: &quot;2012-08-13 19:01:06&quot;, updated_at: &quot;2012-08-13 19:01:06&quot;&gt;, #&lt;ResponseElement id: 431, name: &quot;status&quot;, description: &quot;The status of the consumer key: 'approved' or 'unap...&quot;, required: nil, api_method_id: 50, created_at: &quot;2012-08-13 19:01:06&quot;, updated_at: &quot;2012-08-13 19:01:06&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/companies/{companyName}/apps/{appName}/keys/{consumerKey}</td>   
     	<td>Basic Auth</td>
@@ -2426,6 +2595,9 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -2475,6 +2647,9 @@ New ApiProduct(s) will merge existing ApiProduct(s).</span></td>
   &quot;consumerSecret&quot; : &quot;{consumerSecret}&quot;,
   &quot;status&quot; : &quot;approved&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 126, name: &quot;apiproduct&quot;, description: &quot;An API Product associated with this key&quot;, required: nil, api_method_id: 49, created_at: &quot;2012-07-27 01:15:55&quot;, updated_at: &quot;2012-07-27 11:00:36&quot;&gt;, #&lt;ResponseElement id: 127, name: &quot;status&quot;, description: &quot;The status of the key for this API Product&quot;, required: nil, api_method_id: 49, created_at: &quot;2012-07-27 01:15:55&quot;, updated_at: &quot;2012-07-27 11:00:36&quot;&gt;, #&lt;ResponseElement id: 128, name: &quot;attributes&quot;, description: &quot;Arbitrary, app-specific attributes associated with ...&quot;, required: nil, api_method_id: 49, created_at: &quot;2012-07-27 01:15:55&quot;, updated_at: &quot;2012-07-27 11:00:36&quot;&gt;, #&lt;ResponseElement id: 129, name: &quot;consumerKey&quot;, description: &quot;The value of the key&quot;, required: nil, api_method_id: 49, created_at: &quot;2012-07-27 01:15:55&quot;, updated_at: &quot;2012-07-27 11:00:36&quot;&gt;, #&lt;ResponseElement id: 130, name: &quot;consumerSecret&quot;, description: &quot;The value of the secret associated with this key&quot;, required: nil, api_method_id: 49, created_at: &quot;2012-07-27 01:15:55&quot;, updated_at: &quot;2012-07-27 11:00:36&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -2550,6 +2725,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/companies/{companyname}/apps</td>   
     	<td>Basic Auth</td>
@@ -2607,6 +2785,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 147, name: &quot;access_type&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 148, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 149, name: &quot;callback_url&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 150, name: &quot;created_at&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 151, name: &quot;created_by&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 152, name: &quot;lastmodified_by&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 153, name: &quot;name&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;, #&lt;ResponseElement id: 154, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 64, created_at: &quot;2012-07-27 11:07:39&quot;, updated_at: &quot;2012-07-27 11:07:39&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/companies/{companyName}/apps</td>   
     	<td>Basic Auth</td>
@@ -2649,6 +2830,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/companies/{companyName}/apps/{appName}</td>   
     	<td>Basic Auth</td>
@@ -2678,6 +2862,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/companies/{companyName}/apps/{appname}?query=count&amp;entity=apiresources</td>   
     	<td>Basic Auth</td>
@@ -2703,6 +2890,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;DevApp2&quot;, &quot;DevApp1&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -2764,6 +2954,9 @@ Failure 4xx with proper error message
 }				</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 432, name: &quot;app&quot;, description: &quot;The list of all company apps in an organization&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 433, name: &quot;access_type&quot;, description: &quot;Access type for the app&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 434, name: &quot;app_family&quot;, description: &quot;App family that the app belongs to&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 435, name: &quot;attributes&quot;, description: &quot;name/value pairs used to extend the default company...&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 436, name: &quot;callback_url&quot;, description: &quot;Callback URL for the app&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 437, name: &quot;company_name&quot;, description: &quot;Name of the company with which the app is associate...&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 438, name: &quot;created_at&quot;, description: &quot;Unix time when the app was created&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 439, name: &quot;created_by&quot;, description: &quot;User name of the Apigee user who created the app&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 440, name: &quot;lastmodified_at&quot;, description: &quot;Unix time when the app was last modified&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 441, name: &quot;lastmodified_by&quot;, description: &quot;User name of the Apigee user who last modified the ...&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 442, name: &quot;name&quot;, description: &quot;The name of the app&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;, #&lt;ResponseElement id: 443, name: &quot;status&quot;, description: &quot;The status of the app: 'approved' or 'unapproved'&quot;, required: nil, api_method_id: 69, created_at: &quot;2012-08-13 19:22:20&quot;, updated_at: &quot;2012-08-13 19:22:20&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/companies/{companyName}/apps?expand=true</td>   
     	<td>Basic Auth</td>
@@ -2812,25 +3005,28 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 155, name: &quot;access_type&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 156, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 157, name: &quot;callback_url&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 158, name: &quot;created_at&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 159, name: &quot;created_at&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 160, name: &quot;created_by&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 161, name: &quot;lastmodified_at&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 162, name: &quot;lastmodified_by&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;, #&lt;ResponseElement id: 163, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 65, created_at: &quot;2012-07-27 11:17:26&quot;, updated_at: &quot;2012-07-27 11:17:26&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/companies/{companyName}/apps/{appName}</td>   
     	<td>Basic Auth</td>
    </tr>
 	<tr>
-		<td colspan="1"><h4><span class='best_in_place' id='best_in_place_api_method_132_name' data-url='/api_methods/132-update-a-company-app-with-a-new-api-product' data-object='api_method' data-attribute='name' data-type='input'>Update a Company App with a New API Product</span></h4></td>
+		<td colspan="1"><h4><span class='best_in_place' id='best_in_place_api_method_132_name' data-url='/api_methods/132-update-a-company-app-with-an-additional-api-product' data-object='api_method' data-attribute='name' data-type='input'>Update a company app with an additional API product</span></h4></td>
 	    <td colspan="1"><h4>132</h4></td>
-		<td><a href="132-update-a-company-app-with-a-new-api-product/index.html" class="btn btn-mini">Detail</a>
+		<td><a href="132-update-a-company-app-with-an-additional-api-product/index.html" class="btn btn-mini">Detail</a>
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_132_description' data-url='/api_methods/132-update-a-company-app-with-a-new-api-product' data-object='api_method' data-attribute='description' data-type='textarea'>Update existing App Key with New ApiProduct(s). New ApiProduct(s) will merge existing ApiProduct(s).</span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_132_description' data-url='/api_methods/132-update-a-company-app-with-an-additional-api-product' data-object='api_method' data-attribute='description' data-type='textarea'>Update existing app key with an API product. </span></td>
 		  
 	</tr>
 	<tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_132_doc' data-url='/api_methods/132-update-a-company-app-with-a-new-api-product' data-object='api_method' data-attribute='doc' data-type='textarea'>Adds an API product to a Company, enabling the Company App to access the API resources (URIs) defined in the API product</span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_132_doc' data-url='/api_methods/132-update-a-company-app-with-an-additional-api-product' data-object='api_method' data-attribute='doc' data-type='textarea'>Adds an API product to a Company, enabling the Company App to access the API resources (URIs) defined in the API product. Existing API products are merged with the API product added by this method. </span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_132_curl_json' data-url='/api_methods/132-update-a-company-app-with-a-new-api-product' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organization/{organizationName}/companies/{companyName}/apps/{appName}/keys/{consumerkey}</span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_132_curl_json' data-url='/api_methods/132-update-a-company-app-with-an-additional-api-product' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organization/{organizationName}/companies/{companyName}/apps/{appName}/keys/{consumerkey}</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
@@ -2858,6 +3054,9 @@ Failure 4xx with proper error message
   &quot;consumerSecret&quot; : &quot;{consumerSecret}&quot;,
   &quot;status&quot; : &quot;approved&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 444, name: &quot;apiProducts&quot;, description: &quot;The list of API products associated with the app&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;, #&lt;ResponseElement id: 445, name: &quot;apiproduct&quot;, description: &quot;The name of one API product in the list of API prod...&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;, #&lt;ResponseElement id: 446, name: &quot;status&quot;, description: &quot;The status of the app's association with the API pr...&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;, #&lt;ResponseElement id: 447, name: &quot;attributes&quot;, description: &quot;Name/value  formatted attributes used to extend the...&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;, #&lt;ResponseElement id: 448, name: &quot;consumerKey&quot;, description: &quot;The value of the consumer key associated with the a...&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;, #&lt;ResponseElement id: 449, name: &quot;consumerSecret&quot;, description: &quot;The name of the consumer secret associated with the...&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;, #&lt;ResponseElement id: 450, name: &quot;status&quot;, description: &quot;The status of the consumer key: 'approved' or 'pend...&quot;, required: nil, api_method_id: 132, created_at: &quot;2012-08-13 19:28:47&quot;, updated_at: &quot;2012-08-13 19:28:47&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -2918,6 +3117,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/companies/{companyname}/apps/{appName}</td>   
     	<td>Basic Auth</td>
@@ -2970,6 +3172,9 @@ Failure 4xx with proper error message
 </pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 122, name: &quot;email&quot;, description: &quot;The unique key ID a Company Developer&quot;, required: nil, api_method_id: 122, created_at: &quot;2012-07-27 00:09:52&quot;, updated_at: &quot;2012-07-27 00:09:52&quot;&gt;, #&lt;ResponseElement id: 123, name: &quot;rile&quot;, description: &quot;An entry that may be used for acces control to App ...&quot;, required: nil, api_method_id: 122, created_at: &quot;2012-07-27 00:09:52&quot;, updated_at: &quot;2012-07-27 00:09:52&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/companies/{companyName}/developers</td>   
     	<td>Basic Auth</td>
@@ -3003,6 +3208,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 124, name: &quot;email&quot;, description: &quot;&quot;, required: nil, api_method_id: 124, created_at: &quot;2012-07-27 00:15:26&quot;, updated_at: &quot;2012-07-27 00:15:26&quot;&gt;, #&lt;ResponseElement id: 125, name: &quot;role&quot;, description: &quot;&quot;, required: nil, api_method_id: 124, created_at: &quot;2012-07-27 00:15:26&quot;, updated_at: &quot;2012-07-27 00:15:26&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/companies/{companyname}/developers/</td>   
     	<td>Basic Auth</td>
@@ -3028,6 +3236,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -3064,6 +3275,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/environments/{environmentName} /apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</td>   
     	<td>Basic Auth</td>
@@ -3089,6 +3303,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -3118,6 +3335,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}/apis/{apiName}/revisions/{revisionId/debugsessions/{debugSessionId}/data</td>   
     	<td>Basic Auth</td>
@@ -3143,6 +3363,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -3203,6 +3426,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}/apis/{apiproxyName}/revisions/{revisionNumber}/deployments</td>   
     	<td>Basic Auth</td>
@@ -3261,6 +3487,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 60, name: &quot;environment&quot;, description: &quot;Settings for the environment&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 61, name: &quot;name&quot;, description: &quot;Name of the environment&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 62, name: &quot;revision&quot;, description: &quot;Configuration settings for the API revision&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 63, name: &quot;basePath&quot;, description: &quot;Basepath for the API in this environment&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 64, name: &quot;steps&quot;, description: &quot;Policies attached to the API&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 65, name: &quot;server&quot;, description: &quot;Servers deployed in support of this API (usedintern...&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 66, name: &quot;state&quot;, description: &quot;The deployment status of the API (deployed or undep...&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 67, name: &quot;name&quot;, description: &quot;Name of the API&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;, #&lt;ResponseElement id: 68, name: &quot;organization&quot;, description: &quot;The organization in which the API is deployed&quot;, required: nil, api_method_id: 18, created_at: &quot;2012-07-26 17:03:59&quot;, updated_at: &quot;2012-08-07 18:57:28&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apis/{apiName}/deployments</td>   
     	<td>Basic Auth</td>
@@ -3315,6 +3544,9 @@ Failure 4xx with proper error message
   &quot;name&quot; : &quot;1&quot;,
   &quot;organization&quot; : &quot;myorg&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 313, name: &quot;aPIProxy&quot;, description: &quot;APi proxy settings&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 314, name: &quot;environment&quot;, description: &quot;Environment settings&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 315, name: &quot;configuration&quot;, description: &quot;Confirguation settings for the revision&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 316, name: &quot;basePath&quot;, description: &quot;Basepath for the API in this environment&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 317, name: &quot;steps&quot;, description: &quot;Policies attached to the API revision&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 318, name: &quot;name&quot;, description: &quot;Name of the environment where the revision is deplo...&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 319, name: &quot;name&quot;, description: &quot;Name of the revision (the revision numer deployed)&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;, #&lt;ResponseElement id: 320, name: &quot;organization&quot;, description: &quot;The organization where the API is deployed&quot;, required: nil, api_method_id: 19, created_at: &quot;2012-08-07 19:04:24&quot;, updated_at: &quot;2012-08-07 19:04:24&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -3400,6 +3632,9 @@ Failure 4xx with proper error message
   &quot;name&quot; : &quot;test&quot;,
   &quot;organization&quot; : &quot;myorg&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 307, name: &quot;aPIProxy&quot;, description: &quot;The API proxy that is deployed in this environment&quot;, required: nil, api_method_id: 20, created_at: &quot;2012-08-07 18:51:11&quot;, updated_at: &quot;2012-08-07 18:51:11&quot;&gt;, #&lt;ResponseElement id: 308, name: &quot;name&quot;, description: &quot;The name of the API&quot;, required: nil, api_method_id: 20, created_at: &quot;2012-08-07 18:51:11&quot;, updated_at: &quot;2012-08-07 18:51:11&quot;&gt;, #&lt;ResponseElement id: 309, name: &quot;revision&quot;, description: &quot;The revision number of the deployed API&quot;, required: nil, api_method_id: 20, created_at: &quot;2012-08-07 18:51:11&quot;, updated_at: &quot;2012-08-07 18:51:11&quot;&gt;, #&lt;ResponseElement id: 310, name: &quot;server&quot;, description: &quot;Servers that support this API deployment (used inte...&quot;, required: nil, api_method_id: 20, created_at: &quot;2012-08-07 18:51:11&quot;, updated_at: &quot;2012-08-07 18:51:11&quot;&gt;, #&lt;ResponseElement id: 311, name: &quot;name&quot;, description: &quot;Environment name&quot;, required: nil, api_method_id: 20, created_at: &quot;2012-08-07 18:51:11&quot;, updated_at: &quot;2012-08-07 18:51:11&quot;&gt;, #&lt;ResponseElement id: 312, name: &quot;organization&quot;, description: &quot;Organization for the environment&quot;, required: nil, api_method_id: 20, created_at: &quot;2012-08-07 18:51:11&quot;, updated_at: &quot;2012-08-07 18:51:11&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -3546,6 +3781,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 131, name: &quot;aPIProxy&quot;, description: &quot;&quot;, required: nil, api_method_id: 112, created_at: &quot;2012-07-27 02:58:51&quot;, updated_at: &quot;2012-07-27 02:58:51&quot;&gt;, #&lt;ResponseElement id: 132, name: &quot;name&quot;, description: &quot;&quot;, required: nil, api_method_id: 112, created_at: &quot;2012-07-27 02:58:51&quot;, updated_at: &quot;2012-07-27 02:58:51&quot;&gt;, #&lt;ResponseElement id: 133, name: &quot;revision&quot;, description: &quot;&quot;, required: nil, api_method_id: 112, created_at: &quot;2012-07-27 02:58:51&quot;, updated_at: &quot;2012-07-27 02:58:51&quot;&gt;, #&lt;ResponseElement id: 134, name: &quot;configuration&quot;, description: &quot;&quot;, required: nil, api_method_id: 112, created_at: &quot;2012-07-27 02:58:51&quot;, updated_at: &quot;2012-07-27 02:58:51&quot;&gt;, #&lt;ResponseElement id: 135, name: &quot;basePath&quot;, description: &quot;&quot;, required: nil, api_method_id: 112, created_at: &quot;2012-07-27 02:58:51&quot;, updated_at: &quot;2012-07-27 02:58:51&quot;&gt;, #&lt;ResponseElement id: 136, name: &quot;steps&quot;, description: &quot;&quot;, required: nil, api_method_id: 112, created_at: &quot;2012-07-27 02:58:51&quot;, updated_at: &quot;2012-07-27 02:58:51&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/deployments</td>   
     	<td>Basic Auth</td>
@@ -3573,6 +3811,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/apis/{apiName}/deployments</td>   
     	<td>Basic Auth</td>
@@ -3598,6 +3839,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -3714,6 +3958,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/deployments</td>   
     	<td>Basic Auth</td>
@@ -3750,6 +3997,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerName}/apps/{appName}/oauth1accesstokens </td>   
     	<td>Basic Auth</td>
@@ -3777,6 +4027,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre>{
  “value” : 1
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -3815,6 +4068,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerName}/apps/{appName}/keys/{consumerkey}/oauth1accesstokens</td>   
     	<td>Basic Auth</td>
@@ -3842,6 +4098,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre>{
  “value” : 1
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -3878,6 +4137,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/developers/{developerName}/apps/{appName}/keys/{consumerKey}</td>   
     	<td>Basic Auth</td>
@@ -3905,6 +4167,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/developers/{developerName}/apps/{appName}/keys/{consumerkey}/apiproducts/{apiproductName}</td>   
     	<td>Basic Auth</td>
@@ -3929,13 +4194,12 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre>Success 200 with proper response
-{
+		<td colspan="3"><div id="well"><pre>{
   &quot;apiProducts&quot; : [ {
-    &quot;apiproduct&quot; : &quot;NikeApiProduct&quot;,
+    &quot;apiproduct&quot; : &quot;ApiProduct&quot;,
     &quot;status&quot; : &quot;approved&quot;
   }, {
-    &quot;apiproduct&quot; : &quot;NikeApiProduct_qa&quot;,
+    &quot;apiproduct&quot; : &quot;ApiProduct_qa&quot;,
     &quot;status&quot; : &quot;approved&quot;
   } ],
   &quot;attributes&quot; : [ {
@@ -3949,6 +4213,9 @@ Failure 4xx with proper error message
   &quot;consumerSecret&quot; : &quot;pgppv4OsarzfwY2x&quot;,
   &quot;status&quot; : &quot;approved&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 451, name: &quot;apiProducts&quot;, description: &quot;List of API products with which the app key is asso...&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;, #&lt;ResponseElement id: 452, name: &quot;apiproduct&quot;, description: &quot;An API product in the list&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;, #&lt;ResponseElement id: 453, name: &quot;status&quot;, description: &quot;Status of the association between the app key and t...&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;, #&lt;ResponseElement id: 454, name: &quot;attributes&quot;, description: &quot;Name'value pairs used to extend the defautl API pro...&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;, #&lt;ResponseElement id: 455, name: &quot;consumerKey&quot;, description: &quot;The value of the consumer key&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;, #&lt;ResponseElement id: 456, name: &quot;consumerSecret&quot;, description: &quot;The value of the consumer secret associated with th...&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;, #&lt;ResponseElement id: 457, name: &quot;status&quot;, description: &quot;Status of the consumer key: 'approved' or 'pending'...&quot;, required: nil, api_method_id: 91, created_at: &quot;2012-08-13 19:35:24&quot;, updated_at: &quot;2012-08-13 19:35:24&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -3996,6 +4263,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 321, name: &quot;apiProducts&quot;, description: &quot;Name of an API product associated with the key&quot;, required: nil, api_method_id: 90, created_at: &quot;2012-08-07 19:22:29&quot;, updated_at: &quot;2012-08-07 19:22:29&quot;&gt;, #&lt;ResponseElement id: 322, name: &quot;status&quot;, description: &quot;Status of the association with the API product&quot;, required: nil, api_method_id: 90, created_at: &quot;2012-08-07 19:22:29&quot;, updated_at: &quot;2012-08-07 19:22:29&quot;&gt;, #&lt;ResponseElement id: 323, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value pairs associated with the key&quot;, required: nil, api_method_id: 90, created_at: &quot;2012-08-07 19:22:29&quot;, updated_at: &quot;2012-08-07 19:22:29&quot;&gt;, #&lt;ResponseElement id: 324, name: &quot;consumerKey&quot;, description: &quot;The value of the consumer key&quot;, required: nil, api_method_id: 90, created_at: &quot;2012-08-07 19:22:29&quot;, updated_at: &quot;2012-08-07 19:22:29&quot;&gt;, #&lt;ResponseElement id: 325, name: &quot;consumerSecret&quot;, description: &quot;The value of the secret associated with the consume...&quot;, required: nil, api_method_id: 90, created_at: &quot;2012-08-07 19:22:29&quot;, updated_at: &quot;2012-08-07 19:22:29&quot;&gt;, #&lt;ResponseElement id: 326, name: &quot;status&quot;, description: &quot;Staus of the consumer key: 'approved' or 'pending'&quot;, required: nil, api_method_id: 90, created_at: &quot;2012-08-07 19:22:29&quot;, updated_at: &quot;2012-08-07 19:22:29&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerName}/apps/{appName}/keys/{consumerKey}</td>   
     	<td>Basic Auth</td>
@@ -4023,6 +4293,9 @@ Failure 4xx with proper error message
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/developers/{developerName}/apps/{appName}/keys/{consumerKey}</td>   
     	<td>Basic Auth</td>
@@ -4048,6 +4321,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -4105,6 +4381,9 @@ The ApiProduct(s) specified in request payload will be merged with existing ApiP
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 213, name: &quot;apiproduct&quot;, description: &quot;The name of the API Product added to the Developer ...&quot;, required: nil, api_method_id: 89, created_at: &quot;2012-07-27 21:16:03&quot;, updated_at: &quot;2012-07-27 21:16:03&quot;&gt;, #&lt;ResponseElement id: 214, name: &quot;status&quot;, description: &quot;The status of the API Product&quot;, required: nil, api_method_id: 89, created_at: &quot;2012-07-27 21:16:03&quot;, updated_at: &quot;2012-07-27 21:16:03&quot;&gt;, #&lt;ResponseElement id: 215, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value pairs added by the client&quot;, required: nil, api_method_id: 89, created_at: &quot;2012-07-27 21:16:03&quot;, updated_at: &quot;2012-07-27 21:16:03&quot;&gt;, #&lt;ResponseElement id: 216, name: &quot;consumerKey&quot;, description: &quot;The value of the Developer App Key to which the API...&quot;, required: nil, api_method_id: 89, created_at: &quot;2012-07-27 21:16:03&quot;, updated_at: &quot;2012-07-27 21:16:03&quot;&gt;, #&lt;ResponseElement id: 217, name: &quot;consumerSecret&quot;, description: &quot;The value of the Developer App Key secret to which ...&quot;, required: nil, api_method_id: 89, created_at: &quot;2012-07-27 21:16:03&quot;, updated_at: &quot;2012-07-27 21:16:03&quot;&gt;, #&lt;ResponseElement id: 218, name: &quot;status&quot;, description: &quot;The status of the Consumer App Key (approved or pen...&quot;, required: nil, api_method_id: 89, created_at: &quot;2012-07-27 21:16:03&quot;, updated_at: &quot;2012-07-27 21:16:03&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/developers/{developerName}/apps/{appName}/keys/{consumerKey}</td>   
     	<td>Basic Auth</td>
@@ -4137,6 +4416,9 @@ The ApiProduct(s) specified in request payload will be merged with existing ApiP
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -4202,6 +4484,9 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.</span></td>
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 164, name: &quot;accessType&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 165, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 166, name: &quot;callbackUrl&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 167, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 168, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 169, name: &quot;credentials&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 170, name: &quot;apiProducts&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 171, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 172, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 173, name: &quot;consumerKey&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 174, name: &quot;consumerSecret&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 175, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 176, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 177, name: &quot;lastModifiedBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 178, name: &quot;name&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;, #&lt;ResponseElement id: 179, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 14, created_at: &quot;2012-07-27 17:38:26&quot;, updated_at: &quot;2012-07-27 17:38:26&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/developers/{developerName}/apps</td>   
     	<td>Basic Auth</td>
@@ -4252,6 +4537,9 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.</span></td>
   &quot;name&quot; : &quot;weatherapp&quot;,
   &quot;status&quot; : &quot;approved&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -4314,6 +4602,9 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.</span></td>
 </pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerName}/apps/{appName}</td>   
     	<td>Basic Auth</td>
@@ -4343,6 +4634,9 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.</span></td>
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerName}/apps/{appname}?query=count&amp;entity=apiresources</td>   
     	<td>Basic Auth</td>
@@ -4368,6 +4662,9 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.</span></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;weatherapp&quot;, &quot;weatherapp_prod&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -4443,6 +4740,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developerName}/apps?expand=true</td>   
     	<td>Basic Auth</td>
@@ -4468,6 +4768,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -4538,6 +4841,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/developers/{developerName}/apps/{appName}</td>   
     	<td>Basic Auth</td>
@@ -4579,6 +4885,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -4625,6 +4934,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/developers/{developerName}</td>   
     	<td>Basic Auth</td>
@@ -4666,6 +4978,9 @@ Failure 4xx with proper error message
   &quot;lastModifiedAt&quot; : 1342258630656,
   &quot;lastModifiedBy&quot; : &quot;defaultUser&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 180, name: &quot;apps&quot;, description: &quot;The name of the App that the search was performed o...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 181, name: &quot;email&quot;, description: &quot;Email address of the developer of this App&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 182, name: &quot;firstName&quot;, description: &quot;First name of the developer of this App&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 183, name: &quot;last_name&quot;, description: &quot;Last name of the developer of this App&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 184, name: &quot;organizationName&quot;, description: &quot;The Organization to which the Developer of this App...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 185, name: &quot;userName&quot;, description: &quot;Username of the Developer of this App (not used by ...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 186, name: &quot;status&quot;, description: &quot;The status of the Developer of this App (Active, In...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 187, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value pairs that constitute a custom...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 188, name: &quot;createdAt&quot;, description: &quot;The Unix time value for the creation date of this e...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 189, name: &quot;createdBy&quot;, description: &quot;The username for the Apigee account holder who crea...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 190, name: &quot;lastModifiedAt&quot;, description: &quot;The Unix time value for the most recent modificatio...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;, #&lt;ResponseElement id: 191, name: &quot;lastModifiedBy&quot;, description: &quot;The username for the Apigee account holder who most...&quot;, required: nil, api_method_id: 36, created_at: &quot;2012-07-27 20:14:18&quot;, updated_at: &quot;2012-07-27 20:14:18&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -4711,6 +5026,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 291, name: &quot;apps&quot;, description: &quot;A list of apps associated with the developer&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 292, name: &quot;email&quot;, description: &quot;The developers' email--used as the unique key to re...&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 293, name: &quot;firstName&quot;, description: &quot;The developer's first name&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 294, name: &quot;lastName&quot;, description: &quot;The developer's last name&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 295, name: &quot;userName&quot;, description: &quot;A username created by the developer--unused in Apig...&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 296, name: &quot;organizationName&quot;, description: &quot;The organization where the developer is registered&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 297, name: &quot;status&quot;, description: &quot;The developer's status--active, inactive,  login_lo...&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;, #&lt;ResponseElement id: 298, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value attributes that can be used to...&quot;, required: nil, api_method_id: 34, created_at: &quot;2012-08-06 20:10:52&quot;, updated_at: &quot;2012-08-06 20:10:52&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/developerEmail}</td>   
     	<td>Basic Auth</td>
@@ -4736,6 +5054,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -4781,6 +5102,9 @@ Failure 4xx with proper error message
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 192, name: &quot;apps&quot;, description: &quot;The name of the App&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 193, name: &quot;email&quot;, description: &quot;The email address of the Developer who registered t...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 194, name: &quot;firstName&quot;, description: &quot;The first name of the Developer who registered the ...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 195, name: &quot;last_name&quot;, description: &quot;The last name of the Developer who registered the A...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 196, name: &quot;userName&quot;, description: &quot;The username of the Developer who registered the Ap...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 197, name: &quot;organizationName&quot;, description: &quot;The Organization which the Developer who registered...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 198, name: &quot;status&quot;, description: &quot;The status of the Developer who registered the App ...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 199, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value attributes that are part of th...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 200, name: &quot;createdAt&quot;, description: &quot;The Unix time at which the Developer profile was cr...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 201, name: &quot;createdBy&quot;, description: &quot;The Apigee username of the user who created the Dev...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 202, name: &quot;lastModifiedAt&quot;, description: &quot;The Unix time at which the Developer profile was la...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;, #&lt;ResponseElement id: 203, name: &quot;lastModifiedAt&quot;, description: &quot;The Apigee username of the user who most recently m...&quot;, required: nil, api_method_id: 138, created_at: &quot;2012-07-27 20:42:42&quot;, updated_at: &quot;2012-07-27 20:42:42&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers?app={appName}</td>   
     	<td>Basic Auth</td>
@@ -4809,6 +5133,9 @@ Failure 4xx with proper error message
 [developer@apigee.com]</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/developers/{developername}?registereddate={registeredDate}</td>   
     	<td>Basic Auth</td>
@@ -4834,6 +5161,9 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;developer@apigee.com&quot;, &quot;dev1@apigee.com&quot;, &quot;dev2@apigee.com&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -4865,6 +5195,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with No Content</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -4917,6 +5250,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/developers/{developerName}</td>   
     	<td>Basic Auth</td>
@@ -4960,6 +5296,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 </pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 409, name: &quot;createdAt&quot;, description: &quot;Unix time when the environment was created&quot;, required: nil, api_method_id: 113, created_at: &quot;2012-08-13 18:47:20&quot;, updated_at: &quot;2012-08-13 18:47:20&quot;&gt;, #&lt;ResponseElement id: 410, name: &quot;createdBy&quot;, description: &quot;User name of the Apigee user who created the enviro...&quot;, required: nil, api_method_id: 113, created_at: &quot;2012-08-13 18:47:20&quot;, updated_at: &quot;2012-08-13 18:47:20&quot;&gt;, #&lt;ResponseElement id: 411, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the environment was last modified&quot;, required: nil, api_method_id: 113, created_at: &quot;2012-08-13 18:47:20&quot;, updated_at: &quot;2012-08-13 18:47:20&quot;&gt;, #&lt;ResponseElement id: 412, name: &quot;lastModifiedBy&quot;, description: &quot;User name of the Apigee user who last modified the ...&quot;, required: nil, api_method_id: 113, created_at: &quot;2012-08-13 18:47:20&quot;, updated_at: &quot;2012-08-13 18:47:20&quot;&gt;, #&lt;ResponseElement id: 413, name: &quot;name&quot;, description: &quot;Name of the environment&quot;, required: nil, api_method_id: 113, created_at: &quot;2012-08-13 18:47:20&quot;, updated_at: &quot;2012-08-13 18:47:20&quot;&gt;, #&lt;ResponseElement id: 414, name: &quot;properties&quot;, description: &quot;A list of properties reserved for use by Apigee&quot;, required: nil, api_method_id: 113, created_at: &quot;2012-08-13 18:47:20&quot;, updated_at: &quot;2012-08-13 18:47:20&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/environments/{environmentName}</td>   
     	<td>Basic Auth</td>
@@ -4993,6 +5332,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
     }
 }
 </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 407, name: &quot;List&quot;, description: &quot;A list of items (in this case environments)&quot;, required: nil, api_method_id: 21, created_at: &quot;2012-08-13 18:44:02&quot;, updated_at: &quot;2012-08-13 18:44:02&quot;&gt;, #&lt;ResponseElement id: 408, name: &quot;Item&quot;, description: &quot;A list of environments by name&quot;, required: nil, api_method_id: 21, created_at: &quot;2012-08-13 18:44:02&quot;, updated_at: &quot;2012-08-13 18:44:02&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -5032,7 +5374,16 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre></pre></div></td>
+		<td colspan="3"><div id="well"><pre>  {
+  &quot;entry&quot; : [ {
+    &quot;name&quot; : &quot;dev&quot;,
+    &quot;value&quot; : &quot;user1&quot;
+  } ],
+  &quot;name&quot; : &quot;prodmap&quot;
+}</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 396, name: &quot;entry&quot;, description: &quot;The name/value pair for the entry, that defines the...&quot;, required: nil, api_method_id: 44, created_at: &quot;2012-08-13 18:37:15&quot;, updated_at: &quot;2012-08-13 18:37:15&quot;&gt;, #&lt;ResponseElement id: 397, name: &quot;name&quot;, description: &quot;The name of the map to be created&quot;, required: nil, api_method_id: 44, created_at: &quot;2012-08-13 18:37:15&quot;, updated_at: &quot;2012-08-13 18:37:15&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -5063,6 +5414,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
   &quot;name&quot; : &quot;qa&quot;,
   &quot;value&quot; : &quot;user2&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 398, name: &quot;name&quot;, description: &quot;The name of the deleted netry&quot;, required: nil, api_method_id: 48, created_at: &quot;2012-08-13 18:38:19&quot;, updated_at: &quot;2012-08-13 18:38:19&quot;&gt;, #&lt;ResponseElement id: 399, name: &quot;value&quot;, description: &quot;The value of the deleted entry&quot;, required: nil, api_method_id: 48, created_at: &quot;2012-08-13 18:38:19&quot;, updated_at: &quot;2012-08-13 18:38:19&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -5096,6 +5450,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
   } ],
   &quot;name&quot; : &quot;prodmap&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 405, name: &quot;entry&quot;, description: &quot;Name'value pair that defines an entry in the map&quot;, required: nil, api_method_id: 63, created_at: &quot;2012-08-13 18:42:29&quot;, updated_at: &quot;2012-08-13 18:42:29&quot;&gt;, #&lt;ResponseElement id: 406, name: &quot;name&quot;, description: &quot;Name of the map that was deleted&quot;, required: nil, api_method_id: 63, created_at: &quot;2012-08-13 18:42:29&quot;, updated_at: &quot;2012-08-13 18:42:29&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -5139,6 +5496,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 400, name: &quot;map&quot;, description: &quot;Top level element for a map&quot;, required: nil, api_method_id: 158, created_at: &quot;2012-08-13 18:40:09&quot;, updated_at: &quot;2012-08-13 18:40:09&quot;&gt;, #&lt;ResponseElement id: 401, name: &quot;entry&quot;, description: &quot;Name/value pair that defines the entry&quot;, required: nil, api_method_id: 158, created_at: &quot;2012-08-13 18:40:09&quot;, updated_at: &quot;2012-08-13 18:40:09&quot;&gt;, #&lt;ResponseElement id: 402, name: &quot;name&quot;, description: &quot;The name of the map&quot;, required: nil, api_method_id: 158, created_at: &quot;2012-08-13 18:40:09&quot;, updated_at: &quot;2012-08-13 18:40:09&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/maps?expand=true</td>   
     	<td>Basic Auth</td>
@@ -5172,6 +5532,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 403, name: &quot;entry&quot;, description: &quot;Name/value pair that defines the map entry&quot;, required: nil, api_method_id: 45, created_at: &quot;2012-08-13 18:41:13&quot;, updated_at: &quot;2012-08-13 18:41:13&quot;&gt;, #&lt;ResponseElement id: 404, name: &quot;name&quot;, description: &quot;The name of the map&quot;, required: nil, api_method_id: 45, created_at: &quot;2012-08-13 18:41:13&quot;, updated_at: &quot;2012-08-13 18:41:13&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/maps/{mapName}</td>   
     	<td>Basic Auth</td>
@@ -5197,6 +5560,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>[ &quot;sandbox_map&quot;, &quot;prodmap&quot; ]</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -5241,6 +5607,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 392, name: &quot;entry&quot;, description: &quot;The name of the list of entries in the map&quot;, required: nil, api_method_id: 62, created_at: &quot;2012-08-13 18:33:23&quot;, updated_at: &quot;2012-08-13 18:33:23&quot;&gt;, #&lt;ResponseElement id: 393, name: &quot;name&quot;, description: &quot;The name of the entry&quot;, required: nil, api_method_id: 62, created_at: &quot;2012-08-13 18:33:23&quot;, updated_at: &quot;2012-08-13 18:33:23&quot;&gt;, #&lt;ResponseElement id: 394, name: &quot;value&quot;, description: &quot;The value of the entry&quot;, required: nil, api_method_id: 62, created_at: &quot;2012-08-13 18:33:23&quot;, updated_at: &quot;2012-08-13 18:33:23&quot;&gt;, #&lt;ResponseElement id: 395, name: &quot;name&quot;, description: &quot;The name of the map&quot;, required: nil, api_method_id: 62, created_at: &quot;2012-08-13 18:33:23&quot;, updated_at: &quot;2012-08-13 18:33:23&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/maps/{mapName}</td>   
     	<td>Basic Auth</td>
@@ -5273,6 +5642,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -5324,6 +5696,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth1/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
@@ -5351,6 +5726,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><div id="well"><pre>{
   &quot;value&quot; : 4
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -5404,6 +5782,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 </pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 327, name: &quot;apiProducts&quot;, description: &quot;API products associated with the consumer key used ...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:58:54&quot;&gt;, #&lt;ResponseElement id: 328, name: &quot;app&quot;, description: &quot;App with which the access token is associated&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 329, name: &quot;appUserId&quot;, description: &quot;The ID of the app end user for whom the access toke...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 330, name: &quot;attributes&quot;, description: &quot;Name/value pairs used to exntend the default OAuth ...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 331, name: &quot;consumerKey&quot;, description: &quot;The consumer key associated with access toen&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 332, name: &quot;consumerSecret&quot;, description: &quot;The consumer secret associated with the consumer ke...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 333, name: &quot;createdAt&quot;, description: &quot;Unix time the access token was generated&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 334, name: &quot;createdBy&quot;, description: &quot;User name of the Apigee user who created the access...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 335, name: &quot;expiresAt&quot;, description: &quot;Unix time the access token will expire&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 336, name: &quot;issuedAt&quot;, description: &quot;Validity time period for the OAuth verifier code&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:58:54&quot;&gt;, #&lt;ResponseElement id: 337, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time the access token was last modified&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 338, name: &quot;lastModifiedBy&quot;, description: &quot;User name of the Apigee user who last modified&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 339, name: &quot;scope&quot;, description: &quot;The OAUth scope of the access token (used at runtim...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 340, name: &quot;secret&quot;, description: &quot;The screat associated with the access token&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 341, name: &quot;status&quot;, description: &quot;The status of the access token: 'approved', 'revoke...&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;, #&lt;ResponseElement id: 342, name: &quot;token&quot;, description: &quot;The value of the Access Token&quot;, required: nil, api_method_id: 152, created_at: &quot;2012-08-10 17:21:43&quot;, updated_at: &quot;2012-08-10 17:21:43&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/oauth1/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
@@ -5429,6 +5810,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -5490,6 +5874,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/oauth1/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
@@ -5522,6 +5909,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 200 with proper response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -5569,6 +5959,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth/1/requesttokens/{requesttoken}</td>   
     	<td>Basic Auth</td>
@@ -5612,6 +6005,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
   &quot;status&quot; : &quot;approved&quot;,
   &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 343, name: &quot;app&quot;, description: &quot;The app for which the request token was generated&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 344, name: &quot;attributes&quot;, description: &quot;Name/value elements used to extend the default requ...&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 345, name: &quot;callbackUrl&quot;, description: &quot;Fetches the client registration details and verifie...&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 346, name: &quot;consumerKey&quot;, description: &quot;The key associated with the app&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 347, name: &quot;createdAt&quot;, description: &quot;Unix time when the request token was created&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 348, name: &quot;createdBy&quot;, description: &quot;Apigee user name of the user who create the request...&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 349, name: &quot;expiresAt&quot;, description: &quot;Expiry time period of the token to be generated; to...&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 350, name: &quot;issuedAt&quot;, description: &quot;Validity time period for the OAuth verifier code &quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 351, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the request token was last modified&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 352, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee user name of the user who last modified the ...&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 353, name: &quot;scope&quot;, description: &quot;Oauth scope(s) included in the request&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 354, name: &quot;secret&quot;, description: &quot;Secret password for getting the request token&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 355, name: &quot;status&quot;, description: &quot;Status of the request token; changes to expired whe...&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;, #&lt;ResponseElement id: 356, name: &quot;token&quot;, description: &quot;Value of the request token&quot;, required: nil, api_method_id: 143, created_at: &quot;2012-08-10 17:56:23&quot;, updated_at: &quot;2012-08-10 17:56:23&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -5677,6 +6073,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/oauth/1/requesttokens</td>   
     	<td>Basic Auth</td>
@@ -5702,6 +6101,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 200 with proper response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -5752,6 +6154,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth/1/verifiers/{verifiercode}</td>   
     	<td>Basic Auth</td>
@@ -5791,6 +6196,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
   &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
   &quot;requestToken&quot; : &quot;wsxHGWZBwruGfkDGrPNWM2HNVddd&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 252, name: &quot;appUserId&quot;, description: &quot;Resource owner's user ID&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 253, name: &quot;attributes&quot;, description: &quot;Name/value attributes for the verifier&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 254, name: &quot;code&quot;, description: &quot;The verifier code provided by the resource owner&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 255, name: &quot;createdAt&quot;, description: &quot;UNIX time the app was created&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 256, name: &quot;createdBy&quot;, description: &quot;Apigee user account name of the individual who subm...&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 257, name: &quot;expiresAt&quot;, description: &quot;Expiry time period of the token to be generated; to...&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 258, name: &quot;issuedAt&quot;, description: &quot;UNIX time the verifier code is issued &quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 259, name: &quot;lastModifiedAt&quot;, description: &quot;UNIX time the app was last modified&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 260, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee user account name of the individual who subm...&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;, #&lt;ResponseElement id: 261, name: &quot;requestToken&quot;, description: &quot;Request token associated with the verifier&quot;, required: nil, api_method_id: 149, created_at: &quot;2012-07-27 23:41:49&quot;, updated_at: &quot;2012-07-27 23:48:31&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -5838,6 +6246,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 262, name: &quot;code&quot;, description: &quot;Fetches the detail of the verifier code provided by...&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 263, name: &quot;appUserId&quot;, description: &quot;Resource owner's user ID&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 264, name: &quot;attributes&quot;, description: &quot;Arbitrary name/value elements attached to the profi...&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 265, name: &quot;requestToken&quot;, description: &quot;Token to re-issue the request token&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 266, name: &quot;createdAt&quot;, description: &quot;UNIX time the verifier was created&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 267, name: &quot;createdBy&quot;, description: &quot;Apigee user account name of the individual who subm...&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 268, name: &quot;expiresAt&quot;, description: &quot;Expiry time period of the token to be generated; to...&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 269, name: &quot;issuedAt&quot;, description: &quot;UNIX time the verifier code is issued&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 270, name: &quot;lastModifiedBy&quot;, description: &quot;Apigee user account name of the individual who subm...&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;, #&lt;ResponseElement id: 271, name: &quot;lastModifiedAt&quot;, description: &quot;UNIX time the app was last modified&quot;, required: nil, api_method_id: 150, created_at: &quot;2012-07-27 23:57:30&quot;, updated_at: &quot;2012-07-27 23:57:30&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/oauth/1/verifiers</td>   
     	<td>Basic Auth</td>
@@ -5872,6 +6283,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><div id="well"><pre>Success 204
 
 </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -5924,6 +6338,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 </pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 69, name: &quot;app&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 70, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 71, name: &quot;clientId&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 72, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 73, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 74, name: &quot;expiresAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 75, name: &quot;grantType&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 76, name: &quot;issuedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 77, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 78, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 79, name: &quot;refreshCount&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 80, name: &quot;refreshToken&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 81, name: &quot;scope&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 82, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;, #&lt;ResponseElement id: 83, name: &quot;tokenType&quot;, description: &quot;&quot;, required: nil, api_method_id: 114, created_at: &quot;2012-07-26 23:34:00&quot;, updated_at: &quot;2012-07-26 23:34:00&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth2/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
@@ -5968,6 +6385,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 43, name: &quot;app&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 44, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 45, name: &quot;clientId&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 46, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 47, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 48, name: &quot;expiresAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 49, name: &quot;grantType&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 50, name: &quot;issuedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 51, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 52, name: &quot;lastModifiedBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 53, name: &quot;defaultUser&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 54, name: &quot;refreshCount&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 55, name: &quot;refreshToken&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 56, name: &quot;scope&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 57, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 58, name: &quot;token&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;, #&lt;ResponseElement id: 59, name: &quot;tokenType&quot;, description: &quot;&quot;, required: nil, api_method_id: 109, created_at: &quot;2012-07-26 00:27:51&quot;, updated_at: &quot;2012-07-26 00:27:51&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/oauth2/accesstokens/{accessToken}</td>   
     	<td>Basic Auth</td>
@@ -5997,6 +6417,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/oauth2/accesstokens</td>   
     	<td>Basic Auth</td>
@@ -6022,6 +6445,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -6074,6 +6500,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 234, name: &quot;apiProducts&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 235, name: &quot;app&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 236, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 237, name: &quot;clientId&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 238, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 239, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 240, name: &quot;expiresAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 241, name: &quot;grantType&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 242, name: &quot;issuedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 243, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 244, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 245, name: &quot;lastModifiedBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 246, name: &quot;refreshCount&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 247, name: &quot;refreshToken&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 248, name: &quot;scope&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 249, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 250, name: &quot;token&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;, #&lt;ResponseElement id: 251, name: &quot;tokenType&quot;, description: &quot;&quot;, required: nil, api_method_id: 111, created_at: &quot;2012-07-27 21:59:43&quot;, updated_at: &quot;2012-07-27 21:59:43&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">PUT</span></td>
     	<td>/oauth2/accesstokens/{accessToken}</td>   
     	<td>Basic Auth</td>
@@ -6099,6 +6528,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">PUT</span></td>
@@ -6153,6 +6585,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 </pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 33, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 34, name: &quot;client_id&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 35, name: &quot;code&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 36, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 37, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 38, name: &quot;expiresAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 39, name: &quot;issuedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 40, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 41, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;, #&lt;ResponseElement id: 42, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 108, created_at: &quot;2012-07-26 00:22:23&quot;, updated_at: &quot;2012-07-26 00:22:23&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth2/authorizationcodes/{authCode}</td>   
     	<td>Basic Auth</td>
@@ -6193,6 +6628,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
   &quot;scope&quot; : &quot;&quot;,
   &quot;status&quot; : &quot;active&quot;
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 11, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 12, name: &quot;client_id&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 13, name: &quot;code&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 14, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 15, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 16, name: &quot;expiresAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 17, name: &quot;issuedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 18, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 19, name: &quot;lastModifiedBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 20, name: &quot;scope&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;, #&lt;ResponseElement id: 21, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 106, created_at: &quot;2012-07-26 00:14:24&quot;, updated_at: &quot;2012-07-26 00:14:24&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -6241,6 +6679,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 22, name: &quot;attributes&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 23, name: &quot;client_id&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 24, name: &quot;code&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 25, name: &quot;createdAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 26, name: &quot;createdBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 27, name: &quot;expiresAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 28, name: &quot;issuedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 29, name: &quot;lastModifiedAt&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 30, name: &quot;lastModifiedBy&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 31, name: &quot;scope&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;, #&lt;ResponseElement id: 32, name: &quot;status&quot;, description: &quot;&quot;, required: nil, api_method_id: 107, created_at: &quot;2012-07-26 00:18:36&quot;, updated_at: &quot;2012-07-26 00:18:36&quot;&gt;]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/oauth2/authorizationcodes</td>   
     	<td>Basic Auth</td>
@@ -6275,7 +6716,7 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><div id="well"><pre>{
   &quot;createdAt&quot; : 1336659666648,
   &quot;createdBy&quot; : &quot;admin&quot;,
-  &quot;displayName&quot; : &quot;apigee-cs&quot;,
+  &quot;displayName&quot; : &quot;myorg&quot;,
   &quot;environments&quot; : [ &quot;test&quot;, &quot;prod&quot; ],
   &quot;lastModifiedAt&quot; : 1336659666648,
   &quot;lastModifiedBy&quot; : &quot;admin&quot;,
@@ -6288,6 +6729,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
     &quot;role&quot; : [ ]
   }
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 383, name: &quot;createdAt&quot;, description: &quot;Unix time when the organization was created&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 384, name: &quot;createdBy&quot;, description: &quot;User name of the Apigee user who created the organi...&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 385, name: &quot;displayName&quot;, description: &quot;Display name of the organization&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 386, name: &quot;environments&quot;, description: &quot;Environments available in the organization (by defa...&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 387, name: &quot;lastModifiedAt&quot;, description: &quot;Unix time when the organization was last modified&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 388, name: &quot;name&quot;, description: &quot;Internal name of the organization&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 389, name: &quot;properties&quot;, description: &quot;A list of descriptors used internally by Apigee&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 390, name: &quot;type&quot;, description: &quot;Organization type: currently 'trial' and 'paid' are...&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;, #&lt;ResponseElement id: 391, name: &quot;users&quot;, description: &quot;A list of user and roles for the organization. Only...&quot;, required: nil, api_method_id: 61, created_at: &quot;2012-08-13 18:27:09&quot;, updated_at: &quot;2012-08-13 18:27:09&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -6331,6 +6775,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">POST</span></td>
     	<td>/apis/{apiproxyName}/revisions/{revision}?format=bundle</td>   
     	<td>Basic Auth</td>
@@ -6371,6 +6818,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/users/{userName}/authenticate</td>   
     	<td>Basic Auth</td>
@@ -6389,24 +6839,27 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_79_doc' data-url='/api_methods/79-create-a-user' data-object='api_method' data-attribute='doc' data-type='textarea'>Creates a user account with an organization.</span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_79_curl_json' data-url='/api_methods/79-create-a-user' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u &quot;myname:mypass&quot; &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/users&quot; -X POST</span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_79_curl_json' data-url='/api_methods/79-create-a-user' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/users -X POST</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
-  &quot;emailId&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;firstName&quot; : &quot;ashok&quot;,
-  &quot;id&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;madhavan&quot;
+  &quot;emailId&quot; : &quot;joe@apigee.com&quot;,
+  &quot;firstName&quot; : &quot;joe&quot;,
+  &quot;id&quot; : &quot;joe@apigee.com&quot;,
+  &quot;lastName&quot; : &quot;developer&quot;
 }</pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
-  &quot;emailId&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;firstName&quot; : &quot;ashok&quot;,
-  &quot;id&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;madhavan&quot;,
-  &quot;roles&quot; : [ ]
+  &quot;emailId&quot; : &quot;joe@apigee.com&quot;,
+  &quot;firstName&quot; : &quot;joe&quot;,
+  &quot;id&quot; : &quot;joe@apigee.com&quot;,
+  &quot;lastName&quot; : &quot;developer&quot;,
+  &quot;roles&quot; : [ orgadmin ]
 }</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 371, name: &quot;emailId&quot;, description: &quot;The email of the user&quot;, required: nil, api_method_id: 79, created_at: &quot;2012-08-13 18:07:53&quot;, updated_at: &quot;2012-08-13 18:07:53&quot;&gt;, #&lt;ResponseElement id: 372, name: &quot;firstName&quot;, description: &quot;First name of the user&quot;, required: nil, api_method_id: 79, created_at: &quot;2012-08-13 18:07:53&quot;, updated_at: &quot;2012-08-13 18:07:53&quot;&gt;, #&lt;ResponseElement id: 373, name: &quot;id&quot;, description: &quot;The user's userID&quot;, required: nil, api_method_id: 79, created_at: &quot;2012-08-13 18:07:53&quot;, updated_at: &quot;2012-08-13 18:07:53&quot;&gt;, #&lt;ResponseElement id: 374, name: &quot;lastName&quot;, description: &quot;Last name of the user&quot;, required: nil, api_method_id: 79, created_at: &quot;2012-08-13 18:07:53&quot;, updated_at: &quot;2012-08-13 18:07:53&quot;&gt;, #&lt;ResponseElement id: 375, name: &quot;roles&quot;, description: &quot;The role of the user: 'orgadmin' or 'user'&quot;, required: nil, api_method_id: 79, created_at: &quot;2012-08-13 18:07:53&quot;, updated_at: &quot;2012-08-13 18:07:53&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">POST</span></td>
@@ -6434,6 +6887,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no response</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">DELETE</span></td>
@@ -6469,6 +6925,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/users/{userID}</td>   
     	<td>Basic Auth</td>
@@ -6496,6 +6955,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><div id="well"><pre>[ &quot;admin&quot;, &quot;ben&quot;, &quot;sroy@apigee.com&quot;, &quot;greg&quot;, &quot;hugol@apigee.com&quot;, &quot;rrisco@apigee.com&quot;, &quot;vinoth@apigee.com&quot;]</pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
+	</tr>
+	<tr>
 		<td><span class="label label-success">GET</span></td>
     	<td>/users</td>   
     	<td>Basic Auth</td>
@@ -6507,7 +6969,7 @@ If a developer's status is inactive, the developer is not allowed to create apps
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_83_description' data-url='/api_methods/83-update-a-user' data-object='api_method' data-attribute='description' data-type='textarea'>Updates a User profile with a new profile</span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_83_description' data-url='/api_methods/83-update-a-user' data-object='api_method' data-attribute='description' data-type='textarea'>Updates a user profile with a new profile</span></td>
 		  
 	</tr>
 	<tr>
@@ -6521,11 +6983,14 @@ If a developer's status is inactive, the developer is not allowed to create apps
   &quot;emailId&quot; : &quot;guest@apigee.com&quot;,
   &quot;firstName&quot; : &quot;Guest&quot;,
   &quot;id&quot; : &quot;guest@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;NoLOnger&quot;
+  &quot;lastName&quot; : &quot;NoLonger&quot;
 }</pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>Success 204 with no content</pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">PUT</span></td>
@@ -6561,7 +7026,7 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
     &quot;VirtualHost&quot;: {
-        &quot;@name&quot;: &quot;default&quot;, 
+        &quot;name&quot;: &quot;default&quot;, 
         &quot;HostAliases&quot;: {
             &quot;HostAlias&quot;: &quot;myorg-test.apigee.net&quot;
         }, 
@@ -6570,6 +7035,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
     }
 }
 </pre></div></td>
+	</tr>
+	<tr>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 378, name: &quot;VirtualHost&quot;, description: &quot;Settings for a named virtual host&quot;, required: nil, api_method_id: 23, created_at: &quot;2012-08-13 18:15:13&quot;, updated_at: &quot;2012-08-13 18:15:13&quot;&gt;, #&lt;ResponseElement id: 379, name: &quot;name&quot;, description: &quot;The name of the virutal host&quot;, required: nil, api_method_id: 23, created_at: &quot;2012-08-13 18:15:13&quot;, updated_at: &quot;2012-08-13 18:15:13&quot;&gt;, #&lt;ResponseElement id: 380, name: &quot;HostAliases&quot;, description: &quot;The URL for the virtual host &quot;, required: nil, api_method_id: 23, created_at: &quot;2012-08-13 18:15:13&quot;, updated_at: &quot;2012-08-13 18:15:13&quot;&gt;, #&lt;ResponseElement id: 381, name: &quot;Interfaces&quot;, description: &quot;Named interfaces used by the virtual host&quot;, required: nil, api_method_id: 23, created_at: &quot;2012-08-13 18:15:13&quot;, updated_at: &quot;2012-08-13 18:15:13&quot;&gt;, #&lt;ResponseElement id: 382, name: &quot;Port&quot;, description: &quot;The port on which the virtual host listens&quot;, required: nil, api_method_id: 23, created_at: &quot;2012-08-13 18:15:13&quot;, updated_at: &quot;2012-08-13 18:15:13&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
@@ -6593,6 +7061,9 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_22_curl_json' data-url='/api_methods/22-list-virtual-hosts-for-an-environment' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass -H "Accept:application/json" https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/virtualhosts</span></pre></div></td>
 	</tr>
 	<tr>
+		<td colspan="3"><div id="well"><pre></pre></div></td>
+	</tr>
+	<tr>
 		<td colspan="3"><div id="well"><pre>{
     &quot;List&quot;: {
         &quot;Item&quot;: &quot;default&quot;
@@ -6601,7 +7072,7 @@ If a developer's status is inactive, the developer is not allowed to create apps
 </pre></div></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre></pre></div></td>
+		<td colspan="3"><div id="well"><pre>[#&lt;ResponseElement id: 376, name: &quot;List&quot;, description: &quot;A list of named virtual hosts&quot;, required: nil, api_method_id: 22, created_at: &quot;2012-08-13 18:13:08&quot;, updated_at: &quot;2012-08-13 18:13:08&quot;&gt;, #&lt;ResponseElement id: 377, name: &quot;Item&quot;, description: &quot;The name of a virtual in the environment specified ...&quot;, required: nil, api_method_id: 22, created_at: &quot;2012-08-13 18:13:08&quot;, updated_at: &quot;2012-08-13 18:13:08&quot;&gt;]</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>

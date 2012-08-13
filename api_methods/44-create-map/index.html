@@ -116,18 +116,6 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 
 
 <tr>
-<div class="request_element" id="request_element_56">
-<td>entry</td>
-<td>The name/value pair for the entry, that data to be stored</td>
-<td>N/A</td>
-<td>Yes</td>
-<td><a href="../../request_elements/56/index.html" class="btn btn-mini">Detail</a></td>
-</div></tr>
-
-
-
-
-<tr>
 <div class="request_element" id="request_element_57">
 <td>name</td>
 <td>The name of the map to be created</td>
@@ -138,13 +126,31 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 
 
 
+
+<tr>
+<div class="request_element" id="request_element_56">
+<td>entry</td>
+<td>The name/value pair for the entry, that defines the data to be stored</td>
+<td>N/A</td>
+<td>Yes</td>
+<td><a href="../../request_elements/56/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
 </table>
 </div>
 
 <b>Response Payload:</b> 
 <div class="well">
 	<pre>
-  
+    {
+  &quot;entry&quot; : [ {
+    &quot;name&quot; : &quot;dev&quot;,
+    &quot;value&quot; : &quot;user1&quot;
+  } ],
+  &quot;name&quot; : &quot;prodmap&quot;
+}
 	</pre>
 </div>
 
@@ -158,7 +164,19 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <th></th>
 		</tr>
 		</thead>
-
+<tr>
+<div class="response_element" id="response_element_396">
+<td>entry: </td>
+<td>The name/value pair for the entry, that defines the data to be stored</td>
+<td><a href="../../response_elements/396/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/44-create-map?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_397">
+<td>name: </td>
+<td>The name of the map to be created</td>
+<td><a href="../../response_elements/397/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/44-create-map?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr>
 </table></div>
 
 <b>Errors</b> 
@@ -177,7 +195,6 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
-- application/json
 
 </p>
 

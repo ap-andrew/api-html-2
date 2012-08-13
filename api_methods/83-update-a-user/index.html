@@ -77,7 +77,7 @@ PUT
 
 <p>
   <b>Description:</b>
-  Updates a User profile with a new profile
+  Updates a user profile with a new profile
 </p>
 
 <b> cURL:</b>
@@ -95,7 +95,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/use
   &quot;emailId&quot; : &quot;guest@apigee.com&quot;,
   &quot;firstName&quot; : &quot;Guest&quot;,
   &quot;id&quot; : &quot;guest@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;NoLOnger&quot;
+  &quot;lastName&quot; : &quot;NoLonger&quot;
 }
 	</pre>
 </div>
@@ -112,6 +112,54 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/use
 			<th>Required?</th>
 		</tr>
 		</thead>
+
+
+<tr>
+<div class="request_element" id="request_element_62">
+<td>emailId</td>
+<td>The user's email address</td>
+<td>N/A</td>
+<td>Yes</td>
+<td><a href="../../request_elements/62/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_63">
+<td>firstName</td>
+<td>The first name of the user</td>
+<td>N/A</td>
+<td>Yes</td>
+<td><a href="../../request_elements/63/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_64">
+<td>id</td>
+<td>The user ID</td>
+<td>N/A</td>
+<td>Yes</td>
+<td><a href="../../request_elements/64/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_65">
+<td>lastName</td>
+<td>The last name of the user</td>
+<td>N/A</td>
+<td>Yes</td>
+<td><a href="../../request_elements/65/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
 
 </table>
 </div>
@@ -152,6 +200,7 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
+- application/json
 
 </p>
 

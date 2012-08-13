@@ -117,7 +117,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}
   {
   &quot;createdAt&quot; : 1336659666648,
   &quot;createdBy&quot; : &quot;admin&quot;,
-  &quot;displayName&quot; : &quot;apigee-cs&quot;,
+  &quot;displayName&quot; : &quot;myorg&quot;,
   &quot;environments&quot; : [ &quot;test&quot;, &quot;prod&quot; ],
   &quot;lastModifiedAt&quot; : 1336659666648,
   &quot;lastModifiedBy&quot; : &quot;admin&quot;,
@@ -143,7 +143,61 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}
 <th></th>
 		</tr>
 		</thead>
-
+<tr>
+<div class="response_element" id="response_element_383">
+<td>createdAt: </td>
+<td>Unix time when the organization was created</td>
+<td><a href="../../response_elements/383/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_384">
+<td>createdBy: </td>
+<td>User name of the Apigee user who created the organization</td>
+<td><a href="../../response_elements/384/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_385">
+<td>displayName: </td>
+<td>Display name of the organization</td>
+<td><a href="../../response_elements/385/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_386">
+<td>environments: </td>
+<td>Environments available in the organization (by default 'test' and 'prod' environments are available.</td>
+<td><a href="../../response_elements/386/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_387">
+<td>lastModifiedAt: </td>
+<td>Unix time when the organization was last modified</td>
+<td><a href="../../response_elements/387/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_388">
+<td>name: </td>
+<td>Internal name of the organization</td>
+<td><a href="../../response_elements/388/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_389">
+<td>properties: </td>
+<td>A list of descriptors used internally by Apigee</td>
+<td><a href="../../response_elements/389/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_390">
+<td>type: </td>
+<td>Organization type: currently 'trial' and 'paid' are valid</td>
+<td><a href="../../response_elements/390/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_391">
+<td>users: </td>
+<td>A list of user and roles for the organization. Only populated for users in sysadmn role.</td>
+<td><a href="../../response_elements/391/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/61-get-organization?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr>
 </table></div>
 
 <b>Errors</b> 
@@ -162,6 +216,7 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
+- application/json
 
 </p>
 

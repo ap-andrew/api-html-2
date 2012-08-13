@@ -116,11 +116,24 @@
 </li>
 
 	
-	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">{
+    &quot;List&quot;: {
+        &quot;Item&quot;: &quot;default&quot;
+    }
+}
+</textarea>
 
 </li>
 	
-		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
+	<div class="fields">
+	  <input id="api_method_response_elements_attributes_0_name" name="api_method[response_elements_attributes][0][name]" size="30" type="text" value="List" />
+      <input id="api_method_response_elements_attributes_0_description" name="api_method[response_elements_attributes][0][description]" size="30" type="text" value="A list of named virtual hosts" />
+	  <input id="api_method_response_elements_attributes_0__destroy" name="api_method[response_elements_attributes][0][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_0_id" name="api_method[response_elements_attributes][0][id]" type="hidden" value="376" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_1_name" name="api_method[response_elements_attributes][1][name]" size="30" type="text" value="Item" />
+      <input id="api_method_response_elements_attributes_1_description" name="api_method[response_elements_attributes][1][description]" size="30" type="text" value="The name of a virtual in the environment specified in the request. For detail, do a GET on the named virtual host." />
+	  <input id="api_method_response_elements_attributes_1__destroy" name="api_method[response_elements_attributes][1][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_1_id" name="api_method[response_elements_attributes][1][id]" type="hidden" value="377" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
 	
 	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20"></textarea>
 
@@ -171,12 +184,7 @@
 
 </li>
 
-	<li class="text input optional" id="api_method_sample_request_json_input"><label class=" label" for="api_method_sample_request_json">Sample request json</label><textarea id="api_method_sample_request_json" name="api_method[sample_request_json]" rows="20">{
-    &quot;List&quot;: {
-        &quot;Item&quot;: &quot;default&quot;
-    }
-}
-</textarea>
+	<li class="text input optional" id="api_method_sample_request_json_input"><label class=" label" for="api_method_sample_request_json">Sample request json</label><textarea id="api_method_sample_request_json" name="api_method[sample_request_json]" rows="20"></textarea>
 
 </li>	
 

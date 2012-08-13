@@ -116,11 +116,25 @@
 </li>
 
 	
-	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">  {
+  &quot;entry&quot; : [ {
+    &quot;name&quot; : &quot;dev&quot;,
+    &quot;value&quot; : &quot;user1&quot;
+  } ],
+  &quot;name&quot; : &quot;prodmap&quot;
+}</textarea>
 
 </li>
 	
-		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
+	<div class="fields">
+	  <input id="api_method_response_elements_attributes_0_name" name="api_method[response_elements_attributes][0][name]" size="30" type="text" value="entry" />
+      <input id="api_method_response_elements_attributes_0_description" name="api_method[response_elements_attributes][0][description]" size="30" type="text" value="The name/value pair for the entry, that defines the data to be stored" />
+	  <input id="api_method_response_elements_attributes_0__destroy" name="api_method[response_elements_attributes][0][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_0_id" name="api_method[response_elements_attributes][0][id]" type="hidden" value="396" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_1_name" name="api_method[response_elements_attributes][1][name]" size="30" type="text" value="name" />
+      <input id="api_method_response_elements_attributes_1_description" name="api_method[response_elements_attributes][1][description]" size="30" type="text" value="The name of the map to be created" />
+	  <input id="api_method_response_elements_attributes_1__destroy" name="api_method[response_elements_attributes][1][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_1_id" name="api_method[response_elements_attributes][1][id]" type="hidden" value="397" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
 	
 	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20"></textarea>
 
@@ -183,20 +197,20 @@
 
 	
 	<div class="fields">
-	  <input id="api_method_request_elements_attributes_0_name" name="api_method[request_elements_attributes][0][name]" size="30" type="text" value="entry" />
-      <input id="api_method_request_elements_attributes_0_description" name="api_method[request_elements_attributes][0][description]" size="30" type="text" value="The name/value pair for the entry, that data to be stored" />
+	  <input id="api_method_request_elements_attributes_0_name" name="api_method[request_elements_attributes][0][name]" size="30" type="text" value="name" />
+      <input id="api_method_request_elements_attributes_0_description" name="api_method[request_elements_attributes][0][description]" size="30" type="text" value="The name of the map to be created" />
 	  <input id="api_method_request_elements_attributes_0_default_value" name="api_method[request_elements_attributes][0][default_value]" size="30" type="text" value="N/A" />
       <select id="api_method_request_elements_attributes_0_required" name="api_method[request_elements_attributes][0][required]"><option value="Yes" selected="selected">Yes</option>
 <option value="No">No</option></select>
 	  <input id="api_method_request_elements_attributes_0__destroy" name="api_method[request_elements_attributes][0][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
-<input id="api_method_request_elements_attributes_0_id" name="api_method[request_elements_attributes][0][id]" type="hidden" value="56" /></div><div class="fields">
-	  <input id="api_method_request_elements_attributes_1_name" name="api_method[request_elements_attributes][1][name]" size="30" type="text" value="name" />
-      <input id="api_method_request_elements_attributes_1_description" name="api_method[request_elements_attributes][1][description]" size="30" type="text" value="The name of the map to be created" />
+<input id="api_method_request_elements_attributes_0_id" name="api_method[request_elements_attributes][0][id]" type="hidden" value="57" /></div><div class="fields">
+	  <input id="api_method_request_elements_attributes_1_name" name="api_method[request_elements_attributes][1][name]" size="30" type="text" value="entry" />
+      <input id="api_method_request_elements_attributes_1_description" name="api_method[request_elements_attributes][1][description]" size="30" type="text" value="The name/value pair for the entry, that defines the data to be stored" />
 	  <input id="api_method_request_elements_attributes_1_default_value" name="api_method[request_elements_attributes][1][default_value]" size="30" type="text" value="N/A" />
       <select id="api_method_request_elements_attributes_1_required" name="api_method[request_elements_attributes][1][required]"><option value="Yes" selected="selected">Yes</option>
 <option value="No">No</option></select>
 	  <input id="api_method_request_elements_attributes_1__destroy" name="api_method[request_elements_attributes][1][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
-<input id="api_method_request_elements_attributes_1_id" name="api_method[request_elements_attributes][1][id]" type="hidden" value="57" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="request_elements">Elements</a></p>
+<input id="api_method_request_elements_attributes_1_id" name="api_method[request_elements_attributes][1][id]" type="hidden" value="56" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="request_elements">Elements</a></p>
 </ol></fieldset></form><div id="response_elements_fields_blueprint" style="display: none"><div class="fields">
 	  <input id="api_method_response_elements_attributes_new_response_elements_name" name="api_method[response_elements_attributes][new_response_elements][name]" size="30" type="text" />
       <input id="api_method_response_elements_attributes_new_response_elements_description" name="api_method[response_elements_attributes][new_response_elements][description]" size="30" type="text" />

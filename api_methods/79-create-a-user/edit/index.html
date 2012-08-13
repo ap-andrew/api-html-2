@@ -103,7 +103,7 @@
     <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="Creates a user in an Apigee Enterprise Organization" />
 
 </li>
-	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="curl -u &amp;quot;myname:mypass&amp;quot; &amp;quot;https://api.enterprise.apigee.com/v1/o/{myorg}/users&amp;quot; -X POST" />
+	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/users -X POST" />
 
 </li>
 
@@ -117,16 +117,36 @@
 
 	
 	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">{
-  &quot;emailId&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;firstName&quot; : &quot;ashok&quot;,
-  &quot;id&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;madhavan&quot;,
-  &quot;roles&quot; : [ ]
+  &quot;emailId&quot; : &quot;joe@apigee.com&quot;,
+  &quot;firstName&quot; : &quot;joe&quot;,
+  &quot;id&quot; : &quot;joe@apigee.com&quot;,
+  &quot;lastName&quot; : &quot;developer&quot;,
+  &quot;roles&quot; : [ orgadmin ]
 }</textarea>
 
 </li>
 	
-		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
+	<div class="fields">
+	  <input id="api_method_response_elements_attributes_0_name" name="api_method[response_elements_attributes][0][name]" size="30" type="text" value="emailId" />
+      <input id="api_method_response_elements_attributes_0_description" name="api_method[response_elements_attributes][0][description]" size="30" type="text" value="The email of the user" />
+	  <input id="api_method_response_elements_attributes_0__destroy" name="api_method[response_elements_attributes][0][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_0_id" name="api_method[response_elements_attributes][0][id]" type="hidden" value="371" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_1_name" name="api_method[response_elements_attributes][1][name]" size="30" type="text" value="firstName" />
+      <input id="api_method_response_elements_attributes_1_description" name="api_method[response_elements_attributes][1][description]" size="30" type="text" value="First name of the user" />
+	  <input id="api_method_response_elements_attributes_1__destroy" name="api_method[response_elements_attributes][1][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_1_id" name="api_method[response_elements_attributes][1][id]" type="hidden" value="372" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_2_name" name="api_method[response_elements_attributes][2][name]" size="30" type="text" value="id" />
+      <input id="api_method_response_elements_attributes_2_description" name="api_method[response_elements_attributes][2][description]" size="30" type="text" value="The user's userID" />
+	  <input id="api_method_response_elements_attributes_2__destroy" name="api_method[response_elements_attributes][2][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_2_id" name="api_method[response_elements_attributes][2][id]" type="hidden" value="373" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_3_name" name="api_method[response_elements_attributes][3][name]" size="30" type="text" value="lastName" />
+      <input id="api_method_response_elements_attributes_3_description" name="api_method[response_elements_attributes][3][description]" size="30" type="text" value="Last name of the user" />
+	  <input id="api_method_response_elements_attributes_3__destroy" name="api_method[response_elements_attributes][3][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_3_id" name="api_method[response_elements_attributes][3][id]" type="hidden" value="374" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_4_name" name="api_method[response_elements_attributes][4][name]" size="30" type="text" value="roles" />
+      <input id="api_method_response_elements_attributes_4_description" name="api_method[response_elements_attributes][4][description]" size="30" type="text" value="The role of the user: 'orgadmin' or 'user'" />
+	  <input id="api_method_response_elements_attributes_4__destroy" name="api_method[response_elements_attributes][4][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_4_id" name="api_method[response_elements_attributes][4][id]" type="hidden" value="375" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
 	
 	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20"></textarea>
 
@@ -178,16 +198,44 @@
 </li>
 
 	<li class="text input optional" id="api_method_sample_request_json_input"><label class=" label" for="api_method_sample_request_json">Sample request json</label><textarea id="api_method_sample_request_json" name="api_method[sample_request_json]" rows="20">{
-  &quot;emailId&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;firstName&quot; : &quot;ashok&quot;,
-  &quot;id&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;madhavan&quot;
+  &quot;emailId&quot; : &quot;joe@apigee.com&quot;,
+  &quot;firstName&quot; : &quot;joe&quot;,
+  &quot;id&quot; : &quot;joe@apigee.com&quot;,
+  &quot;lastName&quot; : &quot;developer&quot;
 }</textarea>
 
 </li>	
 
 	
-		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="request_elements">Elements</a></p>
+	<div class="fields">
+	  <input id="api_method_request_elements_attributes_0_name" name="api_method[request_elements_attributes][0][name]" size="30" type="text" value="emailId" />
+      <input id="api_method_request_elements_attributes_0_description" name="api_method[request_elements_attributes][0][description]" size="30" type="text" value="The users email address" />
+	  <input id="api_method_request_elements_attributes_0_default_value" name="api_method[request_elements_attributes][0][default_value]" size="30" type="text" value="" />
+      <select id="api_method_request_elements_attributes_0_required" name="api_method[request_elements_attributes][0][required]"><option value="Yes" selected="selected">Yes</option>
+<option value="No">No</option></select>
+	  <input id="api_method_request_elements_attributes_0__destroy" name="api_method[request_elements_attributes][0][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_request_elements_attributes_0_id" name="api_method[request_elements_attributes][0][id]" type="hidden" value="58" /></div><div class="fields">
+	  <input id="api_method_request_elements_attributes_1_name" name="api_method[request_elements_attributes][1][name]" size="30" type="text" value="firstName" />
+      <input id="api_method_request_elements_attributes_1_description" name="api_method[request_elements_attributes][1][description]" size="30" type="text" value="The user's first name" />
+	  <input id="api_method_request_elements_attributes_1_default_value" name="api_method[request_elements_attributes][1][default_value]" size="30" type="text" value="" />
+      <select id="api_method_request_elements_attributes_1_required" name="api_method[request_elements_attributes][1][required]"><option value="Yes" selected="selected">Yes</option>
+<option value="No">No</option></select>
+	  <input id="api_method_request_elements_attributes_1__destroy" name="api_method[request_elements_attributes][1][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_request_elements_attributes_1_id" name="api_method[request_elements_attributes][1][id]" type="hidden" value="59" /></div><div class="fields">
+	  <input id="api_method_request_elements_attributes_2_name" name="api_method[request_elements_attributes][2][name]" size="30" type="text" value="id" />
+      <input id="api_method_request_elements_attributes_2_description" name="api_method[request_elements_attributes][2][description]" size="30" type="text" value="The user's ID" />
+	  <input id="api_method_request_elements_attributes_2_default_value" name="api_method[request_elements_attributes][2][default_value]" size="30" type="text" value="" />
+      <select id="api_method_request_elements_attributes_2_required" name="api_method[request_elements_attributes][2][required]"><option value="Yes" selected="selected">Yes</option>
+<option value="No">No</option></select>
+	  <input id="api_method_request_elements_attributes_2__destroy" name="api_method[request_elements_attributes][2][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_request_elements_attributes_2_id" name="api_method[request_elements_attributes][2][id]" type="hidden" value="60" /></div><div class="fields">
+	  <input id="api_method_request_elements_attributes_3_name" name="api_method[request_elements_attributes][3][name]" size="30" type="text" value="lastName" />
+      <input id="api_method_request_elements_attributes_3_description" name="api_method[request_elements_attributes][3][description]" size="30" type="text" value="The user's last name" />
+	  <input id="api_method_request_elements_attributes_3_default_value" name="api_method[request_elements_attributes][3][default_value]" size="30" type="text" value="" />
+      <select id="api_method_request_elements_attributes_3_required" name="api_method[request_elements_attributes][3][required]"><option value="Yes" selected="selected">Yes</option>
+<option value="No">No</option></select>
+	  <input id="api_method_request_elements_attributes_3__destroy" name="api_method[request_elements_attributes][3][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_request_elements_attributes_3_id" name="api_method[request_elements_attributes][3][id]" type="hidden" value="61" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="request_elements">Elements</a></p>
 </ol></fieldset></form><div id="response_elements_fields_blueprint" style="display: none"><div class="fields">
 	  <input id="api_method_response_elements_attributes_new_response_elements_name" name="api_method[response_elements_attributes][new_response_elements][name]" size="30" type="text" />
       <input id="api_method_response_elements_attributes_new_response_elements_description" name="api_method[response_elements_attributes][new_response_elements][description]" size="30" type="text" />

@@ -84,7 +84,7 @@ POST
 
 <div class="well">
 	<pre>
-curl -u &amp;quot;myname:mypass&amp;quot; &amp;quot;https://api.enterprise.apigee.com/v1/o/{myorg}/users&amp;quot; -X POST
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/users -X POST
 </pre>
 </div>
 
@@ -92,10 +92,10 @@ curl -u &amp;quot;myname:mypass&amp;quot; &amp;quot;https://api.enterprise.apige
 <div class="well">
 	<pre>
   {
-  &quot;emailId&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;firstName&quot; : &quot;ashok&quot;,
-  &quot;id&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;madhavan&quot;
+  &quot;emailId&quot; : &quot;joe@apigee.com&quot;,
+  &quot;firstName&quot; : &quot;joe&quot;,
+  &quot;id&quot; : &quot;joe@apigee.com&quot;,
+  &quot;lastName&quot; : &quot;developer&quot;
 }
 	</pre>
 </div>
@@ -113,6 +113,54 @@ curl -u &amp;quot;myname:mypass&amp;quot; &amp;quot;https://api.enterprise.apige
 		</tr>
 		</thead>
 
+
+<tr>
+<div class="request_element" id="request_element_58">
+<td>emailId</td>
+<td>The users email address</td>
+<td></td>
+<td>Yes</td>
+<td><a href="../../request_elements/58/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_59">
+<td>firstName</td>
+<td>The user's first name</td>
+<td></td>
+<td>Yes</td>
+<td><a href="../../request_elements/59/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_60">
+<td>id</td>
+<td>The user's ID</td>
+<td></td>
+<td>Yes</td>
+<td><a href="../../request_elements/60/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_61">
+<td>lastName</td>
+<td>The user's last name</td>
+<td></td>
+<td>Yes</td>
+<td><a href="../../request_elements/61/index.html" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
 </table>
 </div>
 
@@ -120,11 +168,11 @@ curl -u &amp;quot;myname:mypass&amp;quot; &amp;quot;https://api.enterprise.apige
 <div class="well">
 	<pre>
   {
-  &quot;emailId&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;firstName&quot; : &quot;ashok&quot;,
-  &quot;id&quot; : &quot;ashok@apigee.com&quot;,
-  &quot;lastName&quot; : &quot;madhavan&quot;,
-  &quot;roles&quot; : [ ]
+  &quot;emailId&quot; : &quot;joe@apigee.com&quot;,
+  &quot;firstName&quot; : &quot;joe&quot;,
+  &quot;id&quot; : &quot;joe@apigee.com&quot;,
+  &quot;lastName&quot; : &quot;developer&quot;,
+  &quot;roles&quot; : [ orgadmin ]
 }
 	</pre>
 </div>
@@ -139,7 +187,37 @@ curl -u &amp;quot;myname:mypass&amp;quot; &amp;quot;https://api.enterprise.apige
 <th></th>
 		</tr>
 		</thead>
-
+<tr>
+<div class="response_element" id="response_element_371">
+<td>emailId: </td>
+<td>The email of the user</td>
+<td><a href="../../response_elements/371/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/79-create-a-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_372">
+<td>firstName: </td>
+<td>First name of the user</td>
+<td><a href="../../response_elements/372/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/79-create-a-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_373">
+<td>id: </td>
+<td>The user's userID</td>
+<td><a href="../../response_elements/373/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/79-create-a-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_374">
+<td>lastName: </td>
+<td>Last name of the user</td>
+<td><a href="../../response_elements/374/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/79-create-a-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_375">
+<td>roles: </td>
+<td>The role of the user: 'orgadmin' or 'user'</td>
+<td><a href="../../response_elements/375/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/79-create-a-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr>
 </table></div>
 
 <b>Errors</b> 
@@ -158,6 +236,7 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
+- application/json
 
 </p>
 
