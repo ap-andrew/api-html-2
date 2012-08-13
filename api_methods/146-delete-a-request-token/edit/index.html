@@ -94,16 +94,16 @@
     <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth/1/requesttokens/{requesttoken}" />
 
 </li>
-    <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET" selected="selected">GET</option>
+    <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET">GET</option>
 <option value="PUT">PUT</option>
 <option value="POST">POST</option>
-<option value="DELETE">DELETE</option></select>
+<option value="DELETE" selected="selected">DELETE</option></select>
 
 </li>
-    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="" />
+    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="Deletes the request token specified" />
 
 </li>
-	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="" />
+	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}//oauth/1/requesttokens/{requesttoken}" />
 
 </li>
 
@@ -116,13 +116,39 @@
 </li>
 
 	
-	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">{
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;north&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+  &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+  &quot;createdAt&quot; : 1343034561737,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;expiresAt&quot; : 1343036361737,
+  &quot;issuedAt&quot; : 1343034561737,
+  &quot;lastModifiedAt&quot; : 1343034561817,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;global&quot;,
+  &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+}</textarea>
 
 </li>
 	
 		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
 	
-	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20">{
+  &quot;code&quot; : &quot;keymanagement.service......&quot;,
+  &quot;message&quot; : &quot;Request Token doesnot exist&quot;,
+  &quot;contexts&quot; : [ ]
+}
+
+Error Code:
+1. keymanagement.service.oauth10_request_token_doesnot_exist
+2. keymanagement.service.oauth10_request_token_deletion_failed</textarea>
 
 </li>
 

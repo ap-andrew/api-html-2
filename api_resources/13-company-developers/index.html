@@ -54,7 +54,7 @@
 <div class="page-header">
   <h1>Company Developers</h1>
 </div>
-
+ 
 <table>
 	<tbody>
 		<tr>
@@ -62,12 +62,17 @@
 
  <tr>
 	
-  <td>Developers grouped into a Company entity</td></tr>
+  <td>Developers grouped into a company entity</td></tr>
   <td>A developer within an organization who is associated with a company. The company developer creates apps on behalf of the company, and any apps created by a company developer are associated with the company and known as 'company apps'.
+
+
 
 The Company Developer API enables you to add developers to companies. A developer must exist in the system before you can associate them with a company. You associate a developer with a company by adding the developer’s email and assigning the developer a role.
 
+
+
 Company developer roles are enforced within the client application that you build using the API, not within the Apigee system. Thus, when you retrieve a list of company apps on behalf of a developer, it is your code that checks the developer’s role and displays the capabilities appropriate to that role. You typically create an admin role to allow a company developer to add other developers, delete company apps, and so on.
+
 
 Company developers are mapped to developers in your organization using the developer email as a key. The mapping associates the developer with the company and adds a role. The company developer entity thus has simply an email address and a role while the organization developer entity that it maps to can have a wide variety of attributes defined.</td></tr>
   <td><div id="well"><pre></pre></div></td></tr>

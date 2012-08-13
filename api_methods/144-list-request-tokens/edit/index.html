@@ -91,7 +91,7 @@
     <li class="string input required stringish" id="api_method_name_input"><label class=" label" for="api_method_name">Name<abbr title="required">*</abbr></label><input id="api_method_name" maxlength="255" name="api_method[name]" type="text" value="List Request Tokens" />
 
 </li>
-    <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="" />
+    <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth/1/requesttokens" />
 
 </li>
     <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET" selected="selected">GET</option>
@@ -100,10 +100,10 @@
 <option value="DELETE">DELETE</option></select>
 
 </li>
-    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="" />
+    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="Returns list of all Oauth 1.0a request tokens, with detail for each token" />
 
 </li>
-	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="" />
+	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth/1/requesttokens" />
 
 </li>
 
@@ -116,13 +116,57 @@
 </li>
 
 	
-	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">{
+  &quot;requestToken&quot; : [ {
+    &quot;app&quot; : &quot;app1&quot;,
+    &quot;attributes&quot; : [ ],
+    &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+    &quot;consumerKey&quot; : &quot;HAflZ3JzeQaEuPzTVQ5YCIy9TAh0Lhba&quot;,
+    &quot;createdAt&quot; : 1343028237179,
+    &quot;createdBy&quot; : &quot;defaultUser&quot;,
+    &quot;expiresAt&quot; : 1343028237184,
+    &quot;issuedAt&quot; : 1343028237179,
+    &quot;lastModifiedAt&quot; : 1343028237179,
+    &quot;lastModifiedBy&quot; : &quot;defaultUser&quot;,
+    &quot;secret&quot; : &quot;u3rn4tdRaBYvnk4FdZmOD6oDoQA8&quot;,
+    &quot;status&quot; : &quot;expired&quot;,
+    &quot;token&quot; : &quot;bKf4sSPg8vUoeLmR4iNCbl2y94NB&quot;
+  }, {
+    &quot;app&quot; : &quot;myApp&quot;,
+    &quot;attributes&quot; : [ {
+      &quot;name&quot; : &quot;region&quot;,
+      &quot;value&quot; : &quot;south&quot;
+    } ],
+    &quot;callbackUrl&quot; : &quot;www.nike.com&quot;,
+    &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+    &quot;createdAt&quot; : 1343034561737,
+    &quot;createdBy&quot; : &quot;Admin&quot;,
+    &quot;expiresAt&quot; : 1343036361737,
+    &quot;issuedAt&quot; : 1343034561737,
+    &quot;lastModifiedAt&quot; : 1343034561737,
+    &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+    &quot;scope&quot; : &quot;local&quot;,
+    &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+    &quot;status&quot; : &quot;approved&quot;,
+    &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+  },
+  {.....}
+ ]
+}</textarea>
 
 </li>
 	
 		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
 	
-	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20">Failure 500 with proper error message
+{
+  &quot;code&quot; : &quot;keymanagement.service.oauth10_request_token_fetch_failed,
+  &quot;message&quot; : &quot;unable to fetch request token details&quot;,
+  &quot;contexts&quot; : [ ]
+}
+
+Error Codes:
+1. keymanagement.service.oauth10_request_token_fetch_failed</textarea>
 
 </li>
 

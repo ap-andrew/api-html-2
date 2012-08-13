@@ -54,7 +54,7 @@
 <div class="page-header">
   <h1>Oauth 1.0a Request Tokens</h1>
 </div>
-
+ 
 <table>
 	<tbody>
 		<tr>
@@ -64,7 +64,25 @@
 	
   <td>Oauth 1.0a Request Tokens</td></tr>
   <td></td></tr>
-  <td><div id="well"><pre></pre></div></td></tr>
+  <td><div id="well"><pre>{
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;north&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+  &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+  &quot;createdAt&quot; : 1343034561737,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;expiresAt&quot; : 1343036361737,
+  &quot;issuedAt&quot; : 1343034561737,
+  &quot;lastModifiedAt&quot; : 1343034561817,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;global&quot;,
+  &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+}</pre></div></td></tr>
 
 </tr>
 </tbody>
@@ -93,7 +111,7 @@
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Approves an OAuth 1.0a Request Token</td></tr>
 
 
 
@@ -118,11 +136,11 @@
   <tr>
 	
 	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">GET</span></td></tr>
+	  <td><span class="label label-success">DELETE</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Deletes the request token specified</td></tr>
 
 
 
@@ -141,7 +159,7 @@
 
 		
 		
-		<div id="well"><pre>/oauth/1/requesttokens/{requesttoken}?consumerKey=&lt;validconsumerkey&gt;</pre></div>		
+		<div id="well"><pre>/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}</pre></div>		
 		
 		<tr>
   <tr>
@@ -151,7 +169,7 @@
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Gets the Oauth 1.0a Request Token for the speficied consumer key</td></tr>
 
 
 
@@ -170,7 +188,7 @@
 
 		
 		
-		<div id="well"><pre></pre></div>		
+		<div id="well"><pre>/oauth/1/requesttokens</pre></div>		
 		
 		<tr>
   <tr>
@@ -180,7 +198,7 @@
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Returns list of all Oauth 1.0a request tokens, with detail for each token</td></tr>
 
 
 

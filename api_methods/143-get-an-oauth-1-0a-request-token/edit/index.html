@@ -91,7 +91,7 @@
     <li class="string input required stringish" id="api_method_name_input"><label class=" label" for="api_method_name">Name<abbr title="required">*</abbr></label><input id="api_method_name" maxlength="255" name="api_method[name]" type="text" value="Get an Oauth 1.0a Request Token" />
 
 </li>
-    <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth/1/requesttokens/{requesttoken}?consumerKey=&lt;validconsumerkey&gt;" />
+    <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}" />
 
 </li>
     <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET" selected="selected">GET</option>
@@ -100,10 +100,10 @@
 <option value="DELETE">DELETE</option></select>
 
 </li>
-    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="" />
+    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="Gets the Oauth 1.0a Request Token for the speficied consumer key" />
 
 </li>
-	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="" />
+	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}" />
 
 </li>
 
@@ -116,13 +116,96 @@
 </li>
 
 	
-	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">{
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;south&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+  &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+  &quot;createdAt&quot; : 1343034561737,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;expiresAt&quot; : 1343036361737,
+  &quot;issuedAt&quot; : 1343034561737,
+  &quot;lastModifiedAt&quot; : 1343034561737,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;local&quot;,
+  &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+}</textarea>
 
 </li>
 	
-		<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
+	<div class="fields">
+	  <input id="api_method_response_elements_attributes_0_name" name="api_method[response_elements_attributes][0][name]" size="30" type="text" value="app" />
+      <input id="api_method_response_elements_attributes_0_description" name="api_method[response_elements_attributes][0][description]" size="30" type="text" value="The app for which the request token was generated" />
+	  <input id="api_method_response_elements_attributes_0__destroy" name="api_method[response_elements_attributes][0][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_0_id" name="api_method[response_elements_attributes][0][id]" type="hidden" value="343" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_1_name" name="api_method[response_elements_attributes][1][name]" size="30" type="text" value="attributes" />
+      <input id="api_method_response_elements_attributes_1_description" name="api_method[response_elements_attributes][1][description]" size="30" type="text" value="Name/value elements used to extend the default request token profile" />
+	  <input id="api_method_response_elements_attributes_1__destroy" name="api_method[response_elements_attributes][1][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_1_id" name="api_method[response_elements_attributes][1][id]" type="hidden" value="344" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_2_name" name="api_method[response_elements_attributes][2][name]" size="30" type="text" value="callbackUrl" />
+      <input id="api_method_response_elements_attributes_2_description" name="api_method[response_elements_attributes][2][description]" size="30" type="text" value="Fetches the client registration details and verifies for the following. It does not redirect if any of the following validation conditions fail. redirect_uri is not provided multiple redirect_uri instances are provided only a part of the redirect_uri is provided if the redirect_uri is provided, it is compared against the multiple redirect_uri instances (if any) ignores fragment components" />
+	  <input id="api_method_response_elements_attributes_2__destroy" name="api_method[response_elements_attributes][2][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_2_id" name="api_method[response_elements_attributes][2][id]" type="hidden" value="345" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_3_name" name="api_method[response_elements_attributes][3][name]" size="30" type="text" value="consumerKey" />
+      <input id="api_method_response_elements_attributes_3_description" name="api_method[response_elements_attributes][3][description]" size="30" type="text" value="The key associated with the app" />
+	  <input id="api_method_response_elements_attributes_3__destroy" name="api_method[response_elements_attributes][3][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_3_id" name="api_method[response_elements_attributes][3][id]" type="hidden" value="346" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_4_name" name="api_method[response_elements_attributes][4][name]" size="30" type="text" value="createdAt" />
+      <input id="api_method_response_elements_attributes_4_description" name="api_method[response_elements_attributes][4][description]" size="30" type="text" value="Unix time when the request token was created" />
+	  <input id="api_method_response_elements_attributes_4__destroy" name="api_method[response_elements_attributes][4][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_4_id" name="api_method[response_elements_attributes][4][id]" type="hidden" value="347" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_5_name" name="api_method[response_elements_attributes][5][name]" size="30" type="text" value="createdBy" />
+      <input id="api_method_response_elements_attributes_5_description" name="api_method[response_elements_attributes][5][description]" size="30" type="text" value="Apigee user name of the user who create the request token" />
+	  <input id="api_method_response_elements_attributes_5__destroy" name="api_method[response_elements_attributes][5][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_5_id" name="api_method[response_elements_attributes][5][id]" type="hidden" value="348" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_6_name" name="api_method[response_elements_attributes][6][name]" size="30" type="text" value="expiresAt" />
+      <input id="api_method_response_elements_attributes_6_description" name="api_method[response_elements_attributes][6][description]" size="30" type="text" value="Expiry time period of the token to be generated; token expires/is deleted when the expiry time ends" />
+	  <input id="api_method_response_elements_attributes_6__destroy" name="api_method[response_elements_attributes][6][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_6_id" name="api_method[response_elements_attributes][6][id]" type="hidden" value="349" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_7_name" name="api_method[response_elements_attributes][7][name]" size="30" type="text" value="issuedAt" />
+      <input id="api_method_response_elements_attributes_7_description" name="api_method[response_elements_attributes][7][description]" size="30" type="text" value="Validity time period for the OAuth verifier code " />
+	  <input id="api_method_response_elements_attributes_7__destroy" name="api_method[response_elements_attributes][7][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_7_id" name="api_method[response_elements_attributes][7][id]" type="hidden" value="350" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_8_name" name="api_method[response_elements_attributes][8][name]" size="30" type="text" value="lastModifiedAt" />
+      <input id="api_method_response_elements_attributes_8_description" name="api_method[response_elements_attributes][8][description]" size="30" type="text" value="Unix time when the request token was last modified" />
+	  <input id="api_method_response_elements_attributes_8__destroy" name="api_method[response_elements_attributes][8][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_8_id" name="api_method[response_elements_attributes][8][id]" type="hidden" value="351" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_9_name" name="api_method[response_elements_attributes][9][name]" size="30" type="text" value="lastModifiedBy" />
+      <input id="api_method_response_elements_attributes_9_description" name="api_method[response_elements_attributes][9][description]" size="30" type="text" value="Apigee user name of the user who last modified the request token" />
+	  <input id="api_method_response_elements_attributes_9__destroy" name="api_method[response_elements_attributes][9][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_9_id" name="api_method[response_elements_attributes][9][id]" type="hidden" value="352" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_10_name" name="api_method[response_elements_attributes][10][name]" size="30" type="text" value="scope" />
+      <input id="api_method_response_elements_attributes_10_description" name="api_method[response_elements_attributes][10][description]" size="30" type="text" value="Oauth scope(s) included in the request" />
+	  <input id="api_method_response_elements_attributes_10__destroy" name="api_method[response_elements_attributes][10][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_10_id" name="api_method[response_elements_attributes][10][id]" type="hidden" value="353" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_11_name" name="api_method[response_elements_attributes][11][name]" size="30" type="text" value="secret" />
+      <input id="api_method_response_elements_attributes_11_description" name="api_method[response_elements_attributes][11][description]" size="30" type="text" value="Secret password for getting the request token" />
+	  <input id="api_method_response_elements_attributes_11__destroy" name="api_method[response_elements_attributes][11][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_11_id" name="api_method[response_elements_attributes][11][id]" type="hidden" value="354" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_12_name" name="api_method[response_elements_attributes][12][name]" size="30" type="text" value="status" />
+      <input id="api_method_response_elements_attributes_12_description" name="api_method[response_elements_attributes][12][description]" size="30" type="text" value="Status of the request token; changes to expired when the expiry time ends" />
+	  <input id="api_method_response_elements_attributes_12__destroy" name="api_method[response_elements_attributes][12][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_12_id" name="api_method[response_elements_attributes][12][id]" type="hidden" value="355" /></div><div class="fields">
+	  <input id="api_method_response_elements_attributes_13_name" name="api_method[response_elements_attributes][13][name]" size="30" type="text" value="token" />
+      <input id="api_method_response_elements_attributes_13_description" name="api_method[response_elements_attributes][13][description]" size="30" type="text" value="Value of the request token" />
+	  <input id="api_method_response_elements_attributes_13__destroy" name="api_method[response_elements_attributes][13][_destroy]" type="hidden" value="false" /><a href="javascript:void(0)" class="i icon-remove remove_nested_fields"></a>
+<input id="api_method_response_elements_attributes_13_id" name="api_method[response_elements_attributes][13][id]" type="hidden" value="356" /></div>	<p><a href="javascript:void(0)" class="i icon-plus add_nested_fields" data-association="response_elements">Elements</a></p>
 	
-	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20"></textarea>
+	<li class="text input optional" id="api_method_error_message_input"><label class=" label" for="api_method_error_message">Error message</label><textarea id="api_method_error_message" name="api_method[error_message]" rows="20">{
+  &quot;code&quot; : &quot;keymanagement.service.oauth10_request_token_doesnot_exist&quot;,
+  &quot;message&quot; : &quot;Request Token doesnot exist&quot;,
+  &quot;contexts&quot; : [ ]
+}
+
+Error Code:
+1. keymanagement.service.oauth10_request_token_doesnot_exist
+2. keymanagement.service.application_not_approved
+3. keymanagement.service.oauth10_request_token_fetch_failed</textarea>
 
 </li>
 

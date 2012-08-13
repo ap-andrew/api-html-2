@@ -94,10 +94,10 @@
     <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth1/accesstokens/{accesstoken}" />
 
 </li>
-    <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET" selected="selected">GET</option>
+    <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET">GET</option>
 <option value="PUT">PUT</option>
 <option value="POST">POST</option>
-<option value="DELETE">DELETE</option></select>
+<option value="DELETE" selected="selected">DELETE</option></select>
 
 </li>
     <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="Deletes the specified access token" />
@@ -117,8 +117,8 @@
 
 	
 	<li class="text input optional" id="api_method_sample_response_json_input"><label class=" label" for="api_method_sample_response_json">Sample response json</label><textarea id="api_method_sample_response_json" name="api_method[sample_response_json]" rows="20">{
-  &quot;app&quot; : &quot;nikeApp&quot;,
-  &quot;appUserId&quot; : &quot;nikeDeveloper@apigee.com&quot;,
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
     &quot;value&quot; : &quot;south&quot;

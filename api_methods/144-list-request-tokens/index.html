@@ -53,7 +53,7 @@
 
 
 <p>
-<h1>List Request Tokens :: </h1> 
+<h1>List Request Tokens :: /oauth/1/requesttokens</h1> 
 </p>
 
 <!-- <a href="/api_methods/144-list-request-tokens/edit" class="btn btn-mini">Edit</a> -->
@@ -77,14 +77,14 @@ GET
 
 <p>
   <b>Description:</b>
-  
+  Returns list of all Oauth 1.0a request tokens, with detail for each token
 </p>
 
 <b> cURL:</b>
 
 <div class="well">
 	<pre>
-
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth/1/requesttokens
 </pre>
 </div>
 
@@ -114,7 +114,43 @@ GET
 <b>Response Payload:</b> 
 <div class="well">
 	<pre>
-  
+  {
+  &quot;requestToken&quot; : [ {
+    &quot;app&quot; : &quot;app1&quot;,
+    &quot;attributes&quot; : [ ],
+    &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+    &quot;consumerKey&quot; : &quot;HAflZ3JzeQaEuPzTVQ5YCIy9TAh0Lhba&quot;,
+    &quot;createdAt&quot; : 1343028237179,
+    &quot;createdBy&quot; : &quot;defaultUser&quot;,
+    &quot;expiresAt&quot; : 1343028237184,
+    &quot;issuedAt&quot; : 1343028237179,
+    &quot;lastModifiedAt&quot; : 1343028237179,
+    &quot;lastModifiedBy&quot; : &quot;defaultUser&quot;,
+    &quot;secret&quot; : &quot;u3rn4tdRaBYvnk4FdZmOD6oDoQA8&quot;,
+    &quot;status&quot; : &quot;expired&quot;,
+    &quot;token&quot; : &quot;bKf4sSPg8vUoeLmR4iNCbl2y94NB&quot;
+  }, {
+    &quot;app&quot; : &quot;myApp&quot;,
+    &quot;attributes&quot; : [ {
+      &quot;name&quot; : &quot;region&quot;,
+      &quot;value&quot; : &quot;south&quot;
+    } ],
+    &quot;callbackUrl&quot; : &quot;www.nike.com&quot;,
+    &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+    &quot;createdAt&quot; : 1343034561737,
+    &quot;createdBy&quot; : &quot;Admin&quot;,
+    &quot;expiresAt&quot; : 1343036361737,
+    &quot;issuedAt&quot; : 1343034561737,
+    &quot;lastModifiedAt&quot; : 1343034561737,
+    &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+    &quot;scope&quot; : &quot;local&quot;,
+    &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+    &quot;status&quot; : &quot;approved&quot;,
+    &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+  },
+  {.....}
+ ]
+}
 	</pre>
 </div>
 
@@ -134,7 +170,15 @@ GET
 <b>Errors</b> 
 <div class="well">
 	<pre>
-  
+  Failure 500 with proper error message
+{
+  &quot;code&quot; : &quot;keymanagement.service.oauth10_request_token_fetch_failed,
+  &quot;message&quot; : &quot;unable to fetch request token details&quot;,
+  &quot;contexts&quot; : [ ]
+}
+
+Error Codes:
+1. keymanagement.service.oauth10_request_token_fetch_failed
 	</pre>
 </div>
 
@@ -147,6 +191,7 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
+- application/json
 
 </p>
 

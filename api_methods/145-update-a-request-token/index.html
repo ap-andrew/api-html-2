@@ -53,7 +53,7 @@
 
 
 <p>
-<h1>Update a Request Token :: /oauth/1/requesttokens/{requesttoken}</h1> 
+<h1>Update a Request Token :: /oauth/2/requesttokens/{requesttoken}</h1> 
 </p>
 
 <!-- <a href="/api_methods/145-update-a-request-token/edit" class="btn btn-mini">Edit</a> -->
@@ -77,14 +77,14 @@ PUT
 
 <p>
   <b>Description:</b>
-  
+  Updates a Request Token with new profile
 </p>
 
 <b> cURL:</b>
 
 <div class="well">
 	<pre>
-
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}//oauth/2/requesttokens/{requesttoken}
 </pre>
 </div>
 

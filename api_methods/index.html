@@ -3833,7 +3833,7 @@ Failure 4xx with proper error message
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_142_doc' data-url='/api_methods/142-get-count-of-oauth-2-0-access-tokens-for-developer-app-key' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_142_curl_json' data-url='/api_methods/142-get-count-of-oauth-2-0-access-tokens-for-developer-app-key' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developername}/apps/{appname}/oauth2accesstokens</span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_142_curl_json' data-url='/api_methods/142-get-count-of-oauth-2-0-access-tokens-for-developer-app-key' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developername}/apps/{appname}/oauth2/accesstokens</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
@@ -3845,7 +3845,7 @@ Failure 4xx with proper error message
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
-    	<td>/developers/{developerName}/apps/{appName}/oauth1accesstokens</td>   
+    	<td>/developers/{developerName}/apps/{appName}/oauth2accesstokens</td>   
     	<td>Basic Auth</td>
    </tr>
 </tbody>
@@ -5300,8 +5300,8 @@ If a developer's status is inactive, the developer is not allowed to create apps
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
-  &quot;app&quot; : &quot;nikeApp&quot;,
-  &quot;appUserId&quot; : &quot;nikeDeveloper@apigee.com&quot;,
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
     &quot;value&quot; : &quot;south&quot;
@@ -5324,7 +5324,7 @@ If a developer's status is inactive, the developer is not allowed to create apps
 }</pre></div></td>
 	</tr>
 	<tr>
-		<td><span class="label label-success">GET</span></td>
+		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth1/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
    </tr>
@@ -5335,7 +5335,7 @@ If a developer's status is inactive, the developer is not allowed to create apps
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_153_description' data-url='/api_methods/153-get-count-of-oauth-1-0-access-tokens' data-object='api_method' data-attribute='description' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_153_description' data-url='/api_methods/153-get-count-of-oauth-1-0-access-tokens' data-object='api_method' data-attribute='description' data-type='textarea'>Returns a count of all 1.0a access tokens in an orgnization</span></td>
 		  
 	</tr>
 	<tr>
@@ -5371,16 +5371,16 @@ If a developer's status is inactive, the developer is not allowed to create apps
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_152_doc' data-url='/api_methods/152-get-oauth-1-0-access-token' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_152_curl_json' data-url='/api_methods/152-get-oauth-1-0-access-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass</span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_152_curl_json' data-url='/api_methods/152-get-oauth-1-0-access-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth1/accesstokens/{accesstoken}</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
-  &quot;apiProducts&quot; : [ &quot;NikeApiProduct&quot; ],
-  &quot;app&quot; : &quot;nikeApp&quot;,
-  &quot;appUserId&quot; : &quot;nikeDeveloper@apigee.com&quot;,
+  &quot;apiProducts&quot; : [ &quot;PremiumApiProduct&quot; ],
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
     &quot;value&quot; : &quot;east&quot;
@@ -5399,18 +5399,13 @@ If a developer's status is inactive, the developer is not allowed to create apps
   &quot;token&quot; : &quot;kNw6eQrL5G7etEBcvqvRTL01E5rY&quot;
 }
 
-Failure 404 with proper error message
-{
-  &quot;code&quot; : &quot;keymanagement.service.....&quot;,
-  &quot;message&quot; : &quot;Access Token doesnot exist&quot;,
-  &quot;contexts&quot; : [ ]
-}
+
 
 </pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
-    	<td>/organizations/{org}/oauth1/accesstokens/{accesstoken}</td>   
+    	<td>/oauth1/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
    </tr>
 	<tr>
@@ -5451,7 +5446,7 @@ Failure 404 with proper error message
 		  
 	</tr>
 	<tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_154_doc' data-url='/api_methods/154-update-oauth-1-0-access-token' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_154_doc' data-url='/api_methods/154-update-oauth-1-0-access-token' data-object='api_method' data-attribute='doc' data-type='textarea'>Any portion of the access token profile may be updated using POST. In this example, we update the access token with custom attributes and a new scope. The entire updated access token profile is returned in the response.</span></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_154_curl_json' data-url='/api_methods/154-update-oauth-1-0-access-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/{org}/oauth1/accesstokens/{accesstoken}</span></pre></div></td>
@@ -5470,9 +5465,9 @@ Failure 404 with proper error message
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre>{
-  &quot;apiProducts&quot; : [ &quot;NikeApiProduct&quot; ],
-  &quot;app&quot; : &quot;nikeApp&quot;,
-  &quot;appUserId&quot; : &quot;nikeDeveloper@apigee.com&quot;,
+  &quot;apiProducts&quot; : [ &quot;PremiumApiProduct&quot; ],
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
     &quot;value&quot; : &quot;south&quot;
@@ -5513,7 +5508,7 @@ Failure 404 with proper error message
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_147_description' data-url='/api_methods/147-approve-a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_147_description' data-url='/api_methods/147-approve-a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'>Approves an OAuth 1.0a Request Token</span></td>
 		  
 	</tr>
 	<tr>
@@ -5540,23 +5535,41 @@ Failure 404 with proper error message
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_146_description' data-url='/api_methods/146-delete-a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_146_description' data-url='/api_methods/146-delete-a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'>Deletes the request token specified</span></td>
 		  
 	</tr>
 	<tr>
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_146_doc' data-url='/api_methods/146-delete-a-request-token' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_146_curl_json' data-url='/api_methods/146-delete-a-request-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'></span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_146_curl_json' data-url='/api_methods/146-delete-a-request-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}//oauth/1/requesttokens/{requesttoken}</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre></pre></div></td>
+		<td colspan="3"><div id="well"><pre>{
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;north&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+  &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+  &quot;createdAt&quot; : 1343034561737,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;expiresAt&quot; : 1343036361737,
+  &quot;issuedAt&quot; : 1343034561737,
+  &quot;lastModifiedAt&quot; : 1343034561817,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;global&quot;,
+  &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+}</pre></div></td>
 	</tr>
 	<tr>
-		<td><span class="label label-success">GET</span></td>
+		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth/1/requesttokens/{requesttoken}</td>   
     	<td>Basic Auth</td>
    </tr>
@@ -5567,24 +5580,42 @@ Failure 404 with proper error message
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_143_description' data-url='/api_methods/143-get-an-oauth-1-0a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_143_description' data-url='/api_methods/143-get-an-oauth-1-0a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'>Gets the Oauth 1.0a Request Token for the speficied consumer key</span></td>
 		  
 	</tr>
 	<tr>
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_143_doc' data-url='/api_methods/143-get-an-oauth-1-0a-request-token' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_143_curl_json' data-url='/api_methods/143-get-an-oauth-1-0a-request-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'></span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_143_curl_json' data-url='/api_methods/143-get-an-oauth-1-0a-request-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre></pre></div></td>
+		<td colspan="3"><div id="well"><pre>{
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;south&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+  &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+  &quot;createdAt&quot; : 1343034561737,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;expiresAt&quot; : 1343036361737,
+  &quot;issuedAt&quot; : 1343034561737,
+  &quot;lastModifiedAt&quot; : 1343034561737,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;local&quot;,
+  &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+}</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
-    	<td>/oauth/1/requesttokens/{requesttoken}?consumerKey=&lt;validconsumerkey&gt;</td>   
+    	<td>/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}</td>   
     	<td>Basic Auth</td>
    </tr>
 	<tr>
@@ -5594,24 +5625,60 @@ Failure 404 with proper error message
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_144_description' data-url='/api_methods/144-list-request-tokens' data-object='api_method' data-attribute='description' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_144_description' data-url='/api_methods/144-list-request-tokens' data-object='api_method' data-attribute='description' data-type='textarea'>Returns list of all Oauth 1.0a request tokens, with detail for each token</span></td>
 		  
 	</tr>
 	<tr>
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_144_doc' data-url='/api_methods/144-list-request-tokens' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_144_curl_json' data-url='/api_methods/144-list-request-tokens' data-object='api_method' data-attribute='curl_json' data-type='textarea'></span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_144_curl_json' data-url='/api_methods/144-list-request-tokens' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth/1/requesttokens</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre></pre></div></td>
+		<td colspan="3"><div id="well"><pre>{
+  &quot;requestToken&quot; : [ {
+    &quot;app&quot; : &quot;app1&quot;,
+    &quot;attributes&quot; : [ ],
+    &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+    &quot;consumerKey&quot; : &quot;HAflZ3JzeQaEuPzTVQ5YCIy9TAh0Lhba&quot;,
+    &quot;createdAt&quot; : 1343028237179,
+    &quot;createdBy&quot; : &quot;defaultUser&quot;,
+    &quot;expiresAt&quot; : 1343028237184,
+    &quot;issuedAt&quot; : 1343028237179,
+    &quot;lastModifiedAt&quot; : 1343028237179,
+    &quot;lastModifiedBy&quot; : &quot;defaultUser&quot;,
+    &quot;secret&quot; : &quot;u3rn4tdRaBYvnk4FdZmOD6oDoQA8&quot;,
+    &quot;status&quot; : &quot;expired&quot;,
+    &quot;token&quot; : &quot;bKf4sSPg8vUoeLmR4iNCbl2y94NB&quot;
+  }, {
+    &quot;app&quot; : &quot;myApp&quot;,
+    &quot;attributes&quot; : [ {
+      &quot;name&quot; : &quot;region&quot;,
+      &quot;value&quot; : &quot;south&quot;
+    } ],
+    &quot;callbackUrl&quot; : &quot;www.nike.com&quot;,
+    &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+    &quot;createdAt&quot; : 1343034561737,
+    &quot;createdBy&quot; : &quot;Admin&quot;,
+    &quot;expiresAt&quot; : 1343036361737,
+    &quot;issuedAt&quot; : 1343034561737,
+    &quot;lastModifiedAt&quot; : 1343034561737,
+    &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+    &quot;scope&quot; : &quot;local&quot;,
+    &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+    &quot;status&quot; : &quot;approved&quot;,
+    &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+  },
+  {.....}
+ ]
+}</pre></div></td>
 	</tr>
 	<tr>
 		<td><span class="label label-success">GET</span></td>
-    	<td></td>   
+    	<td>/oauth/1/requesttokens</td>   
     	<td>Basic Auth</td>
    </tr>
 	<tr>
@@ -5857,7 +5924,7 @@ Failure 404 with proper error message
 </pre></div></td>
 	</tr>
 	<tr>
-		<td><span class="label label-success">GET</span></td>
+		<td><span class="label label-success">DELETE</span></td>
     	<td>/oauth2/accesstokens/{accesstoken}</td>   
     	<td>Basic Auth</td>
    </tr>
@@ -6018,14 +6085,14 @@ Failure 404 with proper error message
 
 	</tr>
     <tr>
-		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_145_description' data-url='/api_methods/145-update-a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'></span></td>
+		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_145_description' data-url='/api_methods/145-update-a-request-token' data-object='api_method' data-attribute='description' data-type='textarea'>Updates a Request Token with new profile</span></td>
 		  
 	</tr>
 	<tr>
 		<td colspan="3"><span class='best_in_place' id='best_in_place_api_method_145_doc' data-url='/api_methods/145-update-a-request-token' data-object='api_method' data-attribute='doc' data-type='textarea'></span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_145_curl_json' data-url='/api_methods/145-update-a-request-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'></span></pre></div></td>
+		<td colspan="3"><div id="well"><pre><span class='best_in_place' id='best_in_place_api_method_145_curl_json' data-url='/api_methods/145-update-a-request-token' data-object='api_method' data-attribute='curl_json' data-type='textarea'>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}//oauth/2/requesttokens/{requesttoken}</span></pre></div></td>
 	</tr>
 	<tr>
 		<td colspan="3"><div id="well"><pre></pre></div></td>
@@ -6035,7 +6102,7 @@ Failure 404 with proper error message
 	</tr>
 	<tr>
 		<td><span class="label label-success">PUT</span></td>
-    	<td>/oauth/1/requesttokens/{requesttoken}</td>   
+    	<td>/oauth/2/requesttokens/{requesttoken}</td>   
     	<td>Basic Auth</td>
    </tr>
 </tbody>

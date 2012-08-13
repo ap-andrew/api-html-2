@@ -72,7 +72,7 @@ POST
 
 <p>
   <b>Doc:</b>
-  
+  Any portion of the access token profile may be updated using POST. In this example, we update the access token with custom attributes and a new scope. The entire updated access token profile is returned in the response.
 </p>
 
 <p>
@@ -148,9 +148,9 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/{org}/o
 <div class="well">
 	<pre>
   {
-  &quot;apiProducts&quot; : [ &quot;NikeApiProduct&quot; ],
-  &quot;app&quot; : &quot;nikeApp&quot;,
-  &quot;appUserId&quot; : &quot;nikeDeveloper@apigee.com&quot;,
+  &quot;apiProducts&quot; : [ &quot;PremiumApiProduct&quot; ],
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
     &quot;value&quot; : &quot;south&quot;
@@ -214,7 +214,6 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
-- application/json
 
 </p>
 

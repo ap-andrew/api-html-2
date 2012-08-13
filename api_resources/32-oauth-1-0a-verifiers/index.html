@@ -54,7 +54,7 @@
 <div class="page-header">
   <h1>Oauth 1.0a Verifiers</h1>
 </div>
-
+ 
 <table>
 	<tbody>
 		<tr>
@@ -68,7 +68,25 @@
 The access token and its attributes are made available in flow oauth_token, oauth_token_secret, oauth_response.
 The consumer token and its attributes are made available in the flow oauth_consumer_key, oauth_consumer_secret.
 If the request fails the verification, the server sends a response with an appropriate error code and error message. OAuth 1.0 verifier is a verification code tied to the request token. Both the OAuth verifier and request token must be provided in exchange for an access token.</td></tr>
-  <td><div id="well"><pre></pre></div></td></tr>
+  <td><div id="well"><pre>{
+  &quot;verifier&quot; : [ {
+    &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
+    &quot;attributes&quot; : [ {
+      &quot;name&quot; : &quot;region&quot;,
+      &quot;value&quot; : &quot;north&quot;
+    } ],
+    &quot;code&quot; : &quot;1234&quot;,
+    &quot;createdAt&quot; : 1343035714593,
+    &quot;createdBy&quot; : &quot;Admin&quot;,
+    &quot;expiresAt&quot; : 1343037514593,
+    &quot;issuedAt&quot; : 1343035714593,
+    &quot;lastModifiedAt&quot; : 1343035714593,
+    &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+    &quot;requestToken&quot; : &quot;2c8zOXaSwbNrEJ62HhkLAjXgPvu1&quot;
+  },
+  {...}
+ ]
+}</pre></div></td></tr>
 
 </tr>
 </tbody>

@@ -54,7 +54,7 @@
 <div class="page-header">
   <h1>Companies</h1>
 </div>
-
+ 
 <table>
 	<tbody>
 		<tr>
@@ -62,17 +62,16 @@
 
  <tr>
 	
-  <td>A grouping entity for apps--apps can belong to a Company or to a single Developer</td></tr>
-  <td>The Company API enables you to associate multiple developers with a single entity, which is in turn managed as part of your organization. While the term Company is used for that entity, it can be any grouping that is appropriate to your organization, e.g., business unit, product line, or division. If the Company API is not used, developers have no association with each other in your organization.
+  <td>An optional grouping entity for apps--apps can belong to a C\company or to a individual developers</td></tr>
+  <td>The company is a collection of developers managed as a single entity. A company can be any grouping that is appropriate to your organization, e.g., business unit, product line, or division. If the company association is not used, developers have no association with each other in your organization.
 
-The Company API is useful when your goal is to work with multiple developers associated under a single corporate entity for billing purposes, for example. However, it not required that the developers in your organization are associated with a company, so this API is completely optional.
 
-Note that a developer is always a single entity, uniquely identified by the username element.
 
-Prerequisites to use this API call include:
+Grouping developers into companies is useful when your goal is to work with multiple developers associated under a single corporate entity for billing purposes, for example. However, it not required that the developers in your organization are associated with a company, so this API is completely optional.
 
-The provider has created an organization.
-You have a valid user ID as an administrator of the organization.</td></tr>
+
+
+Note that a developer is always a single entity, uniquely identified by the email element.</td></tr>
   <td><div id="well"><pre>{
   &quot;name&quot; : &quot;DeveloperCorp&quot;,
   &quot;displayName&quot; : &quot;Developer Corporation&quot;,

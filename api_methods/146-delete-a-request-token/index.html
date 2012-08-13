@@ -66,7 +66,7 @@
 <p>
   <b>Verb:</b>
 <span class="label label-success">
-GET
+DELETE
 </span>
 </p>
 
@@ -77,14 +77,14 @@ GET
 
 <p>
   <b>Description:</b>
-  
+  Deletes the request token specified
 </p>
 
 <b> cURL:</b>
 
 <div class="well">
 	<pre>
-
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}//oauth/1/requesttokens/{requesttoken}
 </pre>
 </div>
 
@@ -114,7 +114,25 @@ GET
 <b>Response Payload:</b> 
 <div class="well">
 	<pre>
-  
+  {
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;north&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;api.company.com&quot;,
+  &quot;consumerKey&quot; : &quot;Lmupmwb5mD6CAEl6vqii1kojTGMiCnWj&quot;,
+  &quot;createdAt&quot; : 1343034561737,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;expiresAt&quot; : 1343036361737,
+  &quot;issuedAt&quot; : 1343034561737,
+  &quot;lastModifiedAt&quot; : 1343034561817,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;global&quot;,
+  &quot;secret&quot; : &quot;kSdnf7pBZADjxg5qfMkHhDVTumR5&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
+}
 	</pre>
 </div>
 
@@ -134,7 +152,15 @@ GET
 <b>Errors</b> 
 <div class="well">
 	<pre>
-  
+  {
+  &quot;code&quot; : &quot;keymanagement.service......&quot;,
+  &quot;message&quot; : &quot;Request Token doesnot exist&quot;,
+  &quot;contexts&quot; : [ ]
+}
+
+Error Code:
+1. keymanagement.service.oauth10_request_token_doesnot_exist
+2. keymanagement.service.oauth10_request_token_deletion_failed
 	</pre>
 </div>
 
@@ -147,6 +173,7 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
+- application/json
 
 </p>
 

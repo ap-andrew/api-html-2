@@ -54,7 +54,7 @@
 <div class="page-header">
   <h1>App Families</h1>
 </div>
-
+ 
 <table>
 	<tbody>
 		<tr>
@@ -62,14 +62,8 @@
 
  <tr>
 	
-  <td>A collection of Apps for a Developer</td></tr>
-  <td>App families enable you to create functional groups for apps. In many cases, a single app may have multiple manifestations. For example, an app may have sandbox instance and a production, and you may need to associate those instances. You can do this by linking the instances of the app together in a an app family collection. Specify an app family name, associate that name with a developer or a company of your organization, and select one or more app IDs to add to the contents of the app family. You can create app families for developer apps or for company apps within your organization.
-
-Prerequisites to use this API call include:
-
-The provider has created an organization.
-You have a valid user ID as an administrator of the organization.
-The developer exists or the company exists within the organization.</td></tr>
+  <td>A collection of apps associated with a developer</td></tr>
+  <td>App families enable you to create functional groups of apps. A single app may be instantiated in several forms. For example, an app may have sandbox instance and a production instance. App families enable these app instances to be associated. You can do this by linking the instances of the app together in a an app family collection. Specify an app family name, associate that name with a developer or a company of your organization, and select one or more app IDs to add to the contents of the app family. You can create app families for developer apps or for company apps within your organization.</td></tr>
   <td><div id="well"><pre>{
   &quot;apps&quot; : [ &quot;weatherapp_sandbox&quot;, &quot;weatherapp_prod&quot; ],
   &quot;name&quot; : &quot;WeatherApps&quot;

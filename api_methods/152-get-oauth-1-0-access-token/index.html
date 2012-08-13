@@ -53,7 +53,7 @@
 
 
 <p>
-<h1>Get Oauth 1.0 Access Token :: /organizations/{org}/oauth1/accesstokens/{accesstoken}</h1> 
+<h1>Get Oauth 1.0 Access Token :: /oauth1/accesstokens/{accesstoken}</h1> 
 </p>
 
 <!-- <a href="/api_methods/152-get-oauth-1-0-access-token/edit" class="btn btn-mini">Edit</a> -->
@@ -84,7 +84,7 @@ GET
 
 <div class="well">
 	<pre>
-curl -u myname:mypass
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/oauth1/accesstokens/{accesstoken}
 </pre>
 </div>
 
@@ -115,9 +115,9 @@ curl -u myname:mypass
 <div class="well">
 	<pre>
   {
-  &quot;apiProducts&quot; : [ &quot;NikeApiProduct&quot; ],
-  &quot;app&quot; : &quot;nikeApp&quot;,
-  &quot;appUserId&quot; : &quot;nikeDeveloper@apigee.com&quot;,
+  &quot;apiProducts&quot; : [ &quot;PremiumApiProduct&quot; ],
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
     &quot;value&quot; : &quot;east&quot;
@@ -136,12 +136,7 @@ curl -u myname:mypass
   &quot;token&quot; : &quot;kNw6eQrL5G7etEBcvqvRTL01E5rY&quot;
 }
 
-Failure 404 with proper error message
-{
-  &quot;code&quot; : &quot;keymanagement.service.....&quot;,
-  &quot;message&quot; : &quot;Access Token doesnot exist&quot;,
-  &quot;contexts&quot; : [ ]
-}
+
 
 
 	</pre>
@@ -157,16 +152,114 @@ Failure 404 with proper error message
 <th></th>
 		</tr>
 		</thead>
-
+<tr>
+<div class="response_element" id="response_element_327">
+<td>apiProducts: </td>
+<td>API products associated with the consumer key used by the app</td>
+<td><a href="../../response_elements/327/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_328">
+<td>app: </td>
+<td>App with which the access token is associated</td>
+<td><a href="../../response_elements/328/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_329">
+<td>appUserId: </td>
+<td>The ID of the app end user for whom the access token is generated</td>
+<td><a href="../../response_elements/329/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_330">
+<td>attributes: </td>
+<td>Name/value pairs used to exntend the default OAuth 1.0a access token profile</td>
+<td><a href="../../response_elements/330/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_331">
+<td>consumerKey: </td>
+<td>The consumer key associated with access toen</td>
+<td><a href="../../response_elements/331/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_332">
+<td>consumerSecret: </td>
+<td>The consumer secret associated with the consumer key for the access token</td>
+<td><a href="../../response_elements/332/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_333">
+<td>createdAt: </td>
+<td>Unix time the access token was generated</td>
+<td><a href="../../response_elements/333/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_334">
+<td>createdBy: </td>
+<td>User name of the Apigee user who created the access token</td>
+<td><a href="../../response_elements/334/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_335">
+<td>expiresAt: </td>
+<td>Unix time the access token will expire</td>
+<td><a href="../../response_elements/335/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_336">
+<td>issuedAt: </td>
+<td>Validity time period for the OAuth verifier code</td>
+<td><a href="../../response_elements/336/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_337">
+<td>lastModifiedAt: </td>
+<td>Unix time the access token was last modified</td>
+<td><a href="../../response_elements/337/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_338">
+<td>lastModifiedBy: </td>
+<td>User name of the Apigee user who last modified</td>
+<td><a href="../../response_elements/338/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_339">
+<td>scope: </td>
+<td>The OAUth scope of the access token (used at runtime to validate access to API product</td>
+<td><a href="../../response_elements/339/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_340">
+<td>secret: </td>
+<td>The screat associated with the access token</td>
+<td><a href="../../response_elements/340/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_341">
+<td>status: </td>
+<td>The status of the access token: 'approved', 'revoked', expired'</td>
+<td><a href="../../response_elements/341/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_342">
+<td>token: </td>
+<td>The value of the Access Token</td>
+<td><a href="../../response_elements/342/index.html" class="btn btn-mini">Detail</a></td>
+<!-- <td><a href="/api_methods/152-get-oauth-1-0-access-token?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr>
 </table></div>
 
 <b>Errors</b> 
 <div class="well">
 	<pre>
-  Error Codes:
-1. keymanagement.service.oauth10_access_token_doesnotexist
-3. keymanagement.service.application_not_approved
-4. keymanagement.service.oauth10_access_token_fetch_failed
+  Failure 404 with proper error message
+{
+  &quot;code&quot; : &quot;keymanagement.service.....&quot;,
+  &quot;message&quot; : &quot;Access Token doesnot exist&quot;,
+  &quot;contexts&quot; : [ ]
+}
 	</pre>
 </div>
 
@@ -179,7 +272,6 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
-- application/json
 
 </p>
 

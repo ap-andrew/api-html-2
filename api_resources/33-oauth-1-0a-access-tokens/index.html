@@ -54,7 +54,7 @@
 <div class="page-header">
   <h1>Oauth 1.0a Access Tokens</h1>
 </div>
-
+ 
 <table>
 	<tbody>
 		<tr>
@@ -72,7 +72,28 @@ You have a valid user ID as a developer.
 You have created an App.
 You have a valid consumer key.
 An access token has been generated.</td></tr>
-  <td><div id="well"><pre></pre></div></td></tr>
+  <td><div id="well"><pre>
+
+  &quot;apiProducts&quot; : [ &quot;apiProduct&quot; ],
+  &quot;app&quot; : &quot;myApp&quot;,
+  &quot;appUserId&quot; : &quot;Developer@apigee.com&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;region&quot;,
+    &quot;value&quot; : &quot;east&quot;
+  } ],
+  &quot;consumerKey&quot; : &quot;mlfBg7NH9tCua8wUhuamKHeTdfHxMB0A&quot;,
+  &quot;consumerSecret&quot; : &quot;iF1lDg239ngfhLWH&quot;,
+  &quot;createdAt&quot; : 1343037194128,
+  &quot;createdBy&quot; : &quot;1343037194128&quot;,
+  &quot;expiresAt&quot; : 1343038994128,
+  &quot;issuedAt&quot; : 1343037194128,
+  &quot;lastModifiedAt&quot; : 1343037194128,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;scope&quot; : &quot;local&quot;,
+  &quot;secret&quot; : &quot;HJ3Gl6KTF01pAH24GAAdGfb8dOq1&quot;,
+  &quot;status&quot; : &quot;approved&quot;,
+  &quot;token&quot; : &quot;kNw6eQrL5G7etEBcvqvRTL01E5rY&quot;
+}</pre></div></td></tr>
 
 </tr>
 </tbody>
@@ -126,7 +147,7 @@ An access token has been generated.</td></tr>
   <tr>
 	
 	  <tr><td><strong>Verb:</strong></td>
-	  <td><span class="label label-success">GET</span></td></tr>
+	  <td><span class="label label-success">DELETE</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
@@ -159,7 +180,7 @@ An access token has been generated.</td></tr>
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Returns a count of all 1.0a access tokens in an orgnization</td></tr>
 
 
 
@@ -178,7 +199,7 @@ An access token has been generated.</td></tr>
 
 		
 		
-		<div id="well"><pre>/organizations/{org}/oauth1/accesstokens/{accesstoken}</pre></div>		
+		<div id="well"><pre>/oauth1/accesstokens/{accesstoken}</pre></div>		
 		
 		<tr>
   <tr>

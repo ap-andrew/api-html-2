@@ -91,7 +91,7 @@
     <li class="string input required stringish" id="api_method_name_input"><label class=" label" for="api_method_name">Name<abbr title="required">*</abbr></label><input id="api_method_name" maxlength="255" name="api_method[name]" type="text" value="Update a Request Token" />
 
 </li>
-    <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth/1/requesttokens/{requesttoken}" />
+    <li class="string input optional stringish" id="api_method_path_input"><label class=" label" for="api_method_path">Path</label><input id="api_method_path" maxlength="255" name="api_method[path]" type="text" value="/oauth/2/requesttokens/{requesttoken}" />
 
 </li>
     <li class="select input optional" id="api_method_verb_input"><label class=" label" for="api_method_verb">Verb</label><select id="api_method_verb" name="api_method[verb]"><option value="GET">GET</option>
@@ -100,10 +100,10 @@
 <option value="DELETE">DELETE</option></select>
 
 </li>
-    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="" />
+    <li class="string input optional stringish" id="api_method_description_input"><label class=" label" for="api_method_description">Description</label><input id="api_method_description" maxlength="255" name="api_method[description]" type="text" value="Updates a Request Token with new profile" />
 
 </li>
-	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="" />
+	<li class="string input optional stringish" id="api_method_curl_json_input"><label class=" label" for="api_method_curl_json">Curl json</label><input id="api_method_curl_json" maxlength="255" name="api_method[curl_json]" type="text" value="curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}//oauth/2/requesttokens/{requesttoken}" />
 
 </li>
 
