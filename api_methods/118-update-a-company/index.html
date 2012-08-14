@@ -52,8 +52,11 @@
 
 
 <p>
-<h1>Update a Company :: /companies/{companyName}</h1> 
+<h1>Update a Company</h1> 
 </p>
+<div class="lead">
+/companies/{companyName}
+</div>
 
 <!-- <a href="/api_methods/118-update-a-company/edit" class="btn btn-mini">Edit</a> -->
 
@@ -87,6 +90,8 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 </pre>
 </div>
 
+
+
 <b>Request Payload:</b> 
 <div class="well">
 	<pre>
@@ -119,8 +124,8 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 <tr>
 <div class="request_element" id="request_element_13">
 <td>name</td>
-<td></td>
-<td></td>
+<td>Name of the company</td>
+<td>N/A</td>
 <td>Yes</td>
 <td><a href="/request_elements/13" class="btn btn-mini">Detail</a></td>
 </div></tr>
@@ -131,8 +136,8 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 <tr>
 <div class="request_element" id="request_element_14">
 <td>displayName</td>
-<td></td>
-<td></td>
+<td>Display name of the company </td>
+<td>N/A</td>
 <td>Yes</td>
 <td><a href="/request_elements/14" class="btn btn-mini">Detail</a></td>
 </div></tr>
@@ -143,8 +148,8 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 <tr>
 <div class="request_element" id="request_element_15">
 <td>status</td>
-<td></td>
-<td></td>
+<td>Status of the company: 'active&quot; or 'inactive'</td>
+<td>N/A</td>
 <td>Yes</td>
 <td><a href="/request_elements/15" class="btn btn-mini">Detail</a></td>
 </div></tr>
@@ -155,9 +160,9 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 <tr>
 <div class="request_element" id="request_element_16">
 <td>attributes</td>
-<td></td>
-<td></td>
-<td>Yes</td>
+<td>Name/value formatted attributes used to extend the default company profile</td>
+<td>N/A</td>
+<td>No</td>
 <td><a href="/request_elements/16" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
@@ -165,6 +170,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 
 </table>
 </div>
+
 
 <b>Response Payload:</b> 
 <div class="well">
@@ -256,11 +262,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{
 <b>Errors</b> 
 <div class="well">
 	<pre>
-  {&quot;attributes&quot; : [ {
-    &quot;name&quot; : &quot;region&quot;,
-    &quot;value&quot; : &quot;north&quot;
- } ]
-}
+  
 	</pre>
 </div>
 
@@ -271,8 +273,9 @@ Basic Auth
 
 <p>
 <b>Content Types:</b>
----
-- ''
+--- 
+- &quot;&quot;
+- application/json
 
 </p>
 
