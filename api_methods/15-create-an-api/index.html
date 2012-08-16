@@ -79,14 +79,14 @@ POST
 
 <p>
   <b>Description:</b>
-  Creates an API definition and an API proxy configuration on Apigee
+  Creates an API facade (and an API proxy configuration) on Apigee
 </p>
 
 <b> cURL:</b>
 
 <div class="well">
 	<pre>
-curl -u myname:mypass -H &quot;Content-Type: application/json&quot; https://api.enterprise.apigee.com/v1/o/{myorg}/apis
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apis
 </pre>
 </div>
 
@@ -243,6 +243,7 @@ Basic Auth
 --- 
 - &quot;&quot;
 - application/json
+- text/xml
 
 </p>
 

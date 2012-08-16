@@ -90,7 +90,7 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 
 <div class="well">
 	<pre>
-curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerName}/apps/&quot; 
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerName}/apps
 </pre>
 </div>
 
@@ -130,9 +130,21 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/dev
 <div class="request_element" id="request_element_36">
 <td>accessType</td>
 <td>Legacy Apigee-specific element, unused in current version of Apigee</td>
-<td></td>
+<td>N/A</td>
 <td>No</td>
 <td><a href="/request_elements/36" class="btn btn-mini">Detail</a></td>
+</div></tr>
+
+
+
+
+<tr>
+<div class="request_element" id="request_element_39">
+<td>name</td>
+<td>The name of the app</td>
+<td>N/A</td>
+<td>Yes</td>
+<td><a href="/request_elements/39" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
 
@@ -142,7 +154,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/dev
 <div class="request_element" id="request_element_37">
 <td>attributes</td>
 <td>Arbitrary name/value attributes that may be used for customizing profile information or for app specific processing.</td>
-<td></td>
+<td>N/A</td>
 <td>No</td>
 <td><a href="/request_elements/37" class="btn btn-mini">Detail</a></td>
 </div></tr>
@@ -154,7 +166,7 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/dev
 <div class="request_element" id="request_element_38">
 <td>callbackUrl</td>
 <td>A URL that can be used by the API to programatically update consumer Apps, Unused by Apigee. Can be multiple comma separated values. </td>
-<td></td>
+<td>N/A</td>
 <td>No</td>
 <td><a href="/request_elements/38" class="btn btn-mini">Detail</a></td>
 </div></tr>
@@ -163,12 +175,12 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/dev
 
 
 <tr>
-<div class="request_element" id="request_element_39">
-<td>name</td>
-<td></td>
-<td></td>
+<div class="request_element" id="request_element_70">
+<td>apiProducts</td>
+<td>A list of API products with which the app is associated</td>
+<td>N/A</td>
 <td>Yes</td>
-<td><a href="/request_elements/39" class="btn btn-mini">Detail</a></td>
+<td><a href="/request_elements/70" class="btn btn-mini">Detail</a></td>
 </div></tr>
 
 
@@ -226,91 +238,91 @@ curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/dev
 </div></tr><tr>
 <div class="response_element" id="response_element_165">
 <td>attributes: </td>
-<td></td>
+<td>Name/value  formatted attributes used to extend the default profile</td>
 <td><a href="/response_elements/165" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_166">
 <td>callbackUrl: </td>
-<td></td>
+<td>A URL that can be used for app specific callbacks</td>
 <td><a href="/response_elements/166" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_167">
 <td>createdAt: </td>
-<td></td>
+<td>Unix time when the app was created</td>
 <td><a href="/response_elements/167" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_168">
 <td>createdBy: </td>
-<td></td>
+<td>User name of the Apigee user who created the app</td>
 <td><a href="/response_elements/168" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_169">
 <td>credentials: </td>
-<td></td>
+<td>A set of credentials for the app--credentials are app key/secret pairs associated with API products</td>
 <td><a href="/response_elements/169" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_170">
 <td>apiProducts: </td>
-<td></td>
+<td>A list of API products with which the app is associated</td>
 <td><a href="/response_elements/170" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_171">
 <td>status: </td>
-<td></td>
+<td>The status of the API product association: 'approved' or 'pending'</td>
 <td><a href="/response_elements/171" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_172">
 <td>attributes: </td>
-<td></td>
+<td>Name/value pairs used to extend the default app profile</td>
 <td><a href="/response_elements/172" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_173">
 <td>consumerKey: </td>
-<td></td>
+<td>The value of the consumer key for the app</td>
 <td><a href="/response_elements/173" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_174">
 <td>consumerSecret: </td>
-<td></td>
+<td>The value of the consumer secret associated with the consumer key</td>
 <td><a href="/response_elements/174" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_175">
 <td>status: </td>
-<td></td>
+<td>The status of the consumer key: 'approved' or 'pending'</td>
 <td><a href="/response_elements/175" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_176">
 <td>lastModifiedAt: </td>
-<td></td>
+<td>Unix time when the app was last modified</td>
 <td><a href="/response_elements/176" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_177">
 <td>lastModifiedBy: </td>
-<td></td>
+<td>User name of the Apigee user who last modified the app</td>
 <td><a href="/response_elements/177" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_178">
 <td>name: </td>
-<td></td>
+<td>Name of the app</td>
 <td><a href="/response_elements/178" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_179">
 <td>status: </td>
-<td></td>
+<td>Status of the app: 'approved' or 'unapproved'</td>
 <td><a href="/response_elements/179" class="btn btn-mini">Detail</a></td>
 <!-- <td><a href="/api_methods/14-create-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr>
@@ -332,7 +344,6 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
-- application/json
 
 </p>
 

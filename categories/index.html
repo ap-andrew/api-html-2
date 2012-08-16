@@ -66,20 +66,22 @@
 
 <h1>Apigee API Overview</h1>
 
-<p>The Apigee Enterprise API enables you to create, configure, manage, and administer the RESTful resources exposed by Apigee Enterprise.</p>
-<p>The Apigee API is the same one used by Apigee Enterprise user interface. You can even think of the Apigee Enterprise Web UI as a reference implementation of the Enterprise API (albeit an amazingly robust and full-featured one).</p>
-<p>Often you can perform the same action in the UI as via the API. However, the API provides access to all capabilities of Apigee Enterprise, and even lets you do some things a bit differently and more flexibly than the UI does, since the API is not constrained by the same UX needs as a human interface. It's important to be aware that you can do some things using the API that are not supported by the UI. Thus, some changes you make via the API may not be reflected in the UI.</p>
+<p>The Apigee API enables you to create, configure, manage, and administer the RESTful resources exposed by Apigee.</p>
+
+<p>You can usually perform the same action in the UI as via the API. The API eneables you do some things a bit differently and more flexibly than the UI does, since the API is not constrained by the same UX needs as a human interface. </p>
+	
+<p>It is important to be aware that you can do some things using the API that are not supported by the UI. Some changes you make via the API may not be reflected in the Apigee UI.</p>
 <p>In the long run, you will probably find that some mix of working in the UI and working via the API is most effective for you. The benefit of Apigee is that you can define and implement the workflow that suits your needs the best.</p>
 <h2><a class="jumplink" name="Prerequisites"></a>Prerequisites</h2>
 <p>The Apigee API is available over the Internet—any HTTP client is supported.</p>
-<p>All you require is a user account within an Apigee Enterprise organization. This provides the Basic Auth (username:password) credentials that you pass with each API call for authentication.</p>
+<p>All you require is a user account within an Apigee organization. This provides the Basic Auth (username:password) credentials that you pass with each API call for authentication.</p>
 <p>If you do not have an account, you can sign up for the trial here: http://enterprise.apigee.com/trial</p>
-<h2><a class="jumplink" name="Entities"></a>The Apigee Enterprise API Model</h2>
-<p>You can begin familiarizing yourself by using the <strong><a href="http://apigee.com/docs/content/console">Apigee Enterprise API Console</a></strong>.</p>
-<p>The following diagram displays the entity relationships in the Apigee Enterprise API.</p>
+<h2><a class="jumplink" name="Entities"></a>The Apigee API Model</h2>
+<p>You can begin familiarizing yourself by using the <strong><a href="http://apigee.com/docs/content/console">Apigee API Console</a></strong>.</p>
+<p>The following diagram displays the entity relationships in the Apigee API.</p>
 <p><img src="https://lh5.googleusercontent.com/1ORuUNj95qr6S-qGv6GCMrMSq8i72Fal-6jt4E6x1fEMsb5iUPmEa16kIh5HimAbE4_p13RaE_aCa_vecH-3hqOUebnpGaIsqc4ZPfsgUSPo1WkH3mo" style="width: 550px; height: 409px; font-size: 13px;"></p>
 <ul>
-	<li><strong>Organization:</strong> Every Apigee Enterprise account maps into an "organization." Assuming you're an administrator, you can add and remove users to and from your organization. If you are not an administrator, you are a user within your organization. This gives you the ability to log in to the Apigee Enterprise UI for your organization. It also enables you to consume the Apigee API to access capabilities within your account. This is why you have to specify the organization in each API request you make.</li>
+	<li><strong>Organization:</strong> Every Apigee account maps into an "organization." Assuming you're an administrator, you can add and remove users to and from your organization. If you are not an administrator, you are a user within your organization. This gives you the ability to log in to the Apigee  UI for your organization. It also enables you to consume the Apigee API to access capabilities within your account. This is why you have to specify the organization in each API request you make.</li>
 	<li><strong>Company:</strong> An optional container for developers. Use the Company entity when you need to group developers under a single entity. This option used when you require billing information for a corporate entity which may or may not be managed by the developers who are building apps.</li>
 	<li><strong>Developer:</strong> A developer is a person who builds apps that consume the APIs managed in your organization. You can add, update, or remove developers within your organization. You can also group developers using "company" entities. Developers can be internal to your organization, they might be partners, or they can be external.</li>
 	<li><strong>App:</strong> A client application (e.g., an iOS or Android app) that is built by a developer and which consumes your API products.</li>
@@ -94,7 +96,7 @@
 <h2><a class="jumplink" name="Apps"></a>What kinds of apps can I write against the Apigee API?</h2>
 <p>There are a few basic types of apps that you can build against the Apigee API:</p>
 <ul>
-	<li><strong>API provisioning and management:</strong> Import, deploy, configure, and manage API proxies to Apigee Enterprise.</li>
+	<li><strong>API provisioning and management:</strong> Import, deploy, configure, and manage API proxies to Apigee.</li>
 	<li><strong>Developer provisioning and management:</strong> Add developers and manage their profiles within your organization.</li>
 	<li><strong>App provisioning and management:</strong> Add apps, and control and monitor their access to your APIs.</li>
 	<li><strong>Analytics and Insights:</strong> Monitor and analyze how your APIs are being consumed.</li>
@@ -103,7 +105,7 @@
 	<li><strong>Software Development Lifecycle Apps:</strong> The core of the Apigee system are APIs which are managed by a proxy "facade." These proxies provide pipeline processing of the messages that flow to and from your APIs. API proxies are bundles of configurations and (sometimes scripts and code) and thus require a development process. The API enables you to implement apps or scripts that implement the SLDC best suited to your organization.</li>
 </ul>
 <h2><a class="jumplink" name="Tools"></a>Tools</h2>
-<p>All you need to use the API is an account within the organization set up on Apigee Enterprise.</p>
+<p>All you need to use the API is an account within the organization set up on Apigee .</p>
 <p>The only tool you require is an HTTP client. For the purposes of this document, we rely on cURL, a command-line HTTP client. Feel free to use any HTTP client you prefer. Or simply use the Apigee console.</p>
 <p>cURL is available here: <a href="http://curl.haxx.se/">http://curl.haxx.se/</a></p>
 <p>Apigee also provides an optional deployment script (written in Python) to assist in&nbsp;importing and deploying APIs.</p>

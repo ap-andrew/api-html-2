@@ -78,7 +78,7 @@ POST
 You need to:
 Name the API product
 Bundle Resources by defining resource paths (URIs)
-Define the &amp;quot;Service Plan&amp;quot; settings for quota (permitted requests per day/month) and/or spike arrest (permitted requests per second/minute).  The service plan defines how much your developers can consume over time. At runtime, these variables are read by the Rate Limiting Policy applied to an API or Resource. Rate Limiting Variabes are set as API Product attributes:
+Define the service plan settings for quota (permitted requests per day/month) and/or spike arrest (permitted requests per second/minute).  The service plan defines how much your developers can consume over time. At runtime, these variables are read by the Rate Limiting Policy applied to an API or Resource. Rate Limiting Variabes are set as API Product attributes:
 developer.quota.limit - integer
 developer.quota.interval - integer
 developer.quota.timeunit second/minute/hour/day/month)
@@ -94,7 +94,7 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 
 <div class="well">
 	<pre>
-curl -u {myname:mypass} &quot;https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts&quot; 
+curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts
 </pre>
 </div>
 
@@ -363,6 +363,8 @@ Basic Auth
 <b>Content Types:</b>
 --- 
 - &quot;&quot;
+- application/json
+- text/xml
 
 </p>
 
