@@ -117,7 +117,7 @@ To complete this quick start you need:
 <li>The name of your Apigee organization
 </li>
 <li>An HTTP client. Our examples use the cURL client, which can be downloaded from curl.haxx.se</li>
-</ul>
+</ul>	
 
 <h4>Create an API Facade</h4>
 
@@ -670,20 +670,19 @@ Sample Response
 
 <p>Apigee contains a set of instrumentation that can be turned on by creating a debug session. </p>
 
-<div id="well"><pre>$ curl -u myname:mypass -H "Content-type:application/json"  -X POST -d'{"flowdebugsession":{"name":"check","matchingheaders":{"entry":{"key":"trapme","value":"true"}},"matchingqparams":{}}}' 'https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/weatherAPI/revisions/1/debugsessions?session=MySession&header_trapme=true'</pre></div>
+Create an API trace session 
+
+<div id="well"><pre>curl -u myname:mypass -H "Content-Type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/weatherAPI/revisions/1/debugsessions?session=WeatherSession</pre></div>
 
 Sample Response
-
-<div id="well"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
-&lt;FlowDebugSession name=&quot;MySession&quot;&gt;
-    &lt;matchingHeaders&gt;
-        &lt;entry&gt;
-            &lt;key&gt;trapme&lt;/key&gt;
-            &lt;value&gt;true&lt;/value&gt;
-        &lt;/entry&gt;
-    &lt;/matchingHeaders&gt;
-    &lt;matchingQParams/&gt;
-&lt;/FlowDebugSession&gt;</pre></div>
+<div id="well"><pre>{
+  "matchingHeaders" : {
+  },
+  "matchingQParams" : {
+  },
+  "name" : "WeatherSession"
+}</pre>
+</div>
 
 <h4>Submit Request(s) via Apigee API (with header specified in Debug Session)</h4>
 
@@ -699,15 +698,12 @@ Sample Response
 &lt;title&gt;Yahoo! Weather - Palo Alto, CA&lt;/title&gt;
 &lt;link&gt;http://us.rd.yahoo.com/dailynews/rss/weather/Palo_Alto__CA/*http://weather.yahoo.com/forecast/USCA1093_f.html&lt;/link&gt;
 &lt;description&gt;Yahoo! Weather for Palo Alto, CA&lt;/description&gt;
-. . . 
-&lt;/rss&gt;
-
-&lt;!-- api17.weather.ac4.yahoo.com uncompressed/chunked Fri Jun  8 11:33:23 PDT 2012 --&gt;</pre></div>
+</pre></div>
 
 <h4>Get Debug Session Identifier</h4>
 
 <p>When you are ready to retrieve results, you first retrieve the ID for the debug session from Apigee.</p>
-<div id="well"><pre>$ curl -u myname:mypass -H 1/organizations/apigee-cs/environments/test/apis/WeatherAPI/revisions/2/debugsessions/MySession/data'</pre></div>
+<div id="well"><pre>$ curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/WeatherAPI/revisions/1//debugsessions/WeatherSession/data'</pre></div>
 
 Sample Response
 <div id="well"><pre>{"List":{"Item":"7d6e2eb1-581a-4db0-8045-20d9c3306549__17142"}}</pre></div>
@@ -1797,70 +1793,146 @@ Troubleshooting:
 
 <div class="tab-pane fade in" id="oauth">
 	<!-- Begin Quick Start -->
-	<h4>Securing APIs with Oauth</h4>
-Import Oauth Implicit Grant Proxy
+	
 
-curl myname:mypass https://api.enterprise.apigee.com/v1/o/$org/apis?'action=import&name=oauth' -T ./OAuthV2_GrantType-implicit.zip -H "Content-Type: application/octet-stream" -X POST > ./responses/ImportOauthIGProxy.json
+The Quick Start requires a set of sample files which a located in Github.
 
-Create GenerateAccessTokenImplicitGrant Policy
+To obtain the samples, run:
 
-curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<OAuthV2 name="GenerateAccessTokenImplicit"><Operation>GenerateAccessTokenImplicitGrant</Operation><GenerateResponse /></OAuthV2>' https://api.enterprise.apigee.com/v1/o/$org/apis/oauth/revisions/1/policies > ./responses/CreateGenerateAccessTokenIGPolicy.xml
+<div id="well"><pre>$ git clone https://github.com/apigee/api-platform-samples.git</pre></div>
 
-Attach GenerateAccessTokenImplicitGrant Policy
+Then 
 
-curl myname:mypass -H "Content-type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/o/$org/apis/oauth/revisions/1/proxies/OAuthProxy/flows/PreFlow/steps?'name=GenerateAccessTokenImplicit&enforcement=request' > ./responses/AttachGenerateAccessTokenImplicitPolicy.xml
+<div id="well"><pre>$ cd /api-platform-samples/weatherproxies/setup</pre></div>
 
-Deploy Oauth Proxy Implicit Grant
+<h3>Files in this directory</h3>
 
-curl myname:mypass -H "Content-type:application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/o/$org/apis/oauth/revisions/1/deployments?'action=deploy&env=test&basepath=/' > ./responses/DeployOauthIGProxyRevision.json
+<h4>API Products:</h4>
+<ul><li>FreeProduct.xml</li>
+<li>CheapProduct.xml</li>
+<li>ExpensiveProduct.xml</li> </ul>
 
-# Create AuthZ Endpoint
-# curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<OAuthV2 name="GenerateAccessTokenImplicit"><Operation>GenerateAccessTokenImplicitGrant</Operation><GenerateResponse /></OAuthV2>' https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/policies > ./responses/CreateAuthEndpointImplicitGrant.xml
+<p>These are "API Product" definitions that describe how an API is exposed through Apigee.
+</p>
+<h4>Developers</h4>
 
-# Create AuthZ Endpoint
-# curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<OAuthV2 name="GenerateAccessToken"><Operation>GenerateAccessToken</Operation><GenerateResponse /></OAuthV2>' https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/policies > ./responses/CreateAuthEndpoint.xml
+<ul><li>joe.xml</li>
+<li>thomas.xml</li> </ul>
 
-Create a Javascript resource from a  file
-curl myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherTest/revisions/1/resources?'name=js_extract_resource_f&type=js' -X POST -F js_extract_resource_f.js=@./js_extract_resource_f.js > ./responses/CeateJavascriptFromFile.xml
+<p>These are "Developer" definitions that represent developers who use our APIs
+</p>
+<h4>Apps</h4>
+<ul><li>joe-app.xml</li>
+<li>thomas-app.xml</li> </ul>
 
-Create Custom Extract Resource JS Policy
+<p>These are "Application" definitions that describe applications that use the APIs and API Products
+</p>
+<h4>API Product associations</h4>
+<ul><li>joe-app-product.xml</li>
+<li>thomas-app-product.xml</li></ul>
+<p>These are files that instruct Apigee to associate particular applications to API products.
+</p>
+<h3>Installation Instructions</h3>
+In the installation directory run
+<div id="well"><pre>./setup.sh</pre></div>
 
-curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<Script name="ResourceExtract"><Properties /><ResourceURL>js://js_extract_resource_f</ResourceURL></Script>' https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/policies > ./responses/CreateCustomJSPolicy.xml
+<p>This installs the API products, developers, and apps remotely on Apigee.</p>
 
-Create Oauth Policy
+<p>(It is fairly straightforward and you can look at it to see how it installs the components above.)
+</p>
+<p>Next, use the "deploy.py" script to deploy the API proxies</p>
 
-curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<OAuthV2 name="VerifyAccessToken"><Operation>VerifyAccessToken</Operation><Scope>READ</Scope></OAuthV2>' https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/policies > ./responses/CreateVerifyTokenPolicy.xml
+<p>(This script requires Python -- it is present in most Linux environments, on a Mac with XCode installed, on a Windows machine with Cygwin installed, and in many other places.)</p>
 
-Create Resource Generate Quota Key JS 
+To deploy the "apikey" app (which adds API key validation), run the following from this directory, filling in your username and password and the name of your Apigee organization below:
 
-curl myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherTest/revisions/1/resources?'name=js_generate_quotakey_f&type=js' -X POST -F js_generate_quotakey_f.js=@./js_generate_quotakey_f.js > ./responses/CreateGenQuotaKeyJavascriptFromFile.xml
+<div id="well"><pre>./deploy.py -n apikeysample -u myname:mypass -o myorg -e test -d ../apikey</pre></div>
 
-Create Policy Custom Generate Quota Key JS 
+<p>Do the same to deploy the "oauth" app:</p>
 
-curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<Script name="GenerateQuotaKey"><Properties /><ResourceURL>js://js_generate_quotakey_f</ResourceURL></Script>' 
+<div id="well"><pre>./deploy.py -n oauthsample -u myname:mypass -o myorg -e test -d ../apikey</pre></div>
 
-https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/policies > ./responses/CreateCustomGenQuotaKeyJSPolicy.xml
+<h3>Testing with API keys</h3>
+Now, to test the API key app, first take a look at the app that was created to see its client  credentials:
 
-Create Rate Limiting Quota Policy with APi Product Variables
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apps/thomas-app</pre></div>
 
-curl myname:mypass  -H "Content-Type: application/xml" -X POST -d'<Quota name="QuotaStep"><Identifier ref="quota.key" /><Interval ref="apiproduct.developer.quota.interval" /><TimeUnit ref="apiproduct.developer.quota.timeunit" /><Allow countRef="apiproduct.developer.quota.limit" /></Quota>' https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/policies > ./responses/CreateQuotaPolicyforAPIProd.xml
+<div id="well"><pre>{ "accessType" : "read", "appFamily" : "default", "attributes" : [ { "name" : "DisplayName", "value" : "Tom's Weather App" } ], "callbackUrl" : "", "createdAt" : 1345009112912, "createdBy" : "your@email", "credentials" : [ { "apiProducts" : [ { "apiproduct" : "FreeProduct", "status" : "approved" } ], "attributes" : [ ], "consumerKey" : "xxxxx", "consumerSecret" : "yyyyy", "status" : "approved" } ], "lastModifiedAt" : 1345009112912, "lastModifiedBy" : "your@email", "name" : "thomas-app", "status" : "approved" }</pre></div>
 
-Attach Extract Resource Custom Policy
+<p>You'll need the "consumerKey" from above to function as the API key for this sample.
+</p>
+<p>Now invoke the API as follows:</p>
 
-curl myname:mypass -H "Content-type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/proxies/default/flows/PreFlow/steps?'name=ResourceExtract&enforcement=request' > ./responses/AttachResourceExtractJSPolicy.xml
+<div id="well"><pre>curl "http://myorg-test.apigee.net/weatherapikey/forecastrss?w=12761326&apikey=xxxxx"</pre>
+</div>
+<p>where "xxxx" is the "consumerKey" that you got before. You should get back a weather forecast.</p>
 
-Attach Oauth Policy
+<p>Note that if you leave off the "apikey" query parameter, or submit an invalid parameter, you will get back an error.</p>
 
-curl myname:mypass -H "Content-type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/proxies/default/flows/PreFlow/steps?'name=VerifyAccessToken&enforcement=request' > ./responses/AttachVerifyAccssTokenPolicy.json
+<p>Similarly, notice that using this particular API key, you get a very low quota of two API calls per minute -- so after a few requests you will get a quota exception.</p>
 
-Attach Generate Quota Key JS Resource
+<p>However, "thomas" has an app with a higher quota. Get the "consumerKey" from the other app that we created and use that -- the quota exceptions will be gone.</p>
 
-curl myname:mypass -H "Content-type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/proxies/default/flows/PreFlow/steps?'name=ResourceExtract&enforcement=request' > ./responses/AttachResourceExtractJSPolicy.xml
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apps/joe-app</pre></div>
 
-Attach Quota Policy
+<p>If you are curious as to how this works, you'll see that both apps are associated with different API products. You can see the different API product definitions like this:</p>
 
-curl myname:mypass -H "Content-type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/o/$org/apis/weatherTest/revisions/1/proxies/default/flows/PreFlow/steps?'name=QuotaStep&enforcement=request' > ./responses/AttachQuotaPolicyforAPIProd.xml
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apiproducts/FreeProduct</pre></div>
 
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apiproducts/ExpensiveProduct</pre></div>
+
+<h3>Testing with OAuth</h3>
+<p>The OAuth sample is very similar, but instead of using the "API key" pattern it achieves the same thing using OAuth 2.0. It uses the "client credentials" grant type, which lets the user exchange the API key for an OAuth token using no other parameters.</p>
+
+<p>To use this sample, you'll need both the consumer key and the secret that you retrieved above. Assuming that you substitute them for "xxx" and "yyy" in tthe request below to create an OAuth token:</p>
+
+<div id="well"><pre>curl -u xxxx:yyyy https://ORGANIZATION-test.apigee.net/weatheroauth/oauth/accesstoken -d 'grant_type=client_credentials'</pre></div>
+
+<p>{ "issued_at":1345016506911, "scope":"READ", "application_name":"joe-app", "status":"approved", "organization_id":0, "expires_in":599, "api_profile_name":"null", "refresh_token":"null", "access_token":"zzzzzzz", "refresh_count":0 }</pre>
+</p>
+<p>and once you have that, you can make API calls by including the proper OAuth 2.0 "Authorization" header, like this:</p>
+
+<div id="well"><pre>curl -H "Authorization: Bearer zzzzz" https://ORGANIZATION-test.apigee.net/weatheroauth/forecastrss?w=12761326</pre></div>
+
+<h3>Testing with OAuth and Authorization Code</h3>
+<p>OAuth implementations can actually get an access token in one of four ways:
+</p>
+<ul><li>Using the username and password directly, passed on the access token request -- this is called the "username / password" type.</li>
+<li>By redirecting the user's browser to a special URL that produces an authorization code, and redirects the user again to a login page. This is designed for web apps that talk to the API and is called the "authorization code" type.</li>
+<li>Like number 2 above, but returning a "URL fragment" that is designed for use by highly interactive apps built using JavaScript. This is called the "implicit grant" type.</li>
+<li>Just using the client credentials, which is called the "client credentials" type. That's what we did in the last step.</li></ul>
+
+<p>In this step, we'll use the authorization code type (number 2).</p>
+
+<p>For this step, we'll use the proxy in the "oauth-authcode" directory. So we'll deploy it like this:
+</p>
+<div id="well"><pre>./deploy.py -n oauthauthcode -u USERNAME:PASSWORD -o ORGANIZATION -e test -d ../oauth-authcode</pre></div>
+
+<p>The first step in authenticating the user and getting the access token is to redirect the user's web browser to the "login page" supported by the API. We can simulate this using curl like this:</p>
+
+<div id="well"><pre>curl \ "https://ORGANIZATION-test.apigee.net/weatheroauthauthcode/oauth/authorize?response_type=code&client_id=xxx&redirect_uri=http://joe.app/login&scope=READ&state=foobar"</pre>
+</div>
+<p>In this case, the "client_id" should be the same "consumerId" from "joe-app" that we used in the previous example.</p>
+
+<p>Also, the "redirect_uri" must be the same as the "callbackUrl" that we specified when we created "joe-app." (See the joe-app.xml file to check.) If it doesn't match, you'll get an error.</p>
+
+<p>This will return a redirect response like this:</p>
+
+<div id="well"><pre>HTTP/1.1 302 Found Location: http://joe.app/login?scope=READ&state=foobar&code=zzzzz</pre>
+</div>
+<p>In a real OAuth app, this URL would have been invoked by a web browser, which then would have been redirected to the login page at "joe.app". Writing this login page is part of the API provider's responsibility.</p>
+
+<p>(Note the "state" parameter here -- this is to prevent CSRF attacks and should be unique for every request. It's not required but highly recommended.)</p>
+
+<p>Now to get the access token, the login page or pages at joe.app would eventually make a POST back to the proxy, like this:
+</p>
+<div id="well"><pre>curl -u xxxx:yyyy https://ORGANIZATION-test.apigee.net/weatheroauthauthcode/oauth/accesstoken \ -d 'grant_type=authorization_code&code=zzzzz&redirect_uri=http://joe.app/login'</pre></div>
+
+<div id="well"><pre>{ "issued_at":1345073930832, "scope":"READ", "application_name":"joe-app", "status":"approved", "organization_id":0, "expires_in":3599, "api_profile_name":"null", "refresh_token":"SlE9lNYf", "access_token":"I29OwHlGRi1AkbBCIRLLMC5efFgu", "refresh_count":0 }</pre></div>
+
+<p>And now we can use the access token in our request exactly as we did before:</p>
+
+<div id="well"><pre>curl -H "Authorization: Bearer I29OwHlGRi1AkbBCIRLLMC5efFgu" \ https://the-brails-test.apigee.net/weatheroauthauthcode/forecastrss?w=12761326</pre></div>
     <!-- End of Quick Start -->
 </div>
 
