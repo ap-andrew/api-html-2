@@ -177,7 +177,7 @@ To complete this quick start you need:
 <div class="tab-pane fade in" id="provision">
 
 	<!-- Begin Quick Start -->
-	<h4>Provision an API </h4>
+	<h2>Provision an API </h2>
 <p>The Quick Start shows you how to use the Apigee API to construct an API facade.</p>
 
 <p>We will create the most basic API facade possible--one configured to receive requests and forward them to the Yahoo Weather API, and then to return the response, unmodified, to the requesting app.</p>
@@ -186,7 +186,7 @@ To complete this quick start you need:
 
 <p>First, let's get our bearings by submitting a request to the 'naked' weather API. This will ensure that our HTTP client (in this case, cURL) and the API (in the case, the Yahoo Weather API) are both running as expected.  </p>
 	
-	<h4>Submit Request to Weather API</h4>
+	<h2>Submit Request to Weather API</h2>
 
 	<div class="well">
 		$ curl http://weather.yahooapis.com/forecastrss?w=12797282&</pre>
@@ -221,7 +221,7 @@ You Organization is an important component of the API. You will submit your Orga
 </p>
 <p>Note in this request that you provide a username and password for Basic Authentication against the API. This username:password combination is valid for your user account within your Organization. (In some cases, you might belong to multiple Organizations, so if you have auth failures, start by checking the Organization in your request.) 
 </p>
-<h4>Check your Apigee Organization</h4>
+<h2>Check your Apigee Organization</h2>
 	
 <div class="well">$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}</div>
 
@@ -248,7 +248,7 @@ Sample Response
 </p>
 <p>TIP: If you run this command and nothing returns, add the flag '-v' to he end. You can do this with any curl command in this Quick Start. It lets you see what HTTP error may have been thrown. Usually, it's a 401 (bad username/password) or a 404 (not found).
 </p>
-<h4>List APIs in your Organization</h4>
+<h2>List APIs in your Organization</h2>
 
 APIs are collected under Organizations. An Organization, in other words, is an 'API Provider'. So, let's see what APIs exist in our 'org'. If this is your first time using Apigee, it is likely that your list will be empty. However, if you are following in a colleague's footsteps, you may find an API or two already defined in your Organization.
 	
@@ -257,7 +257,7 @@ APIs are collected under Organizations. An Organization, in other words, is an '
 Sample Responses:
 <div id="well"><pre>[ "api1", "api2", "api3" ]</pre></div>
 
-	<h4>Create an API Facade</h4>
+<h2>Create an API Facade</h2>
 Now we will create an API on the Apigee platform. This API will provide a 'front-end' to the API we will manage. A new URL will be generated, as will a processing pipeline (a set of flows) to manage requests submitted to the new URL.
 
 <div id="well"><pre>$ curl https://api.enterprise.apigee.com/v1/o/{myorg}/apis -u myname:mypass -H 'Content-type:application/json' -X POST  -d'{"name" : "weatherAPI"}'</pre></div>
@@ -289,7 +289,7 @@ In the response, you can begin to see the anatomy of the API Proxy that Apigee g
 <li>One or more Policies: Policies are the heart of an API Proxy. They change the behavior of your API and provide services such as rate-limiting, security, transformations, and so on. We'll look at Policies in the next Quick Start.</li>
 <li>One or more Resources: These are files used by policies. They can be Javascripts, Python scripts, XSLT files, etc.</li></ul>
 
-<h4>List APIs</h4>
+<h2>List APIs</h2>
 
 <p>Now let's list APIs in our org again and see our new API listed.</p>
 
@@ -299,7 +299,7 @@ In the response, you can begin to see the anatomy of the API Proxy that Apigee g
 Sample Response
 <div id="well"><pre>[ "weatherAPI" ]</pre></div>	
 
-<h4>Get an API</h4>
+<h2>Get an API</h2>
 
 <p>Now let's do a GET on our new API and see what details are returned.</p>
 	
@@ -311,7 +311,7 @@ Sample Response
   "revision" : [ "1" ]
 }</pre></div>
 	
-<h4>List API Revisions</h4>
+<h2>List API Revisions</h2>
 
 <p>We mentioned that an API facade is implemented in an API Proxy--a bundle of code and configuration. Each API Proxy in Apigee has a sequentially numbered set of packages, which the system tracks for you. Every time you modify an API Proxy (for example, by attaching a polict to it), the system generates a new revision of the API Proxy. This provides a rudimentary form of revision control, which you should feel free to augment by using your own source-code management system. (In other words, store your latest working revision of an API proxy in your SCM!)</p>
 
@@ -330,7 +330,7 @@ Sample Response
 
 <p>So to get the real detail of the AP configuration, we need to look as ata specific revision.</p>
  
-<h4>Get API Revision</h4>
+<h2>Get API Revision</h2>
 
 We do a GET on revision 1 to get a detailed view.
 
@@ -363,7 +363,7 @@ Our goal is to create an API that can intermediate requests to the the YAhoo, so
 	<li>A Target Endpoint: Defining the outbound HTTP connection (to Yahoo)</li>
 </ol>
 
-<h4>Add a Proxy Endpoint to the API Facade</h4>
+<h2>Add a Proxy Endpoint to the API Facade</h2>
 
 <p>The key piece of configuration that we add in this step is the <b>basepath</b> for our API.
 </p>
@@ -412,7 +412,7 @@ Sample Response
 <p>A very important element is the routeRule. It is here that you tell the proxy which target endpoint to use for the outbound call (in this case to Yahoo).</p>
 <p>Here we have named the target 'default' as well, so now we need to create that target endpoint.</p>
 
-<h4>Add a Target Endpoint to the API Facade</h4>
+<h2>Add a Target Endpoint to the API Facade</h2>
 <p>The proxy endpoint is only half the picture. With a proxy endpoint configuration, Apigee knows how to receive  requests. </p>
 
 <p>Now we tell Apigee where to forward those requests.</p> 
@@ -449,14 +449,14 @@ Sample Response
 
 <p>As with the proxy, you can see that the target contains fault rules, and a set of flows.</p>
 
-<h4>Deploying the API</h4>
+<h2>Deploying the API</h2>
 <p>Now that our API facade is configured to receive and forward requests properly, we need to deploy it to an environment.</p>
 	
 <p>An API facade cannot be invoked until is has been deployed.
 </p>
 <p>And what we deploy is the API <b>revision</b>.</p>
 
-<h4>How to List Environments</h4>
+<h2>How to List Environments</h2>
 <p>Every organization in Apigee has at least two environments: 'test' and 'prod'. The distinction is really arbitrary. The goal is to provide you with an area to verify that your API facade is working properly before you open it up to outside developers.</p>
 <p>So, first see which environments are available.</p>
 <div id="well"><pre>$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/environments</pre></div>
@@ -464,7 +464,7 @@ Sample Response
 
 <div id="well"><pre>[ "test", "prod" ]</pre></div>
 
-<h4>Deploy your API to the Test Environment</h4>
+<h2>Deploy your API to the Test Environment</h2>
 <p>Now, deploy the API to the test environment.</p>
 
 <div id="well"><pre>$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apis/weatherAPI/revisions/1/deployments?action=deploy&env=test&basepath=/</pre></div>
@@ -478,7 +478,7 @@ Sample Response
   "organization" : "{myorg}"
 }</pre></div>
 
-<h4>Submit Requests to your API at Runtime</h4>
+<h2>Submit Requests to your API at Runtime</h2>
 
 <p>The proxied URL that Apigee generates for you depends on the environment where you deploy your API Proxy.</p>
 The proxied URL is a concatenation of:
@@ -488,14 +488,14 @@ The proxied URL is a concatenation of:
 <li>The Apigee Base URL (apigee.net, <b>NOT</b> api.enterprise.apigee.com) </li>
 <li>The basepath you configure for the API (in our example, /weather)</li></ul>
 
-<h4>How to Get the Virtual Host for an Environment</h4>
+<h2>How to Get the Virtual Host for an Environment</h2>
 
 First, get the name of the virtual host for your environment.
 <div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/virtualhosts</pre></div>
 Sample Response
 <div id="well"><pre>[ "default" ]</pre></div>
 
-<h4>How to Get the Virtual Host Address for an Environment</h4>
+<h2>How to Get the Virtual Host Address for an Environment</h2>
 Now get the settings for the virtual host. This will tell you where to submit requests to your API facade.
 <div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/virtualhosts/default</pre></div>
 Sample Response
@@ -510,7 +510,7 @@ Sample Response
 <p>Thus to invoke our API we submit requests to:</p>
 <div id="well"><pre>http://myorg-test.apigee.net/weather</pre></div>
 
-<h4>Submit Request via Apigee API</h4>
+<h2>Submit Request via Apigee API</h2>
 
 <p>Now let's submit a request that invokes the Yahoo Weather API by calling the Apigee API proxy, rather than directly calling Yahoo. </p>
 
@@ -531,18 +531,18 @@ Sample Response
 
 <p>You now have a fully configured API facade running in Apigee.</p>
 
-<h3>Examining the API more closely. . .</h3>
+<h1>Examining the API more closely. . .</h1>
 
 
-<h4>List Proxy Flows </h4>
+<h2>List Proxy Flows </h2>
 
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI/revisions/1/proxies/default/flows</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI/revisions/1/proxies/default/flows</pre></div>
 
 Sample Response
 <div id="well"><pre>[ "PreFlow", "PostFlow" ]</div></pre>
 
-<h4>Get the Proxy PreFlow </h4>
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/proxies/default/flows/PreFlow </pre></div>
+<h2>Get the Proxy PreFlow </h2>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/proxies/default/flows/PreFlow </pre></div>
 
 Sample Response
 <div id="well"><pre>{
@@ -555,9 +555,9 @@ Sample Response
   }
 }</pre></div>
 
-<h4>Get the Proxy PostFlow </h4> 
+<h2>Get the Proxy PostFlow </h2> 
 
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/proxies/default/flows/PostFlow</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/proxies/default/flows/PostFlow</pre></div>
 
 Sample Response
 <div id="well"><pre>{
@@ -570,8 +570,8 @@ Sample Response
   }
 }</pre></div>
 
-<h4>Get the Target PreFlow </h4>
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/targets/default/flows/PreFlow</pre></div>
+<h2>Get the Target PreFlow </h2>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/targets/default/flows/PreFlow</pre></div>
 
 Sample Response
 <div id="well"><pre>{
@@ -584,9 +584,9 @@ Sample Response
   }
 }</pre></div>
 
-<h4>Get the Target PostFlow </h4> 
+<h2>Get the Target PostFlow </h2> 
 
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/targets/default/flows/PostFlow</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/$org/apis/weatherAPI//revisions/1/targets/default/flows/PostFlow</pre></div>
 
 <div id="well"><pre>{
   "name" : "PostFlow",
@@ -598,15 +598,15 @@ Sample Response
   }
 }</pre></div>
 
-<h3>Exploring Deployments</h3>
+<h1>Exploring Deployments</h1>
 
 <p>A "deployment" is a deployed revision of your API. It is often useful to check to see in which environment (and if!) your API is deployed. </p>
 
 <p>For example, you mind find requests to your API facade are failing. One troubleshooting step is to ensure that the API is deployed as expected.</p>
 
-<h4>See All Deployments of your API Revision
-</h4>
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/o/$org/apis/weatherAPI/revision/1/deployments</pre></div>
+<h2>See All Deployments of your API Revision
+</h2>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/$org/apis/weatherAPI/revision/1/deployments</pre></div>
 
 <div id="well"><pre>{
   "aPIProxy" : "weatherAPI",
@@ -639,15 +639,15 @@ Sample Response
   "organization" : "myorg"
 }</div></pre>
 
-<h4>See All Deployments in the Test Environment
-</h4>
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/o/$org/environments/test/deployments</pre></div>
+<h2>See All Deployments in the Test Environment
+</h2>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/$org/environments/test/deployments</pre></div>
 
 <p>Returns the same result as above for every API deployed in the test environment
 </p>
-<h4>See All Deployments in your Organization
-</h4>
-<div id="well"><pre>curl -u $username:$password https://api.enterprise.apigee.com/v1/o/$org/deployments</pre></div>
+<h2>See All Deployments in your Organization
+</h2>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/$org/deployments</pre></div>
 <p>Returns the same result as above for every API deployed in all environments
 </p>
 
@@ -663,20 +663,22 @@ Sample Response
 
 <div class="tab-pane fade in" id="debug">
 	<!-- Begin Quick Start -->
-	<h4>Trace API Calls</h4>
+	<h2>Trace API Calls</h2>
 <p>Once you've set up an API in Apigee, you need to be able to debug the traffic flowing through it. You do this in Apigee by tracing API calls.</p>
 
-<h4>Create Debug Session and Specify Message Filter</h4>
+<h2>Create Debug Session and Specify Message Filter</h2>
 
 <p>Apigee contains a set of instrumentation that can be turned on by creating a debug session. </p>
 
 Create an API trace session 
 
-<div id="well"><pre>curl -u myname:mypass -H "Content-Type: application/octet-stream" -X POST https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/weatherAPI/revisions/1/debugsessions?session=WeatherSession</pre></div>
+<div id="well"><pre>curl -u myname:mypass -H "Content-Type: application/json" -X POST 'https://api.enterprise.apigee.com/v1/organizations/{myorg}/environments/test/apis/weatherAPI/revisions/1/debugsessions?session=WeatherSession2&header_traceme=true'</pre></div>
 
 Sample Response
+
 <div id="well"><pre>{
   "matchingHeaders" : {
+    "traceme" : "true"
   },
   "matchingQParams" : {
   },
@@ -684,11 +686,11 @@ Sample Response
 }</pre>
 </div>
 
-<h4>Submit Request(s) via Apigee API (with header specified in Debug Session)</h4>
+<h2>Submit Request(s) via Apigee API</h2>
 
-<p>Once the debug session has been initialized, you can run traffic through the API. Until messages trip the filter, oyu won;t have any results on the debug output.</p>
+<p>Once the debug session has been initialized, you can run traffic through the API and the messages will be captured as part of the session. </p>
 
-<div id="well"><pre>$ curl -H "trapme:true" 'http://apigee-cs-test.apigee.net/WeatherAPI/forecastrss?w=12797282&'</pre></div>
+<div id="well"><pre>$ curl -H traceme:true 'http://{apigee-cs}myorg}-test.apigee.net/WeatherAPI/forecastrss?w=12797282&'</pre></div>
 
 Sample Response
 
@@ -700,28 +702,32 @@ Sample Response
 &lt;description&gt;Yahoo! Weather for Palo Alto, CA&lt;/description&gt;
 </pre></div>
 
-<h4>Get Debug Session Identifier</h4>
+<h2>Get Debug Session Identifier</h2>
 
 <p>When you are ready to retrieve results, you first retrieve the ID for the debug session from Apigee.</p>
-<div id="well"><pre>$ curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/WeatherAPI/revisions/1//debugsessions/WeatherSession/data'</pre></div>
+<div id="well"><pre>$ curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/organizations/{apigee-cs}myorg}/environments/test/apis/WeatherAPI/revisions/1/debugsessions/WeatherSession/data'</pre></div>
 
 Sample Response
 <div id="well"><pre>{"List":{"Item":"7d6e2eb1-581a-4db0-8045-20d9c3306549__17142"}}</pre></div>
 
-<h4>Get Debug Session by Identifier</h4>
+<h2>Get Debug Session by Identifier</h2>
 
 <p>Once you have the session ID, you use it to request the debug output from Apigee.</p>
 
 <div id="well"><pre>$ $ curl -u myname:mypass -H "Accept: application/json" 'https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/WeatherAPI/revisions/1/debugsessions/check/data/7d6e2eb1-581a-4db0-8045-20d9c3306549__17142'</pre></div>
 
 Sample Response
-[See Sample Debug JSON Output here: https://gist.github.com/da41c55a04b44f61bde7]
+<p>The response that is returned contains the raw output of a trace session. (If you run a trace session in the Apigee UI, this trace session is nicely formatted for you.)</p>
+
+[See Sample Debug JSON Output at: https://gist.github.com/da41c55a04b44f61bde7]
 
 <div id="well">
 		<script src="http://gist.github.com/da41c55a04b44f61bde7.js"></script>			
 </div>
 
-<h4>Send Debug JSON output to a local file</h4>
+<h2>Send Debug JSON output to a local file</h2>
+
+<p>It often is easier to send the debug output to a local file for offline examination.</p>
 
 <div id="well"><pre>$ curl -u myname:mypass -H "Accept: application/json" 'https://api.enterprise.apigee.com/v1/organizations/apigee-cs/environments/test/apis/WeatherAPI/revisions/1/debugsessions/check/data/7d6e2eb1-581a-4db0-8045-20d9c3306549__17142' > MySession.json</pre></div>
 
@@ -730,13 +736,13 @@ Sample Response
 	
 <div class="tab-pane fade in" id="policy">
 	<!-- Begin Quick Start -->
-	<h4>Attach a Policy to an API</h4>
+	<h2>Attach a Policy to an API</h2>
 
 <p>In this Quick Start, we will change the behavior of the Yahoo Weather API by applying a policy the API facade that you created in Quick Start 1.</p>
 
 <p>First examine the existing API revision to see what policies are there.</p>
 
-<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/apigee-cs/apis/weatherAPI/revisions/1/policies</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/myorg/apis/weatherAPI/revisions/1/policies</pre></div>
 
 Sample Response
 
@@ -767,7 +773,7 @@ Some examples of policies provided by Apigee are:
 	<p>The policy that we attach to our API will restrict developers from making more than 1 request to the API per minute.
 	</p>
 	<p>(This isn't very realistic of course--but it makes it easy to see the effects of a policy in real time.)
-	</p><h4>Create a Quota Policy</h4>
+	</p><h2>Create a Quota Policy</h2>
 	<p>First create the Quota Policy</p>
 	<p>There are a bunch of options in here, but we will focus on setting the most important configuration settings for a Quota: the time interval value and the timeUnit value. </p>
 
@@ -821,7 +827,7 @@ Sample Response
     }
 }</pre></div>
 
-<h4>The Structure of a Policy</h4>
+<h2>The Structure of a Policy</h2>
 A policy contains some properties general to all policies and some specific to its policy type.
 <ul>
 	<li>policyType: This is the policy type, which is defined in a schema.</li>
@@ -838,7 +844,7 @@ A policy contains some properties general to all policies and some specific to i
 	<li>timeUnit: Set the variable request.header.quota_timeout to 1 minute</li>
 </ul>
 
-<h4>Attach a Quota Policy to the APIs Request PreFlow</h4>
+<h2>Attach a Quota Policy to the APIs Request PreFlow</h2>
 <p>The policy has been created for the API facade. It is available to be enforced. 
 </p>
 <p>Now we need to configure the point in the pipeline where the policy is enforced.
@@ -852,9 +858,9 @@ Sample Response
     "name": "WeatherQuota"
 }</pre></div>
 
-<h4>Verify Policy Attachment</h4>
+<h2>Verify Policy Attachment</h2>
 
-<p>To verify that the policy is attached properly, we can get the proxy endpoints PreFlow details. 
+<p>To verify that the policy is attached properly, we can get the proxy endpoint's PreFlow details. 
 </p>
 <div id="well"><pre>$ curl -H "Accept: application/json" -u myname:mypass 'https://api.enterprise.apigee.com/v1/o/{myorg}/apis/weatherAPI/revisions/1/proxies/default/flows/PreFlow'</pre></div>
 	
@@ -874,7 +880,7 @@ Sample Response
   }
 }</pre></div>
 
-<h4>Deploy to Test Environment</h4>
+<h2>Deploy to Test Environment</h2>
 <p>Remember, an API cannot be invoked until has been deployed to an environment.
 </p>
 <p>Note also that we are deploying an API revision, in this case, revision 1 of the API.</p>
@@ -913,7 +919,7 @@ Sample Response
   &quot;state&quot; : &quot;deployed&quot;
 }</pre></div>
 
-<h4>Verify Policy Enforcement</h4>
+<h2>Verify Policy Enforcement</h2>
 
 <p>Send at least two requests in under a minute. If the quota policy is properly configured and attached we  see Apigee reject a request as a quota violation.
 </p>
@@ -921,10 +927,10 @@ Sample Response
 
 
 Sample Response
-<div id="well"<pre>>&lt;pre&gt;&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;&lt;fault&gt;&lt;faultstring&gt;policies.ratelimit.QuotaViolation&lt;/faultstring&gt;&lt;detail&gt;&lt;errorcode&gt;policies.ratelimit.QuotaViolation&lt;/errorcode&gt;&lt;/detail&gt;&lt;/fault&gt;</pre></div>
+<div id="well"><pre>&lt;?xml version=&#x27;1.0&#x27; encoding=&#x27;UTF-8&#x27;?&gt;&lt;fault&gt;&lt;faultstring&gt;policies.ratelimit.QuotaViolation&lt;/faultstring&gt;&lt;detail&gt;&lt;errorcode&gt;policies.ratelimit.QuotaViolation&lt;/errorcode&gt;&lt;/detail&gt;&lt;/fault&gt;</pre></div>
 
 
-<h4>Deploy to Production</h4>
+<h2>Deploy to Production</h2>
 <p>Now that things are working properly, we can deploy our API to production, so that external developers can access it under the conditions of the quota policy.</p>
 
 <div id="well"><pre>$ curl -u myname:mypass -X POST 'https://api.enterprise.apigee.com/v1/o/{myorg}/apis/weatherAPI/revisions/1/deployments?action=deploy&env=prod&basepath=/weather'</pre></div>
@@ -937,7 +943,7 @@ Sample Response
   },
   &quot;environment&quot; : &quot;prod&quot;,
   &quot;name&quot; : &quot;1&quot;,
-  &quot;organization&quot; : &quot;apigee-cs&quot;,
+  &quot;organization&quot; : &quot;myorg&quot;,
   &quot;revision&quot; : &quot;1&quot;,
   &quot;server&quot; : [ {
     &quot;status&quot; : &quot;deployed&quot;,
@@ -959,7 +965,7 @@ Sample Response
   &quot;state&quot; : &quot;deployed&quot;
 }</pre></div>
 
-<h4>Submit Request to Production API</h4>
+<h2>Submit Request to Production API</h2>
 
 <p>To submit request to the production API facade, we change the request URL to point at prod.
 </p>
@@ -983,7 +989,7 @@ Sample Response
 &lt;!-- api17.weather.ac4.yahoo.com uncompressed/chunked Fri Jun  8 11:33:23 PDT 2012 --&gt;</pre></div>
 
 
-<h4>Undeploy the API Proxy from Test Environment</h4>
+<h2>Undeploy the API Proxy from Test Environment</h2>
 
 <p>To cleanup, we undeploy revision 1 of our API from test. (You always need to undeploy revisions before they can be deleted from the system.) </p>
 
@@ -998,7 +1004,7 @@ Sample Response
   },
   &quot;environment&quot; : &quot;test&quot;,
   &quot;name&quot; : &quot;1&quot;,
-  &quot;organization&quot; : &quot;apigee-cs&quot;,
+  &quot;organization&quot; : &quot;myorg&quot;,
   &quot;revision&quot; : &quot;1&quot;,
   &quot;server&quot; : [ {
     &quot;status&quot; : &quot;undeployed&quot;,
@@ -1022,7 +1028,7 @@ Sample Response
 
 The API is now undeployed from the test environment.
 
-<h4>Attaching other Policies</h4> 
+<h2>Attaching other Policies</h2> 
 <p>This Quick Start was designed to show you how to configure, upload, and attach policy.
 </p>
 <p>Once you have learned these basic mechanics, you can work with any policy type in the Apigee arsenal.</p>
@@ -1031,11 +1037,11 @@ The API is now undeployed from the test environment.
 		
 <div class="tab-pane fade in" id="apps">
 	<!-- Begin Quick Start -->
-	<h4>Provision Developer and Apps</h4>
+	<h2>Provision Developer and Apps</h2>
 
 In this Quick Start, we go through the steps it takes to enable developers to create apps that consume your APIs.
 
-<h4>Create an API Product</h4>
+<h2>Create an API Product</h2>
 
 <p>Before you create a developer and an app, you need to create an API product.</p>
 
@@ -1059,7 +1065,7 @@ In the request to create an API you specify:
 <li>scopes: An optional, comma-separated list of Oauth scopes that are validated at runtime. (Apigee validates that the scopes in the Access Token presented match the scope set in the API product)</li>
 </ul>
 <div id="well"><pre>
-curl https://api.enterprise.apigee.com/v1/o/apigee-cs/apiproducts -u andrew@apigee.com:4G,ftw -H "Content-Type:application/json" -X POST -d'{"apiResources" : [ "/weather" ],"approvalType" : "auto", "attributes" : [ {"name" : "description","value" : "Introductory API Product"}, {"name" : "developer.quota.interval","value" : "1"}, {"name" : "developer.quota.limit","value" : "1"}, {"name" : "developer.quota.timeunit","value" : "minute"}, {"name" : "access","value" : "external"}, {"name" : "apisDeployedIn","value" : "test"}, {"name" : "servicePlan","value" : "Introductory"} ],"description" : "Free API Product","displayName" : "Free API Product","name" : "free_sample","scopes" : [ ]}' https://api.enterprise.apigee.com/v1/o/myorgapiproducts</pre></div>
+curl https://api.enterprise.apigee.com/v1/o/apigee-cs/apiproducts -u admin@apigee.com:4G,ftw -H "Content-Type:application/json" -X POST -d'{"apiResources" : [ "/weather" ],"approvalType" : "auto", "attributes" : [ {"name" : "description","value" : "Introductory API Product"}, {"name" : "developer.quota.interval","value" : "1"}, {"name" : "developer.quota.limit","value" : "1"}, {"name" : "developer.quota.timeunit","value" : "minute"}, {"name" : "access","value" : "external"}, {"name" : "apisDeployedIn","value" : "test"}, {"name" : "servicePlan","value" : "Introductory"} ],"description" : "Free API Product","displayName" : "Free API Product","name" : "free_sample","scopes" : [ ]}' https://api.enterprise.apigee.com/v1/o/myorgapiproducts</pre></div>
 
 
 Sample Response
@@ -1099,7 +1105,7 @@ Sample Response
 }</pre>
 </div>
 
-<h4>Create a Developer</h4>
+<h2>Create a Developer</h2>
 
 <p>Register a developer in the organization. The email that is included here is used as the unique key for the developer throughout the system.</p>
 
@@ -1121,13 +1127,13 @@ Sample Response
 	    "value" : "north"
 	  } ],
 	  "createdAt" : 1343189787717,
-	  "createdBy" : "andrew@apigee.com",
+	  "createdBy" : "admin@apigee.com",
 	  "lastModifiedAt" : 1343189787717,
-	  "lastModifiedBy" : "andrew@apigee.com"
+	  "lastModifiedBy" : "admin@apigee.com"
 	}</pre></div>
 
 
-<h4>Create an App for this Developer that consumes the API Product</h4>
+<h2>Create an App for this Developer that consumes the API Product</h2>
 
 <p>Now create an app to consume the weather API.
 </p>
@@ -1136,14 +1142,14 @@ Sample Response
 <p>When the app is registered, Apigee generates a "credential" (a consumer key and secret pair) when an app is created. This credential is 'bound' (in a loose way) to an API product. In other words, a credential is generated for an app that enables it to consume a set of URIs at a specified rate. </p>
 
 <div id="well"><pre>$ curl -u myname:mypass -H "Content-type:application/json" -X POST -d'{"apiProducts": [ "free_sample"],"callbackUrl" : "www.apigee.com", "name" : "weatherApp"
-}' https://api.enterprise.apigee.com/v1/o/{myorg}/developers/developer%40apigee%2Ecom/apps</pre></div>
+}' https://api.enterprise.apigee.com/v1/o/{myorg}/developers/"developer@apigee.com"/apps</pre></div>
 
 Sample Response
 
 <div id="well"><pre>{
   "callbackUrl" : "www.apigee.com",
   "createdAt" : 1343190620890,
-  "createdBy" : "andrew@apigee.com",
+  "createdBy" : "admin@apigee.com",
   "credentials" : [ {
     "apiProducts" : [ {
       "apiproduct" : "free_sample",
@@ -1155,13 +1161,13 @@ Sample Response
     "status" : "approved"
   } ],
   "lastModifiedAt" : 1343190620890,
-  "lastModifiedBy" : "andrew@apigee.com",
+  "lastModifiedBy" : "admin@apigee.com",
   "name" : "weatherApp",
   "status" : "approved"
 }</pre>
 </div>
 
-<h4>Get the Consumer Key (the API Key)</h4>
+<h2>Get the Consumer Key (the API Key)</h2>
 
 <p>You can retrieve the consumer key any time it's needed. One instance where it may be needed is if the API product is set to 'manual' approval type. In that situation, you must explicitly approve the key for the API product.</p>
 
@@ -1179,10 +1185,10 @@ Sample Response
   "status" : "approved"
 }</pre></div>
 
-<h4>Approve the Consumer Key</h4>
+<h2>Approve the Consumer Key</h2>
 If you need to approve the consumer key explicitly, you can approve it with this method:
 
-<div id="well"><pre>$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/developer%40api%2Ecom/apps/weatherapp/keys/HQg0nCZ54adKobpqEJaE8FefGkdKFc2J?action=approve</pre></div>
+<div id="well"><pre>$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/"developer@apigee.com"/apps/weatherapp/keys/HQg0nCZ54adKobpqEJaE8FefGkdKFc2J?action=approve</pre></div>
 
 Sample Response
 	<div id="well"><pre>{
@@ -1197,113 +1203,58 @@ Sample Response
 	}</pre>
 	</div>
 
-<h4>Approve API Product for the Consumer Key</h4>
+<h2>Approve API Product for the Consumer Key</h2>
 
 <p>The <i>association</i> of an API product with a key also has a status. A consumer key can be 'approved' in general, but not approved specifically for an API product. </p>
 <p>For API access to be successful, the consumer key must be approved, <i>and</i> the consumer key must be approved for the proper API product. 
 </p>
 <p>You can approve the association of a consumer key with an API product as follows:
 </p>
-<div id="well"><pre>$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/developer%40apigee%2Ecom/apps/weatherApp/keys/HQg0nCZ54adKobpqEJaE8FefGkdKFc2J/apiproducts/free_sample?action=approve</pre></div>
+<div id="well"><pre>$ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/"developer@apigee.com"/apps/weatherApp/keys/HQg0nCZ54adKobpqEJaE8FefGkdKFc2J/apiproducts/free_sample?action=approve</pre></div>
+
+<p>For a Quick Start that covers the complete flow, including Oauth setup, see "Setting Up OAuth"</p>
     <!-- End of Quick Start -->
 </div>
 
 <div class="tab-pane fade in" id="analytics">
 	<!-- Begin Quick Start -->
-	<h4>API Analytics</h4>
+	<h2>API Analytics</h2>
 
-<p>Now that apps are able to consume your API, it is time to garner insights into how your API is being used.</p>
+<p>Now that apps are able to consume your API, it is time to get some insights into how the API is being used and how it is performing.</p>
 
-<h4>Get Statistics for all APIs across all Environments</h4>
+<h2>Building a Report: Dimensions, Functions, and Metrics</h2>
 
-One variation is to request message counts (i.e. total throughput) for all APIs for a day:
+Here we build a report that shows request message counts (i.e. total throughput) for all APIs for a day.
 
-<div id="well"><pre>curl -u myname:mypass  'https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/apis?select=message_count&timeRange=7/23/2012%2000:00~7/24/2012%2000:00&timeUnit=day&sortby=message_count&sort=DESC'</pre></div>
+Note in this API call, we define three key elements:
 
-to add top 5 add topk
+<ul><li>Dimension: The dimension selected from the list of dimension recorded by Apigee. In this example the dimension is API name.</li> 
+<li>Metrics: The metric for the chosen dimension. In this example the metric message_count.</li>
+<li>Time range: In this example the time range is July 23 to July 24, 2012. Timestamp is in Unix time (seconds since January 1, 1970, Midnight GMT.)</li></ul>
 
-<div id="well"><pre>{
-  "environments" : [ {
-    "dimensions" : [ {
-      "metrics" : [ {
-        "name" : "message_count",
-        "values" : [ {
-          "timestamp" : 1343235600000,
-          "value" : "2.0"
-        }, {
-          "timestamp" : 1343185200000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343181600000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343178000000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343163600000,
-          "value" : "0"
-        } ]
-      } ],
-      "name" : "weatherAPI"
-    }, {
-      "metrics" : [ {
-        "name" : "message_count",
-        "values" : [ {
-          "timestamp" : 1343235600000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343185200000,
-          "value" : "2.0"
-        }, {
-          "timestamp" : 1343181600000,
-          "value" : "1.0"
-        }, {
-          "timestamp" : 1343178000000,
-          "value" : "2.0"
-        }, {
-          "timestamp" : 1343163600000,
-          "value" : "0"
-        } ]
-      } ],
-      "name" : "harry1"
-    }, {
-      "metrics" : [ {
-        "name" : "message_count",
-        "values" : [ {
-          "timestamp" : 1343235600000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343185200000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343181600000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343178000000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343163600000,
-          "value" : "5.0"
-        } ]
-      } ],
-      "name" : "proxy-test2"
-    } ],
-    "name" : "test"
-  } ],
-  "metaData" : {
-  }
-}</pre></div>
+<p>The dimension is the entity for which Apigee collects metrics. The 'dimension' that is set for this report is 'apis'. There is long list of dimensions that can be used in your reports. Some dimensions of inital interest are:
+<p><li>organization</li>
+<li>client_ip</li>
+<li>developer</li>
+<li>developer_app</li>
+<li>access_token</li></p>
+</p>
+<p>The function run on the metric in this example is 'sum'. The other functions you can use are sum, average, min, and max.</p>
+<p>The metric is 'message_count'.</p> Other metrics you can use are:
+<ul><li>cache_hit</li>
+<li>response_status_code</li>
+<li>message_count</li>
+<li>request_size</li>
+<li>response_processing_latency</li>
+<li>response_size</li>
+<li>request_processing_latency</li>
+<li>total_response_time</li>
+<li>is_error</li></ul>
+ 
+<p>In this example, we collect a sum of message count for all apis. This report gives a snapshot of the throughput to all APIs in the environment specified (in this case, 'test').</p>
 
-
-
-<h4>Get traffic for all APIs deployed in test.</h4>
 <div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/apis?select=sum(message_count)&timeRange=7/24/2012%2000:00~8/25/2012%2000:00&timeUnit=day</pre></div>
 
-Dimension is API Name. Add run this with another dimension. Target URL. 
-
-https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/target_url
-
-https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/target_url?select=count(is_error)
 
 Sample Response
 <div id="well"><pre>{
@@ -1319,19 +1270,7 @@ Sample Response
           "value" : "0"
         } ]
       } ],
-      "name" : "proxy-test2"
-    }, {
-      "metrics" : [ {
-        "name" : "sum(message_count)",
-        "values" : [ {
-          "timestamp" : 1343088000000,
-          "value" : "0"
-        }, {
-          "timestamp" : 1343174400000,
-          "value" : "5.0"
-        } ]
-      } ],
-      "name" : "harry1"
+      "name" : "myAPI"
     }, {
       "metrics" : [ {
         "name" : "sum(message_count)",
@@ -1352,12 +1291,146 @@ Sample Response
   }
 }</pre></div>
 
-Timestamp is a Unix Timestamp (seconds since January 1, 1970, Midnight GMT. 
 
-<h4>Get Statistics for top APIs</h4>
-view the first five top ranked APIs defined by highest throughput in the last 24 hours.
 
-<div id="well"><pre>curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/apis?select=message_count&timeRange=7/24/2012%2000:00~8/25/2012%2000:00&timeUnit=hour&sortby=message_count&sort=DESC&topk=5'</pre></div>
+<p>You can select other dimensions to build reports on. For example, you can specify the 'target_url' dimensions to retrieve metrics on backend services. This report shows the total throughput to target URLs for the specified time interval.
+</p>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/target_url?select=sum(message_count)&timeRange=7/24/2012%2000:00~8/25/2012%2000:00&timeUnit=day</pre></div>
+
+<div id="well"><pre>{
+  "environments" : [ {
+    "dimensions" : [ {
+      "metrics" : [ {
+        "name" : "sum(message_count)",
+        "values" : [ {
+          "timestamp" : 1344816000000,
+          "value" : "1.0"
+        }, {
+          "timestamp" : 1345075200000,
+          "value" : "8.0"
+        }, {
+          "timestamp" : 1345161600000,
+          "value" : "8.0"
+        } ]
+      } ],
+      "name" : "https://api.partner.com"
+    }, {
+      "metrics" : [ {
+        "name" : "sum(message_count)",
+        "values" : [ {
+          "timestamp" : 1344816000000,
+          "value" : "3.0"
+        }, {
+          "timestamp" : 1345075200000,
+          "value" : "0"
+        }, {
+          "timestamp" : 1345161600000,
+          "value" : "3.0"
+        } ]
+      } ],
+      "name" : "http://weather.yahooapis.com/forecastrss?w=12797282&"
+    } ],
+    "name" : "test"
+  } ],
+  "metaData" : {
+    "samplingRate" : "100"
+  }
+}</pre></div>
+
+<h2>Get a count of error messages returned by target URLs for the past week</h2>
+
+<p>For this report, we specify a dimension of "target_url", and the metric "count" for the "is_error" variable. This variation on the report will show how many errors were returned by target URLs. </p>
+
+<div id="well"><pre>-H "Content-type:application/octet-stream" 'https://api.eterprise.apigee.com/v1/o/{myorg}/environments/test/stats/target_url?select=count(is_error)&timeRange=8/08/2012%2000:00~8/15/2012%2000:00&timeUnit=week'</pre></div>
+
+
+<div id="well"><pre>{
+  "environments" : [ {
+    "dimensions" : [ {
+      "metrics" : [ {
+        "name" : "count(is_error)",
+        "values" : [ {
+          "timestamp" : 1344211200000,
+          "value" : "44.0"
+        }, {
+          "timestamp" : 1344816000000,
+          "value" : "1.0"
+        } ]
+      } ],
+      "name" : "https://api.company.com"
+    }, {
+      "metrics" : [ {
+        "name" : "count(is_error)",
+        "values" : [ {
+          "timestamp" : 1344211200000,
+          "value" : "23.0"
+        }, {
+          "timestamp" : 1344816000000,
+          "value" : "3.0"
+        } ]
+      } ],
+      "name" : "http://weather.yahooapis.com/forecastrss?w=12797282&"
+    }, {
+      "metrics" : [ {
+        "name" : "count(is_error)",
+        "values" : [ {
+          "timestamp" : 1344211200000,
+          "value" : "0"
+        }, {
+          "timestamp" : 1344816000000,
+          "value" : "12.0"
+        } ]
+      } ],
+      "name" : "http://weather.yahooapis.com/forecastrss?w=12797282&"
+    } ],
+    "name" : "test"
+  } ],
+  "metaData" : {
+    "samplingRate" : "100"
+  }</pre></div>
+
+
+<h2>Get the Top Target URL by Error Rate for the Week</h2>
+
+<p>You may want to find which of your target URLs was the most error prone over the last week.
+</p>
+<p>You do this by adding the 'topk' parameter with a value of 1.
+</p>
+<p>The 'topk', meaning 'top k' entities, enables you to build reports for the top entities of interest.
+</p>
+<p>For example you may be interested to know who your top developer are, measured by throughput, what your worst (i.e., 'top slowest') target APIs are by latency. </p>
+
+
+<div id="well"><pre>curl -u andrew@apigee.com:4G,ftw -H "Content-type:application/octet-stream" 'https://api.eterprise.apigee.com/v1/o/apigee-cs/environments/test/stats/target_url?select=count(is_error)&timeRange=8/08/2012%2000:00~8/15/2012%2000:00&timeUnit=week&sortby=count(is_error)&sort=DESC&topk=1'</pre></div>
+<div id="well"><pre>{
+  "environments" : [ {
+    "dimensions" : [ {
+      "metrics" : [ {
+        "name" : "count(is_error)",
+        "values" : [ {
+          "timestamp" : 1344816000000,
+          "value" : "1.0"
+        }, {
+          "timestamp" : 1344211200000,
+          "value" : "44.0"
+        } ]
+      } ],
+      "name" : "https://api.company.com"
+    } ],
+    "name" : "test"
+  } ],
+  "metaData" : {
+    "samplingRate" : "100"
+  }
+}</pre></div>
+
+<p>We can see that the buggiest of the target URLs is at http://api.company.com.</p>
+
+<h2>Get Statistics for top APIs</h2>
+
+<p>In this example, you can view the top ranked API, defined by highest throughput in the last 24 hours.</p>
+
+<div id="well"><pre>curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/developers?select=message_count&timeRange=7/24/2012%2000:00~8/25/2012%2000:00&timeUnit=hour&sortby=message_count&sort=DESC&topk=1'</pre></div>
 
 Sample Response
 
@@ -1371,67 +1444,12 @@ Sample Response
   }
 }</pre></div>
 
-
-<h4>Get Statistics for an Environment</h4>
-
-<div id="well"><pre>curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/?select=message_count&timeRange=7/24/2012%2000:00~8/25/2012%2000:00&timeUnit=hour'</pre></div>
-
-
-<div id="well"><pre>{
-  "environments" : [ {
-    "metrics" : [ {
-      "name" : "message_count",
-      "values" : [ {
-        "timestamp" : 1342285200000,
-        "value" : "6.0"
-      }, {
-        "timestamp" : 1342400400000,
-        "value" : "3.0"
-      }, {
-        "timestamp" : 1342411200000,
-        "value" : "2.0"
-      }, {
-        "timestamp" : 1342447200000,
-        "value" : "1.0"
-      }, {
-        "timestamp" : 1342458000000,
-        "value" : "1.0"
-      }, {
-        "timestamp" : 1342526400000,
-        "value" : "12.0"
-      }, {
-        "timestamp" : 1342530000000,
-        "value" : "8.0"
-      }, {
-        "timestamp" : 1342533600000,
-        "value" : "15.0"
-      } ]
-    } ],
-    "name" : "test"
-  } ],
-  "metaData" : {
-  }</pre></div>
-
-
-<h4>Get Statistics on Custom Data</h4>
-
-<h4>Upload Extract Variables Policy</h4>
-
-<h4>Attach Policy to Target Post Flow</h4>
-
-<h4>Upload Statistics Collector Policy</h4>
-
-<h4>Attach Policy to Target Post Flow</h4>
-
-<h4>Deploy Revision</h4>
-
-<h4>Get Custom Report</h4>
     <!-- End of Quick Start -->
 </div>
 
 <div class="tab-pane fade in" id="deploy">
 	<!-- Begin Quick Start -->
-	<h4>API Development Models: Local and Cloud</h4>
+	<h2>API Development Models: Local and Cloud</h2>
 
 <p>Apigee lets you develop API proxies locally. You can create the API proxy files from scratch, or you can download ('export') them from Apigee after you create an API.</p>
 
@@ -1439,12 +1457,12 @@ Sample Response
 
 <p>Apigee provides an open source tool written in Python that helps you simplify and manage the process of packaging and deploying APIs from your local machine to Apigee Enterprise Cloud.</p>
 
-<h4>Download the Python Deploy script from Github.</h4>
+<h2>Download the Python Deploy script from Github.</h2>
 
 <p>The Deploy tool can be downloaded from <pre>https://github.com/ApigeeDocs/Samples</pre>.
 
 
-<h4>Getting started with the Apigee UI</h4>
+<h2>Getting started with the Apigee UI</h2>
 <ol>
 <li>Login to enterprise.apigee.com and Create an API. In this example, we create an API called SampleAPI, with a base path of /sample, and a server url of api.sample.com.</li>
 <li>Navigate to 'APIs', select the API you created, and scroll down to Revisions</li>
@@ -1453,13 +1471,13 @@ Sample Response
 <li>Navigate to the location of the unzipped file on your local machine</li>
 </ol>
 
-<h4>API Proxy Revision Naming</h4>
+<h2>API Proxy Revision Naming</h2>
 If you download the revision from the Apigee UI, the downloaded file name includes the API name, revision number, and download date.
 <div id="well"><pre>sampleapi_rev1_2012_07_11.zip</pre></div>
 
-<h4>Getting started with the Apigee API</h4>
+<h2>Getting started with the Apigee API</h2>
 
-<h4>Create an API</h4> 
+<h2>Create an API</h2> 
 
 <p>To create an API using the Apigee API, you only need to provide a name.</p>
 
@@ -1486,7 +1504,7 @@ Sample Response
   "type" : "Application"
 }</pre></div>
 
-<h4>Export the API to your local machine via API</h4>
+<h2>Export the API to your local machine via API</h2>
 <p>The API that you created on Apigee can be exported as a ZIP file.</p>
 <div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apis/sampleAPI/revisions/1?format=bundle > ./apiproxy.zip
 
@@ -1494,7 +1512,7 @@ $ unzip apiproxy.xml
 $ cd ./apiproxy</pre></div>
 
 
-<h4>API Proxy Basic File Structure</h4>
+<h2>API Proxy Basic File Structure</h2>
 You now have an API generated by Apigee. It is an API proxy in its most basic form. 
 <p>
 This API defines an empty processing pipeline with two endpoints:
@@ -1511,7 +1529,7 @@ This API defines an empty processing pipeline with two endpoints:
 
 <p>APIs created by the Apigee UI always have proxy and target endpoints named 'default'.
 </p>
-<h4>API Proxy File Contents</h4>
+<h2>API Proxy File Contents</h2>
 
 weatherapi.xml
 <div id="well"><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
@@ -1572,10 +1590,10 @@ weatherapi.xml
 &lt;/TargetEndpoint&gt;
 </pre></div>
 
-<h4>Setting up a Local Development Environment</h4>
+<h2>Setting up a Local Development Environment</h2>
 It is usually helpful to import this file structure into your favorite editor to construct a project which will manage the files for you. You may also wish to store the files in a source code repository.
 
-<h4>Using the Deploy Tool</h4>
+<h2>Using the Deploy Tool</h2>
 
 <p>Now that you have your proxy files extracted to a directory called /apiproxy, you can use the Python tool that Apigee provides to Import (that os, upload) and deploy you API one fell swoop.</p>
 
@@ -1597,7 +1615,7 @@ $ curl -u myname:mypass https://api.enterprisee.apigee.com/v1/o/{myorg}/environm
 
 -d The path to the local directory where your API Proxy files reside. Note that your API Proxy files must be stored under a directory called /apiproxy. This script will ZIP your API Proxy into a bundle, and import the bundle to Apigee environment for your organization.</pre></div>
 
-<h4>Import (Upload) your API to Apigee and Deploy to Test</h4>
+<h2>Import (Upload) your API to Apigee and Deploy to Test</h2>
 
 One benefit of the 
 
@@ -1614,7 +1632,7 @@ For example
 <p>Once you have run the tool your API is ready to be invoked. (There is no secondary 'deploy' step.)</p>
 
 
-<h4>How to Submit Requests to your API at Runtime</h4>
+<h2>How to Submit Requests to your API at Runtime</h2>
 <p>The proxied URL for your API depends on the environment where you deploy your API Proxy.</p>
 The proxied URL is a concatenation of:
 
@@ -1625,7 +1643,7 @@ The proxied URL is a concatenation of:
 Thus to invoke our API we submit requests to:
 <div id="well"><pre>http://myorg-test.apigee.net/weather</pre></div>
 
-<h4>Add Policies to your API</h4>
+<h2>Add Policies to your API</h2>
 
 <p>Now that you have the basic structure of the API,  you can start to add some features. 
 </p>
@@ -1653,7 +1671,7 @@ policies	proxies		targets		sampleAPI.xml</pre></div>
 
 <p>Create a file called <pre>QuotaPolicy.xml</pre> under <pre>/policies</pre>, and paste into it the policy body above.</p>
 
-<h4>Attach a Policy to the Request PreFlow</h4>
+<h2>Attach a Policy to the Request PreFlow</h2>
 
 <p>The Policy is now available to be executed in the processing pipeline of your API Proxy.</p>
 
@@ -1705,7 +1723,7 @@ Into the Proxy Endpoint's Request PreFlow as shown below:
 
 The Quota Policy will now execute when the Proxy receives a request from an app.
 
-<h4>Import and Deploy Changes</h4>
+<h2>Import and Deploy Changes</h2>
 
 cd to your apiproxy directory
 
@@ -1713,13 +1731,13 @@ Run the Deploy python tool.
 
 <div id="well"><pre>$ python deploy.py -n sampleAPI -u myname:mypass -h https://api.enterprise.apigee.com -o {myorg} -e test -p /weather -d ./apiproxy</pre></div>
 
-<h4>Verify that the Quota Policy is Functioning</h4>
+<h2>Verify that the Quota Policy is Functioning</h2>
 
 <div id="well"><pre>http://myorg-test.apigee.net/sample</pre></div>
 
 <div id="well"><pre>http://myorg-test.apigee.net/sample</pre></div>
 
-<h4>Working with Variables</h4>
+<h2>Working with Variables</h2>
 
 The Policy Body: Assign Message
 
@@ -1780,7 +1798,7 @@ Create the file: <pre>/apiproxy/policies/AssignResponse.xml</pre>
 
 <div id="well"><pre>$ python deploy.py -n weatherAPI -u myname:mypass -h https://api.enterprise.apigee.com -o {myorg} -e test -p /weather -d ./apiproxy</pre></div>
 
-<h4>Invoke the API:</h4>
+<h2>Invoke the API:</h2>
 
 <pre>http://{myorg}-test.apigee.net/weather?input=World</pre>
 
@@ -1807,27 +1825,27 @@ Then
 
 <h3>Files in this directory</h3>
 
-<h4>API Products:</h4>
+<h2>API Products:</h2>
 <ul><li>FreeProduct.xml</li>
 <li>CheapProduct.xml</li>
 <li>ExpensiveProduct.xml</li> </ul>
 
 <p>These are "API Product" definitions that describe how an API is exposed through Apigee.
 </p>
-<h4>Developers</h4>
+<h2>Developers</h2>
 
 <ul><li>joe.xml</li>
 <li>thomas.xml</li> </ul>
 
 <p>These are "Developer" definitions that represent developers who use our APIs
 </p>
-<h4>Apps</h4>
+<h2>Apps</h2>
 <ul><li>joe-app.xml</li>
 <li>thomas-app.xml</li> </ul>
 
 <p>These are "Application" definitions that describe applications that use the APIs and API Products
 </p>
-<h4>API Product associations</h4>
+<h2>API Product associations</h2>
 <ul><li>joe-app-product.xml</li>
 <li>thomas-app-product.xml</li></ul>
 <p>These are files that instruct Apigee to associate particular applications to API products.
@@ -1846,16 +1864,16 @@ In the installation directory run
 
 To deploy the "apikey" app (which adds API key validation), run the following from this directory, filling in your username and password and the name of your Apigee organization below:
 
-<div id="well"><pre>./deploy.py -n apikeysample -u myname:mypass -o myorg -e test -d ../apikey</pre></div>
+<div id="well"><pre>./deploy.py -n apikeysample -u myname:mypass -o {myorg} -e test -d ../apikey</pre></div>
 
 <p>Do the same to deploy the "oauth" app:</p>
 
-<div id="well"><pre>./deploy.py -n oauthsample -u myname:mypass -o myorg -e test -d ../apikey</pre></div>
+<div id="well"><pre>./deploy.py -n oauthsample -u myname:mypass -o {myorg} -e test -d ../apikey</pre></div>
 
 <h3>Testing with API keys</h3>
 Now, to test the API key app, first take a look at the app that was created to see its client  credentials:
 
-<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apps/thomas-app</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apps/thomas-app</pre></div>
 
 <div id="well"><pre>{ "accessType" : "read", "appFamily" : "default", "attributes" : [ { "name" : "DisplayName", "value" : "Tom's Weather App" } ], "callbackUrl" : "", "createdAt" : 1345009112912, "createdBy" : "your@email", "credentials" : [ { "apiProducts" : [ { "apiproduct" : "FreeProduct", "status" : "approved" } ], "attributes" : [ ], "consumerKey" : "xxxxx", "consumerSecret" : "yyyyy", "status" : "approved" } ], "lastModifiedAt" : 1345009112912, "lastModifiedBy" : "your@email", "name" : "thomas-app", "status" : "approved" }</pre></div>
 
@@ -1863,7 +1881,7 @@ Now, to test the API key app, first take a look at the app that was created to s
 </p>
 <p>Now invoke the API as follows:</p>
 
-<div id="well"><pre>curl "http://myorg-test.apigee.net/weatherapikey/forecastrss?w=12761326&apikey=xxxxx"</pre>
+<div id="well"><pre>curl "http://{myorg}-test.apigee.net/weatherapikey/forecastrss?w=12761326&apikey=xxxxx"</pre>
 </div>
 <p>where "xxxx" is the "consumerKey" that you got before. You should get back a weather forecast.</p>
 
@@ -1873,26 +1891,26 @@ Now, to test the API key app, first take a look at the app that was created to s
 
 <p>However, "thomas" has an app with a higher quota. Get the "consumerKey" from the other app that we created and use that -- the quota exceptions will be gone.</p>
 
-<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apps/joe-app</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apps/joe-app</pre></div>
 
 <p>If you are curious as to how this works, you'll see that both apps are associated with different API products. You can see the different API product definitions like this:</p>
 
-<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apiproducts/FreeProduct</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/FreeProduct</pre></div>
 
-<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/myorg/apiproducts/ExpensiveProduct</pre></div>
+<div id="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/ExpensiveProduct</pre></div>
 
 <h3>Testing with OAuth</h3>
 <p>The OAuth sample is very similar, but instead of using the "API key" pattern it achieves the same thing using OAuth 2.0. It uses the "client credentials" grant type, which lets the user exchange the API key for an OAuth token using no other parameters.</p>
 
 <p>To use this sample, you'll need both the consumer key and the secret that you retrieved above. Assuming that you substitute them for "xxx" and "yyy" in tthe request below to create an OAuth token:</p>
 
-<div id="well"><pre>curl -u xxxx:yyyy https://ORGANIZATION-test.apigee.net/weatheroauth/oauth/accesstoken -d 'grant_type=client_credentials'</pre></div>
+<div id="well"><pre>curl -u xxxx:yyyy https://{myorg}-test.apigee.net/weatheroauth/oauth/accesstoken -d 'grant_type=client_credentials'</pre></div>
 
 <p>{ "issued_at":1345016506911, "scope":"READ", "application_name":"joe-app", "status":"approved", "organization_id":0, "expires_in":599, "api_profile_name":"null", "refresh_token":"null", "access_token":"zzzzzzz", "refresh_count":0 }</pre>
 </p>
 <p>and once you have that, you can make API calls by including the proper OAuth 2.0 "Authorization" header, like this:</p>
 
-<div id="well"><pre>curl -H "Authorization: Bearer zzzzz" https://ORGANIZATION-test.apigee.net/weatheroauth/forecastrss?w=12761326</pre></div>
+<div id="well"><pre>curl -H "Authorization: Bearer zzzzz" https://{myorg}-test.apigee.net/weatheroauth/forecastrss?w=12761326</pre></div>
 
 <h3>Testing with OAuth and Authorization Code</h3>
 <p>OAuth implementations can actually get an access token in one of four ways:
@@ -1906,11 +1924,11 @@ Now, to test the API key app, first take a look at the app that was created to s
 
 <p>For this step, we'll use the proxy in the "oauth-authcode" directory. So we'll deploy it like this:
 </p>
-<div id="well"><pre>./deploy.py -n oauthauthcode -u USERNAME:PASSWORD -o ORGANIZATION -e test -d ../oauth-authcode</pre></div>
+<div id="well"><pre>./deploy.py -n oauthauthcode -u myname:mypass -o {myorg} -e test -d ../oauth-authcode</pre></div>
 
 <p>The first step in authenticating the user and getting the access token is to redirect the user's web browser to the "login page" supported by the API. We can simulate this using curl like this:</p>
 
-<div id="well"><pre>curl \ "https://ORGANIZATION-test.apigee.net/weatheroauthauthcode/oauth/authorize?response_type=code&client_id=xxx&redirect_uri=http://joe.app/login&scope=READ&state=foobar"</pre>
+<div id="well"><pre>curl \ "https://{myorg}-test.apigee.net/weatheroauthauthcode/oauth/authorize?response_type=code&client_id=xxx&redirect_uri=http://joe.app/login&scope=READ&state=foobar"</pre>
 </div>
 <p>In this case, the "client_id" should be the same "consumerId" from "joe-app" that we used in the previous example.</p>
 
@@ -1926,13 +1944,13 @@ Now, to test the API key app, first take a look at the app that was created to s
 
 <p>Now to get the access token, the login page or pages at joe.app would eventually make a POST back to the proxy, like this:
 </p>
-<div id="well"><pre>curl -u xxxx:yyyy https://ORGANIZATION-test.apigee.net/weatheroauthauthcode/oauth/accesstoken \ -d 'grant_type=authorization_code&code=zzzzz&redirect_uri=http://joe.app/login'</pre></div>
+<div id="well"><pre>curl -u xxxx:yyyy https://{myorg}-test.apigee.net/weatheroauthauthcode/oauth/accesstoken \ -d 'grant_type=authorization_code&code=zzzzz&redirect_uri=http://joe.app/login'</pre></div>
 
 <div id="well"><pre>{ "issued_at":1345073930832, "scope":"READ", "application_name":"joe-app", "status":"approved", "organization_id":0, "expires_in":3599, "api_profile_name":"null", "refresh_token":"SlE9lNYf", "access_token":"I29OwHlGRi1AkbBCIRLLMC5efFgu", "refresh_count":0 }</pre></div>
 
 <p>And now we can use the access token in our request exactly as we did before:</p>
 
-<div id="well"><pre>curl -H "Authorization: Bearer I29OwHlGRi1AkbBCIRLLMC5efFgu" \ https://the-brails-test.apigee.net/weatheroauthauthcode/forecastrss?w=12761326</pre></div>
+<div id="well"><pre>curl -H "Authorization: Bearer I29OwHlGRi1AkbBCIRLLMC5efFgu" \ https://{myorg}-test.apigee.net/weatheroauthauthcode/forecastrss?w=12761326</pre></div>
     <!-- End of Quick Start -->
 </div>
 
