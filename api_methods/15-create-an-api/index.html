@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="cRmTWov1YYmt5lj94wGZwn9xhEhuCzHUp+kTw0VXyOo=" name="csrf-token" />
+<meta content="vpls82Z0PVqC2C5jiCbpzCfFC9DpVYHnQVfYwrkZ92g=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -57,30 +57,29 @@
 <div class="lead">
 /apis
 </div>
+<p>
+  Creates an API facade (and an API proxy configuration) on Apigee
+</p>
 
 <!-- <a href="/api_methods/15-create-an-api/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
- <b>API resource:</b>
+ <b>API Resource:</b>
   APIs
 </p>
 
 <p>
   <b>Verb:</b>
-<span class="label label-success">
+<span class="label label-info">
 POST
 </span>
 </p>
 
 <p>
-  <b>Doc:</b>
   This method creates the framework of an API proxy in Apigee, providing an alternative to creating APIs via the UI.  The API will not be accessible at runtime until a proxy endpoint and target endpoint are defined. Usually, this request is followed up with an export API proxy method, which brings the API proxy bundle to the developer's local machine, where AP proxy can be configured and then imported back into Apigee for execution. 
 </p>
 
-<p>
-  <b>Description:</b>
-  Creates an API facade (and an API proxy configuration) on Apigee
-</p>
+
 
 <b> cURL:</b>
 
@@ -165,61 +164,61 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apis
 		</thead>
 <tr>
 <div class="response_element" id="response_element_272">
-<td>configurationVersion: </td>
+<td>configurationVersion </td>
 <td>The version of Apigee that the configuration is valid for</td>
 <!-- <td><a href="/response_elements/272" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_273">
-<td>contextInfo: </td>
+<td>contextInfo </td>
 <td>Apigee generated contextual information about the entity</td>
 <!-- <td><a href="/response_elements/273" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_274">
-<td>name: </td>
+<td>name </td>
 <td>The name of the API</td>
 <!-- <td><a href="/response_elements/274" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_275">
-<td>policies: </td>
+<td>policies </td>
 <td>Policies attached to the API </td>
 <!-- <td><a href="/response_elements/275" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_276">
-<td>proxyEndpoints: </td>
+<td>proxyEndpoints </td>
 <td>Named proxy endpoints (receiver) defined for the API proxy</td>
 <!-- <td><a href="/response_elements/276" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_277">
-<td>resources: </td>
+<td>resources </td>
 <td>Any code, scripts, XSLT files used by policies attached to this API</td>
 <!-- <td><a href="/response_elements/277" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_278">
-<td>revision: </td>
+<td>revision </td>
 <td>The sequential numbered packages of code and configuration that make up an API proxy</td>
 <!-- <td><a href="/response_elements/278" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_279">
-<td>targetEndpoints: </td>
+<td>targetEndpoints </td>
 <td>Named proxy endpoints (sender) defined for the API proxy</td>
 <!-- <td><a href="/response_elements/279" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_280">
-<td>targetServers: </td>
+<td>targetServers </td>
 <td></td>
 <!-- <td><a href="/response_elements/280" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_281">
-<td>type: </td>
+<td>type </td>
 <td></td>
 <!-- <td><a href="/response_elements/281" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/15-create-an-api?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
@@ -238,25 +237,14 @@ Basic Auth
 </p>
 
 
-<p>
-<b>Content Types:</b>
---- 
-- &quot;&quot;
-- application/json
-- text/xml
-
-</p>
-
-
-
 
             </div>
         </div><!--/row-->
       </div><!--/content-->
 
-       <footer>
+       <!-- <footer>
         <p>&copy; Apigee, Inc. 2012</p>
-      </footer> 
+      </footer>  -->
 
     </div> <!-- /container -->
 

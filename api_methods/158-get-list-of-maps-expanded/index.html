@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="cRmTWov1YYmt5lj94wGZwn9xhEhuCzHUp+kTw0VXyOo=" name="csrf-token" />
+<meta content="vpls82Z0PVqC2C5jiCbpzCfFC9DpVYHnQVfYwrkZ92g=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -57,30 +57,29 @@
 <div class="lead">
 /maps?expand=true
 </div>
+<p>
+  Returns an expanded view of all Maps in an Organization
+</p>
 
 <!-- <a href="/api_methods/158-get-list-of-maps-expanded/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
- <b>API resource:</b>
+ <b>API Resource:</b>
   Maps
 </p>
 
 <p>
   <b>Verb:</b>
-<span class="label label-success">
+<span class="label label-info">
 GET
 </span>
 </p>
 
 <p>
-  <b>Doc:</b>
   Returns an expanded view of all Maps in an Organization. An expanded view displays all entries for each Map returned.
 </p>
 
-<p>
-  <b>Description:</b>
-  Returns an expanded view of all Maps in an Organization
-</p>
+
 
 <b> cURL:</b>
 
@@ -149,19 +148,19 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps?expand
 		</thead>
 <tr>
 <div class="response_element" id="response_element_400">
-<td>map: </td>
+<td>map </td>
 <td>Top level element for a map</td>
 <!-- <td><a href="/response_elements/400" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/158-get-list-of-maps-expanded?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_401">
-<td>entry: </td>
+<td>entry </td>
 <td>Name/value pair that defines the entry</td>
 <!-- <td><a href="/response_elements/401" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/158-get-list-of-maps-expanded?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_402">
-<td>name: </td>
+<td>name </td>
 <td>The name of the map</td>
 <!-- <td><a href="/response_elements/402" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/158-get-list-of-maps-expanded?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
@@ -184,24 +183,14 @@ Basic Auth
 </p>
 
 
-<p>
-<b>Content Types:</b>
---- 
-- &quot;&quot;
-- application/json
-
-</p>
-
-
-
 
             </div>
         </div><!--/row-->
       </div><!--/content-->
 
-       <footer>
+       <!-- <footer>
         <p>&copy; Apigee, Inc. 2012</p>
-      </footer> 
+      </footer>  -->
 
     </div> <!-- /container -->
 

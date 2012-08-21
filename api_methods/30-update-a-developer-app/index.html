@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="cRmTWov1YYmt5lj94wGZwn9xhEhuCzHUp+kTw0VXyOo=" name="csrf-token" />
+<meta content="vpls82Z0PVqC2C5jiCbpzCfFC9DpVYHnQVfYwrkZ92g=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -57,30 +57,29 @@
 <div class="lead">
 /developers/{developerName}/apps/{appName}
 </div>
+<p>
+  Updates the app to get a new set of consumer credentials. 
+</p>
 
 <!-- <a href="/api_methods/30-update-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
- <b>API resource:</b>
+ <b>API Resource:</b>
   Developer Apps
 </p>
 
 <p>
   <b>Verb:</b>
-<span class="label label-success">
+<span class="label label-info">
 PUT
 </span>
 </p>
 
 <p>
-  <b>Doc:</b>
   Updates and existing app profile with the information in the request payload.
 </p>
 
-<p>
-  <b>Description:</b>
-  Updates the app to get a new set of consumer credentials. 
-</p>
+
 
 <b> cURL:</b>
 
@@ -176,97 +175,97 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/
 		</thead>
 <tr>
 <div class="response_element" id="response_element_502">
-<td>accessType: </td>
+<td>accessType </td>
 <td></td>
 <!-- <td><a href="/response_elements/502" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_503">
-<td>attributes: </td>
+<td>attributes </td>
 <td>Name/value pairs used to extend the default app profile</td>
 <!-- <td><a href="/response_elements/503" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_504">
-<td>callbackUrl: </td>
+<td>callbackUrl </td>
 <td>A callback URL that can be used for app specific callbacks</td>
 <!-- <td><a href="/response_elements/504" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_505">
-<td>createdAt: </td>
+<td>createdAt </td>
 <td>Unix time when the app was created</td>
 <!-- <td><a href="/response_elements/505" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_506">
-<td>credentials: </td>
+<td>credentials </td>
 <td>A list of associations between API products and consumer keys for the app</td>
 <!-- <td><a href="/response_elements/506" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_507">
-<td>apiProducts: </td>
+<td>apiProducts </td>
 <td>A list of API products with which the app is associated</td>
 <!-- <td><a href="/response_elements/507" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_508">
-<td>apiproduct: </td>
+<td>apiproduct </td>
 <td>The API product with which teh app is associated</td>
 <!-- <td><a href="/response_elements/508" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_509">
-<td>status: </td>
+<td>status </td>
 <td>Status of the app association with the API product: 'approved' or 'pending'</td>
 <!-- <td><a href="/response_elements/509" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_510">
-<td>attributes: </td>
+<td>attributes </td>
 <td>Name'value pairs used to extend the profile</td>
 <!-- <td><a href="/response_elements/510" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_511">
-<td>consumerKey: </td>
+<td>consumerKey </td>
 <td>The value of the consumer key associated with the API product</td>
 <!-- <td><a href="/response_elements/511" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_512">
-<td>consumerSecret: </td>
+<td>consumerSecret </td>
 <td>Value of the consumer secret associated with the consumer key</td>
 <!-- <td><a href="/response_elements/512" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_513">
-<td>status: </td>
+<td>status </td>
 <td>Status of the consumer key: 'approved' or 'pending'</td>
 <!-- <td><a href="/response_elements/513" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_514">
-<td>lastModifiedAt: </td>
+<td>lastModifiedAt </td>
 <td>Unix time when the app was last modified</td>
 <!-- <td><a href="/response_elements/514" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_515">
-<td>lastModifiedBy: </td>
+<td>lastModifiedBy </td>
 <td>User name of the Apigee user who last modified the app</td>
 <!-- <td><a href="/response_elements/515" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_516">
-<td>name: </td>
+<td>name </td>
 <td>Name of the app</td>
 <!-- <td><a href="/response_elements/516" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_517">
-<td>status: </td>
+<td>status </td>
 <td>Status of the app: 'approved or 'unapproved'</td>
 <!-- <td><a href="/response_elements/517" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/30-update-a-developer-app?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
@@ -285,25 +284,14 @@ Basic Auth
 </p>
 
 
-<p>
-<b>Content Types:</b>
---- 
-- &quot;&quot;
-- application/json
-- text/xml
-
-</p>
-
-
-
 
             </div>
         </div><!--/row-->
       </div><!--/content-->
 
-       <footer>
+       <!-- <footer>
         <p>&copy; Apigee, Inc. 2012</p>
-      </footer> 
+      </footer>  -->
 
     </div> <!-- /container -->
 

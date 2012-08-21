@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="cRmTWov1YYmt5lj94wGZwn9xhEhuCzHUp+kTw0VXyOo=" name="csrf-token" />
+<meta content="vpls82Z0PVqC2C5jiCbpzCfFC9DpVYHnQVfYwrkZ92g=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -57,30 +57,29 @@
 <div class="lead">
 /apiproducts/{apiproductName}
 </div>
+<p>
+  This method updates an existing APi Product
+</p>
 
 <!-- <a href="/api_methods/12-update-api-product/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
- <b>API resource:</b>
+ <b>API Resource:</b>
   API Products
 </p>
 
 <p>
   <b>Verb:</b>
-<span class="label label-success">
+<span class="label label-info">
 PUT
 </span>
 </p>
 
 <p>
-  <b>Doc:</b>
   Call PUT on an existing API Product to update the API Product. You are only required to include the elements to be updated in the update request.
 </p>
 
-<p>
-  <b>Description:</b>
-  This method updates an existing APi Product
-</p>
+
 
 <b> cURL:</b>
 
@@ -211,57 +210,57 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts
 		</thead>
 <tr>
 <div class="response_element" id="response_element_138">
-<td>apiResources: </td>
+<td>apiResources </td>
 <td>A list of URIs (including wildcards) that represent the bundle of APIs permitted to consumers of this API Product</td>
 <!-- <td><a href="/response_elements/138" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_139">
-<td>approvalType: </td>
+<td>approvalType </td>
 <td>Determines the state of the consumer key generated for requesters of this API Product. For Auto, key are generated in &quot;Approved' state. For Manual, keys are approved in 'Pending' state. </td>
 <!-- <td><a href="/response_elements/139" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_140">
-<td>attributes: </td>
+<td>attributes </td>
 <td>Any app-specific arbitrary attributes that may be used to define visibility of the API Product or runtime policy enforcement (such as setting for a rate-limiting policy.</td>
 <!-- <td><a href="/response_elements/140" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_141">
-<td>createdAt: </td>
+<td>createdAt </td>
 <td>Unix time</td>
 <!-- <td><a href="/response_elements/141" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_142">
-<td>createdBy: </td>
+<td>createdBy </td>
 <td>Apigee user account name of the individual who submitted the POST request that created this entity</td>
 <!-- <td><a href="/response_elements/142" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
-<div class="response_element" id="response_element_143">
-<td>lastModifiedAt: </td>
-<td>Unix time</td>
-<!-- <td><a href="/response_elements/143" class="btn btn-mini">Detail</a></td> -->
-<!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
-</div></tr><tr>
 <div class="response_element" id="response_element_144">
-<td>lastModifiedBy: </td>
+<td>lastModifiedBy </td>
 <td>Apigee user account name of the individual who last modified this entity</td>
 <!-- <td><a href="/response_elements/144" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_145">
-<td>name: </td>
+<td>name </td>
 <td>Name of the API Product</td>
 <!-- <td><a href="/response_elements/145" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_146">
-<td>scopes: </td>
-<td>Oauth scopes required in the Access Token(s) used to consime any of the API Reqsources (URIs) bundled in this API Product</td>
+<td>scopes </td>
+<td>Oauth scopes required in the access token used to consume any of the API resources (URIs) bundled in this API Product</td>
 <!-- <td><a href="/response_elements/146" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
+<div class="response_element" id="response_element_143">
+<td>lastModifiedAt </td>
+<td>Unix time when the API product was last modified</td>
+<!-- <td><a href="/response_elements/143" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/12-update-api-product?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr>
 </table></div>
@@ -282,23 +281,14 @@ Basic Auth
 </p>
 
 
-<p>
-<b>Content Types:</b>
---- 
-- &quot;&quot;
-
-</p>
-
-
-
 
             </div>
         </div><!--/row-->
       </div><!--/content-->
 
-       <footer>
+       <!-- <footer>
         <p>&copy; Apigee, Inc. 2012</p>
-      </footer> 
+      </footer>  -->
 
     </div> <!-- /container -->
 
