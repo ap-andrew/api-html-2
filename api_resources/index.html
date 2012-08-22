@@ -58,6 +58,7 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
+	     <li><a href="/api_resources/34-analytics">Analytics</a></li>
 	     <li><a href="/api_resources/3-api-products">API Products</a></li>
 	     <li><a href="/api_resources/1-apis">APIs</a></li>
 	     <li><a href="/api_resources/29-app-families">App Families</a></li>
@@ -88,6 +89,47 @@
 <table class="table">
 
   <tbody>
+
+      <tr>
+        <td colspan="3" class="lead"><a href="/api_resources/34-analytics">/environments/{environmentName}/stats</a></td>
+
+	</tr>
+	<tr>
+<td><span class='best_in_place' id='best_in_place_api_resource_34_description' data-url='/api_resources/34-analytics' data-object='api_resource' data-attribute='description' data-type='textarea'>Gets metrics for API activity</span></td> 
+	    <td><a href="/api_resources/34-analytics" class="btn btn-mini">Detail</a> 
+		
+<!-- <a href="/api_resources/34-analytics/edit" class="btn btn-mini"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a>
+                   <a href="/api_resources/34-analytics" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow"><span class="translation_missing" title="translation missing: en.helpers.links.delete">Delete</span></a>  -->
+        </td>
+      </tr>
+<!-- <tr>
+        <td colspan="3"><span class='best_in_place' id='best_in_place_api_resource_34_doc' data-url='/api_resources/34-analytics' data-object='api_resource' data-attribute='doc' data-type='textarea' data-original-content='Returns metrics based on specified dimensions.&#10;&#10;Dimension: The dimension selected from the list of dimension recorded by Apigee. In this example the dimension is API name.&#10;Metrics: The metric for the chosen dimension. In this example the metric message_count.&#10;Time range: In this example the time range is July 23 to July 24, 2012. Timestamp is in Unix time (seconds since January 1, 1970, Midnight GMT.)&#10;&#10;The dimension is the entity for which Apigee collects metrics. The &apos;dimension&apos; that is set for this report is &apos;apis&apos;. There is long list of dimensions that can be used in your reports. Some dimensions of inital interest are:&#10;&#10;client_ip: The IP address of the app making the request to your API&#10;developer: The developer of the app making the request to your API&#10;developer_app: The name of the app making the request to your API&#10;access_token: The app end user&apos;s OAuth access token&#10;The function run on the metric in this example is &apos;sum&apos;. The other functions you can use are sum, average, min, and max.&#10;&#10;The metric in this request is &apos;message_count&apos;.&#10;&#10;Other metrics you can use are:&#10;target_response_time: How long it takes the backend service to respond&#10;response_status_code: The status code of the response, which is good for measuring specific errors&#10;message_count: Total number of messages&#10;request_size: Size if the request message&#10;response_processing_latency: Duration of processing by the Apigee response pipeline&#10;response_size: Size of the response message&#10;request_processing_latency: Duratio nof processing by the Apigee request pipeline.&#10;total_response_time: Overall duration of processing for Apigee plus the backend service.&#10;is_error: Defines a message as an error'><p>Returns metrics based on specified dimensions.</p>
+
+<p>Dimension: The dimension selected from the list of dimension recorded by Apigee. In this example the dimension is API name.
+<br />Metrics: The metric for the chosen dimension. In this example the metric message_count.
+<br />Time range: In this example the time range is July 23 to July 24, 2012. Timestamp is in Unix time (seconds since January 1, 1970, Midnight GMT.)</p>
+
+<p>The dimension is the entity for which Apigee collects metrics. The 'dimension' that is set for this report is 'apis'. There is long list of dimensions that can be used in your reports. Some dimensions of inital interest are:</p>
+
+<p>client_ip: The IP address of the app making the request to your API
+<br />developer: The developer of the app making the request to your API
+<br />developer_app: The name of the app making the request to your API
+<br />access_token: The app end user's OAuth access token
+<br />The function run on the metric in this example is 'sum'. The other functions you can use are sum, average, min, and max.</p>
+
+<p>The metric in this request is 'message_count'.</p>
+
+<p>Other metrics you can use are:
+<br />target_response_time: How long it takes the backend service to respond
+<br />response_status_code: The status code of the response, which is good for measuring specific errors
+<br />message_count: Total number of messages
+<br />request_size: Size if the request message
+<br />response_processing_latency: Duration of processing by the Apigee response pipeline
+<br />response_size: Size of the response message
+<br />request_processing_latency: Duratio nof processing by the Apigee request pipeline.
+<br />total_response_time: Overall duration of processing for Apigee plus the backend service.
+<br />is_error: Defines a message as an error</p></span></td>
+</tr> -->
 
       <tr>
         <td colspan="3" class="lead"><a href="/api_resources/3-api-products">/apiproducts</a></td>

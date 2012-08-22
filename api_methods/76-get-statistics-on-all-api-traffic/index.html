@@ -48,18 +48,125 @@
            <div class="span12">
 			<div>
 </div>
-            <h1>API Analytics</h1>
-<!-- <table>
-<tr>
-<td><a href="/api_resources/34-analytics">Analytics</a></td>
-</tr>
- -->
+            
 
-Apigee collects statistics, or metrics, on API traffic as it flows from apps to APIs. The statistics Apigee collects includes API call information (such as URL, IP address, and user id), total response time, backend response time, maximum response time, error rate, and data exchanged. You can augment the metrics collected by Apigee with custom app- or business-specific data by defining policies that extract, collate, and compute analytics on the custom data that you define. Custom metrics can be collected from message headers, query parameters, as well as the content of XML or JSON request or response messages. The statistics collected are used to generate reports, which can be tailored to your needs by collecting metrics specific to your APIs and the apps that use them. Analytics enables you to view long-term usage trends, segment consumers by top developers and apps, and manage your APIs as a business. Usage by API (built-in) Usage by app (built-in) Usage developer (built-in) Usage by API Traffic (built-in) Usage by API Product (built-in) Usage by Environment (built-in) Usage by Customizing the API
 
-<!-- <a href="/categories/3-api-analytics/edit">Edit</a> | -->
-<!-- <a href="/categories/3-api-analytics" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-<a href="/categories">Back</a>
+<p>
+<h1>Get Statistics on all API traffic</h1> 
+</p>
+<div class="lead">
+/environments/{environment_name}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}
+</div>
+<p>
+  Retrieve the metrics for all the available APIs for a given customer in a specific organization and environment.
+</p>
+
+<!-- <a href="/api_methods/76-get-statistics-on-all-api-traffic/edit" class="btn btn-mini">Edit</a> -->
+
+<p>
+ <b>API Resource:</b>
+  Analytics
+</p>
+
+<p>
+  <b>Verb:</b>
+<span class="label label-info">
+GET
+</span>
+</p>
+
+<p>
+  Use the GET method to retrieve the metrics for all the available APIs for a given customer in a specific organization and environment. All API traffic displays the total daily throughput over the last 3 months for all APIs in the account.
+</p>
+
+
+
+<b> cURL:</b>
+
+<div class="well">
+	<pre>
+https://api.enterprise.apigee.com/v1/organizations/myorg/environments/prod/stats/?select=message_count&amp;timeRange=1/20/2012 00:00~1/30/2012 00:00&amp;timeUnit=hour 
+</pre>
+</div>
+
+
+
+<b>Request Payload:</b> 
+<div class="well">
+	<pre>
+  
+	</pre>
+</div>
+
+
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+</div>
+
+
+<b>Response Payload:</b> 
+<div class="well">
+	<pre>
+  {
+    &quot;environments&quot;: [
+       {
+           &quot;metrics&quot;: [
+               {
+                   &quot;name&quot;: &quot;message_count&quot;,
+                   &quot;values&quot;: [
+                          {
+                           &quot;timestamp&quot;: 1335241800000,
+                           &quot;value&quot;: &quot;9090.0&quot;
+                          }
+                   ]
+               }
+           ],
+           &quot;name&quot;: &quot;test&quot;
+       }
+    ],
+    &quot;metaData&quot;: {}
+}
+}
+	</pre>
+</div>
+
+<b>Response Payload Elements:</b>
+<div><table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+<th></th>
+<th></th>
+		</tr>
+		</thead>
+
+</table></div>
+
+<b>Errors</b> 
+<div class="well">
+	<pre>
+  
+	</pre>
+</div>
+
+<b>Auth:</b>
+Basic Auth
+</p>
+
+
+
             </div>
         </div><!--/row-->
       </div><!--/content-->

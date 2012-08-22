@@ -52,31 +52,31 @@
 
 
 <p>
-<h1>Create Map</h1> 
+<h1>Get Statistics for Top APIs</h1> 
 </p>
 <div class="lead">
-/maps
+/environments/{environmentName}/stats/apis
 </div>
 <p>
-  Creates a Map
+  Returns 5 APIs with the highest number of active end users (app end users with throughput) in the last 24 hours.
 </p>
 
-<!-- <a href="/api_methods/44-create-map/edit" class="btn btn-mini">Edit</a> -->
+<!-- <a href="/api_methods/72-get-statistics-for-top-apis/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
  <b>API Resource:</b>
-  Maps
+  Analytics
 </p>
 
 <p>
   <b>Verb:</b>
 <span class="label label-info">
-POST
+GET
 </span>
 </p>
 
 <p>
-  Creates a map, a simple structure for persistently storing name/value pairs (entry) for use at runtime, such as for profile-based access control, for supporting certain non-standard protocols, application specific behavior, and so on.
+  Use the GET method along with the 'topk' parameter to view the first five top ranked apps with the highest number of active end users (app end users with throughput) in the last 24 hours. The graph lists the average daily throughput for these top APIs over the last 30 days for a given customer in a specific organization and environment.
 </p>
 
 
@@ -85,7 +85,7 @@ POST
 
 <div class="well">
 	<pre>
-curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &quot;Content-type:application/json&quot; -X POST
+curl -u myname:mypass http://api.enterprise.apigee.com/v1/o/myorg/environments/prod/stats/apis?select=message_count&amp;timeRange=7%2F1%2F2012%2000%3A00~8%2F1%2F2012%2000%3A00&amp;timeUnit=hour&amp;sortby=message_count&amp;sort=DESC&amp;topk=5
 </pre>
 </div>
 
@@ -94,13 +94,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <b>Request Payload:</b> 
 <div class="well">
 	<pre>
-  {
-  &quot;entry&quot; : [ {
-    &quot;name&quot; : &quot;dev&quot;,
-    &quot;value&quot; : &quot;user1&quot;
-  } ],
-  &quot;name&quot; : &quot;prodmap&quot;
-}
+  
 	</pre>
 </div>
 
@@ -117,30 +111,6 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 		</tr>
 		</thead>
 
-
-<tr>
-<div class="request_element" id="request_element_56">
-<td>entry</td>
-<td>The name/value pair for the entry, that defines the data to be stored</td>
-<td>N/A</td>
-<td>Yes</td>
-<!-- <td><a href="/request_elements/56" class="btn btn-mini">Detail</a></td> -->
-</div></tr>
-
-
-
-
-<tr>
-<div class="request_element" id="request_element_57">
-<td>name</td>
-<td>The name of the map to be created</td>
-<td>N/A</td>
-<td>Yes</td>
-<!-- <td><a href="/request_elements/57" class="btn btn-mini">Detail</a></td> -->
-</div></tr>
-
-
-
 </table>
 </div>
 
@@ -148,12 +118,55 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <b>Response Payload:</b> 
 <div class="well">
 	<pre>
-    {
-  &quot;entry&quot; : [ {
-    &quot;name&quot; : &quot;dev&quot;,
-    &quot;value&quot; : &quot;user1&quot;
-  } ],
-  &quot;name&quot; : &quot;prodmap&quot;
+  {
+ &quot;environments&quot; : [ {
+    &quot;dimensions&quot; : [ {
+       &quot;metrics&quot; : [
+                {
+               &quot;name&quot; : &quot;message_count&quot;,
+               &quot;values&quot; : [ {
+                    &quot;timestamp&quot; : 1335241800000,
+                    &quot;value&quot; : &quot;1.0&quot;
+                } ]
+           } ,
+                {
+                &quot;name&quot; : &quot;error_count&quot;,
+                &quot;values&quot; : [ {
+                     &quot;timestamp&quot; : 1335241800000,
+                     &quot;value&quot; : &quot;0.0&quot;
+                  } ]
+         }
+             ],
+    
+              &quot;name&quot; : &quot;api1&quot;
+    },
+           {
+       &quot;metrics&quot; : [
+              {
+             &quot;name&quot; : &quot;message_count&quot;,
+             &quot;values&quot; : [ {
+                      &quot;timestamp&quot; : 1335241800000,
+                      &quot;value&quot; : &quot;1.0&quot;
+                 } ]
+          },
+               {
+               &quot;name&quot; : &quot;error_count&quot;,
+               &quot;values&quot; : [ {
+                       &quot;timestamp&quot; : 1335241800000,
+                       &quot;value&quot; : &quot;0.0&quot;
+               } ]
+         }
+            ],
+    
+            &quot;name&quot; : &quot;api2&quot;
+    }
+         ],
+       
+        &quot;name&quot; : &quot;test&quot;
+     }
+   ],
+  &quot;metaData&quot; : {
+   }
 }
 	</pre>
 </div>
@@ -168,19 +181,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <th></th>
 		</tr>
 		</thead>
-<tr>
-<div class="response_element" id="response_element_396">
-<td>entry </td>
-<td>The name/value pair for the entry, that defines the data to be stored</td>
-<!-- <td><a href="/response_elements/396" class="btn btn-mini">Detail</a></td> -->
-<!-- <td><a href="/api_methods/44-create-map?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
-</div></tr><tr>
-<div class="response_element" id="response_element_397">
-<td>name </td>
-<td>The name of the map to be created</td>
-<!-- <td><a href="/response_elements/397" class="btn btn-mini">Detail</a></td> -->
-<!-- <td><a href="/api_methods/44-create-map?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
-</div></tr>
+
 </table></div>
 
 <b>Errors</b> 

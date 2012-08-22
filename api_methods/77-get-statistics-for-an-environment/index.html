@@ -52,31 +52,31 @@
 
 
 <p>
-<h1>Create Map</h1> 
+<h1>Get Statistics for an Environment</h1> 
 </p>
 <div class="lead">
-/maps
+/environments/{environmentName}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}
 </div>
 <p>
-  Creates a Map
+  Gets statistics for a specified time range for the environment specified. Available staistics are message count, error count, and API count.
 </p>
 
-<!-- <a href="/api_methods/44-create-map/edit" class="btn btn-mini">Edit</a> -->
+<!-- <a href="/api_methods/77-get-statistics-for-an-environment/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
  <b>API Resource:</b>
-  Maps
+  Analytics
 </p>
 
 <p>
   <b>Verb:</b>
 <span class="label label-info">
-POST
+GET
 </span>
 </p>
 
 <p>
-  Creates a map, a simple structure for persistently storing name/value pairs (entry) for use at runtime, such as for profile-based access control, for supporting certain non-standard protocols, application specific behavior, and so on.
+  
 </p>
 
 
@@ -85,7 +85,7 @@ POST
 
 <div class="well">
 	<pre>
-curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &quot;Content-type:application/json&quot; -X POST
+curl -u myname:mypass 'https://api.enterprise.apigee.com/v1/o/{myorg}/environments/test/stats/?select=message_count&amp;timeRange=7%2F1%2F2012%2000%3A00~8%2F1%2F2012%2000%3A00&amp;timeUnit=hour
 </pre>
 </div>
 
@@ -94,13 +94,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <b>Request Payload:</b> 
 <div class="well">
 	<pre>
-  {
-  &quot;entry&quot; : [ {
-    &quot;name&quot; : &quot;dev&quot;,
-    &quot;value&quot; : &quot;user1&quot;
-  } ],
-  &quot;name&quot; : &quot;prodmap&quot;
-}
+  
 	</pre>
 </div>
 
@@ -117,30 +111,6 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 		</tr>
 		</thead>
 
-
-<tr>
-<div class="request_element" id="request_element_56">
-<td>entry</td>
-<td>The name/value pair for the entry, that defines the data to be stored</td>
-<td>N/A</td>
-<td>Yes</td>
-<!-- <td><a href="/request_elements/56" class="btn btn-mini">Detail</a></td> -->
-</div></tr>
-
-
-
-
-<tr>
-<div class="request_element" id="request_element_57">
-<td>name</td>
-<td>The name of the map to be created</td>
-<td>N/A</td>
-<td>Yes</td>
-<!-- <td><a href="/request_elements/57" class="btn btn-mini">Detail</a></td> -->
-</div></tr>
-
-
-
 </table>
 </div>
 
@@ -148,13 +118,62 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <b>Response Payload:</b> 
 <div class="well">
 	<pre>
-    {
-  &quot;entry&quot; : [ {
-    &quot;name&quot; : &quot;dev&quot;,
-    &quot;value&quot; : &quot;user1&quot;
+  {
+  &quot;environments&quot; : [ {
+    &quot;metrics&quot; : [ {
+      &quot;name&quot; : &quot;message_count&quot;,
+      &quot;values&quot; : [ {
+        &quot;timestamp&quot; : 1342285200000,
+        &quot;value&quot; : &quot;6.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342400400000,
+        &quot;value&quot; : &quot;3.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342411200000,
+        &quot;value&quot; : &quot;2.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342447200000,
+        &quot;value&quot; : &quot;1.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342458000000,
+        &quot;value&quot; : &quot;1.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342526400000,
+        &quot;value&quot; : &quot;12.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342530000000,
+        &quot;value&quot; : &quot;8.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342533600000,
+        &quot;value&quot; : &quot;15.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342537200000,
+        &quot;value&quot; : &quot;17.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342540800000,
+        &quot;value&quot; : &quot;1.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342544400000,
+        &quot;value&quot; : &quot;6.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342548000000,
+        &quot;value&quot; : &quot;11.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342551600000,
+        &quot;value&quot; : &quot;2.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1342573200000,
+        &quot;value&quot; : &quot;1.0&quot;
+      }, {
+        &quot;timestamp&quot; : 1343163600000,
+        &quot;value&quot; : &quot;5.0&quot;
+      } ]
+    } ],
+    &quot;name&quot; : &quot;test&quot;
   } ],
-  &quot;name&quot; : &quot;prodmap&quot;
-}
+  &quot;metaData&quot; : {
+  }
+
 	</pre>
 </div>
 
@@ -168,19 +187,7 @@ curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/maps -H &qu
 <th></th>
 		</tr>
 		</thead>
-<tr>
-<div class="response_element" id="response_element_396">
-<td>entry </td>
-<td>The name/value pair for the entry, that defines the data to be stored</td>
-<!-- <td><a href="/response_elements/396" class="btn btn-mini">Detail</a></td> -->
-<!-- <td><a href="/api_methods/44-create-map?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
-</div></tr><tr>
-<div class="response_element" id="response_element_397">
-<td>name </td>
-<td>The name of the map to be created</td>
-<!-- <td><a href="/response_elements/397" class="btn btn-mini">Detail</a></td> -->
-<!-- <td><a href="/api_methods/44-create-map?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
-</div></tr>
+
 </table></div>
 
 <b>Errors</b> 
