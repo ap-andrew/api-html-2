@@ -78,7 +78,7 @@
 </p>
 <b>cURL:</b>
 
-<div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.comhttp://api.apigeng.com/v1/organizations/sears/companies/{companyName}/apps/{appName}</pre>
+<div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/sears/companies/{companyName}/apps/{appName}</pre>
 </div>
 
 
