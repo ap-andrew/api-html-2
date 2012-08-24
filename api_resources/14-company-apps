@@ -118,7 +118,7 @@ For more background information, see companies for a description of the distinct
 	  <tr><td><strong>Verb:</strong></td>
 		
 
-	  <td><span class="label label-info">POST</span></td></tr>
+	  <td><span class="label label-success">POST</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
@@ -143,7 +143,7 @@ For more background information, see companies for a description of the distinct
 	  <tr><td><strong>Verb:</strong></td>
 		
 
-	  <td><span class="label label-info">POST</span></td></tr>
+	  <td><span class="label label-success">POST</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
@@ -168,7 +168,7 @@ For more background information, see companies for a description of the distinct
 	  <tr><td><strong>Verb:</strong></td>
 		
 
-	  <td><span class="label label-info">DELETE</span></td></tr>
+	  <td><span class="label label-important">DELETE</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
@@ -268,7 +268,7 @@ For more background information, see companies for a description of the distinct
 	  <tr><td><strong>Verb:</strong></td>
 		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
+	  <td><span class="label label-warning">PUT</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
@@ -318,7 +318,7 @@ For more background information, see companies for a description of the distinct
 	  <tr><td><strong>Verb:</strong></td>
 		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
+	  <td><span class="label label-warning">PUT</span></td></tr>
 	
 	
  <td><strong>Description:</strong></td>
