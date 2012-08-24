@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="JoAVH9IhvhdOpioxNKBlWOl6Gz+AZUwYppS3cicyLMQ=" name="csrf-token" />
+<meta content="Zwz1N60td4zksbVJtie6wx3ixdgBrV4zppT4EOu0eK8=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -50,7 +50,7 @@
 </div>
             <h1>New API Method</h1>
 
-<form accept-charset="UTF-8" action="/api_methods" class="formtastic api_method" id="new_api_method" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JoAVH9IhvhdOpioxNKBlWOl6Gz+AZUwYppS3cicyLMQ=" /></div>
+<form accept-charset="UTF-8" action="/api_methods" class="formtastic api_method" id="new_api_method" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Zwz1N60td4zksbVJtie6wx3ixdgBrV4zppT4EOu0eK8=" /></div>
 
 <fieldset class="actions"><ol>
   <li class="action input_action " id="api_method_submit_action"><input name="commit" type="submit" value="Create Api method" /></li>
@@ -66,6 +66,7 @@
 <option value="14">Company Apps</option>
 <option value="13">Company Developers</option>
 <option value="10">Debug Sessions</option>
+<option value="36">Deployments</option>
 <option value="18">Developer App Keys</option>
 <option value="17">Developer Apps</option>
 <option value="35">Developers</option>

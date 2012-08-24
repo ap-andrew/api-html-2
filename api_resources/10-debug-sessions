@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="JoAVH9IhvhdOpioxNKBlWOl6Gz+AZUwYppS3cicyLMQ=" name="csrf-token" />
+<meta content="Zwz1N60td4zksbVJtie6wx3ixdgBrV4zppT4EOu0eK8=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -104,11 +104,11 @@
 		
 		<div class="lead">
 		<hr />
-		Delete a Debug Session
+		Delete a debug session
 	       <a href="/api_methods/43-delete-a-debug-session" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/43-delete-a-debug-session/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/43-delete-a-debug-session" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/environments/{environmentName} /apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</pre></div>		
+		<div id="well"><pre>/environments/{environmentName}/apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</pre></div>		
 		
 		<tr>
   <tr>
@@ -120,7 +120,7 @@
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Deletes a debug session previously generated in an environment</td></tr>
   <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
@@ -154,11 +154,11 @@
 		
 		<div class="lead">
 		<hr />
-		Get Debug Sessions
-	       <a href="/api_methods/7-get-debug-sessions" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/7-get-debug-sessions/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/7-get-debug-sessions" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre></pre></div>		
+		List Debug Sessions
+	       <a href="/api_methods/7-list-debug-sessions" class="btn btn-mini">Detail</a>
+		   <!-- <a href="/api_methods/7-list-debug-sessions/edit" class="btn btn-mini">Edit</a> -->
+		    <!-- <a href="/api_methods/7-list-debug-sessions" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
+		<div id="well"><pre>/environment/{environmentName}/debugsessions</pre></div>		
 		
 		<tr>
   <tr>
@@ -170,7 +170,7 @@
 	
 	
  <td><strong>Description:</strong></td>
-  <td></td></tr>
+  <td>Get a list of debug sessions by ID within an environment</td></tr>
   <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 </tbody>

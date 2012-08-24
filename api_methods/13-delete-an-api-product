@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="JoAVH9IhvhdOpioxNKBlWOl6Gz+AZUwYppS3cicyLMQ=" name="csrf-token" />
+<meta content="Zwz1N60td4zksbVJtie6wx3ixdgBrV4zppT4EOu0eK8=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -80,8 +80,6 @@ Deletes an API product from an organization. Note that deleting an API product w
 
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/{apiproductName}</pre>
 </div>
-
-
 
 
 <b>Response Payload:</b> 

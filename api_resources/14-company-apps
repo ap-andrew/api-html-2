@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="JoAVH9IhvhdOpioxNKBlWOl6Gz+AZUwYppS3cicyLMQ=" name="csrf-token" />
+<meta content="Zwz1N60td4zksbVJtie6wx3ixdgBrV4zppT4EOu0eK8=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -172,7 +172,7 @@ For more background information, see companies for a description of the distinct
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Deletes a Company App</td></tr>
+  <td>Deletes a company app</td></tr>
   <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
@@ -181,7 +181,7 @@ For more background information, see companies for a description of the distinct
 		
 		<div class="lead">
 		<hr />
-		Get count of APi Resources for Company App
+		Get count of API Resources for Company App
 	       <a href="/api_methods/66-get-count-of-api-resources-for-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/66-get-count-of-api-resources-for-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/66-get-count-of-api-resources-for-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
@@ -310,7 +310,7 @@ For more background information, see companies for a description of the distinct
 	       <a href="/api_methods/99-update-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/99-update-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/99-update-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyname}/apps/{appName}</pre></div>		
+		<div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>		
 		
 		<tr>
   <tr>
@@ -322,7 +322,7 @@ For more background information, see companies for a description of the distinct
 	
 	
  <td><strong>Description:</strong></td>
-  <td>Updates an existing Company App with a new profile</td></tr>
+  <td>Updates an existing company app with a new profile</td></tr>
   <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 </tbody>
