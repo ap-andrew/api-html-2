@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Zwz1N60td4zksbVJtie6wx3ixdgBrV4zppT4EOu0eK8=" name="csrf-token" />
+<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -81,6 +81,26 @@ Use the GET method along with the 'topk' parameter to view the first five top ra
 <div class="well"><pre>curl -u myname:mypass http://api.enterprise.apigee.com/v1/o/myorg/environments/prod/stats/apis?select=message_count&amp;timeRange=7%2F1%2F2012%2000%3A00~8%2F1%2F2012%2000%3A00&amp;timeUnit=hour&amp;sortby=message_count&amp;sort=DESC&amp;topk=5</pre>
 </div>
 
+
+<b>Request Payload:</b> 
+<div class="well">
+	<pre></pre>
+</div>
+
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+</div>
 
 <b>Response Payload:</b> 
 <div class="well">
