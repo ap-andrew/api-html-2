@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
+<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -81,26 +81,6 @@ Returns detail on deployments of the API specified. Returns result across enviro
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apis/{apiName}/deployments</pre>
 </div>
 
-
-<b>Request Payload:</b> 
-<div class="well">
-	<pre></pre>
-</div>
-
-<b>Request Payload Elements:</b> 
-<div>
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Default</th>
-			<th>Required?</th>
-		</tr>
-		</thead>
-
-</table>
-</div>
 
 <b>Response Payload:</b> 
 <div class="well">

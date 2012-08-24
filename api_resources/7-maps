@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
+<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -55,158 +55,75 @@
   <h1>Maps</h1>
 </div>
 <table class="table">
-	<tbody>
+
 		<tr>
   			<td class="lead">/maps</td>
 		</tr>
 		<tr><td>A persistence resource that supports storing arbitrary data</td></tr>
   		<tr><td>Maps provide an API for storing arbitrary name/value pairs that can be access at runtime by custom policies, or for other custom runtime requirements such as protocol support. Each map has one or more 'entries', each of which which defines a name/value pair that can be fetched, updated, deleted via the API.</td></tr>
-  <!-- <td><div id="well"><pre>{
+       <!-- <td><div id="well"><pre>{
   &quot;entry&quot; : [ {
     &quot;name&quot; : &quot;dev&quot;,
     &quot;value&quot; : &quot;user1&quot;
   } ],
   &quot;name&quot; : &quot;prodmap&quot;
 }</pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
 
-</tr>
+		<tr><td><span class="lead">Create Map</span></td><td><a href="/api_methods/44-create-map" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Creates a Map</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Delete Entry</span></td><td><a href="/api_methods/48-delete-entry" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps/{mapName}/entries/{entryName}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Deletes a single entry by name</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Delete Map</span></td><td><a href="/api_methods/63-delete-map" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps/{mapName}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Deletes a map and all associated entries.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get List of Maps (Expanded)</span></td><td><a href="/api_methods/158-get-list-of-maps-expanded" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps?expand=true</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Returns an expanded view of all Maps in an Organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Map</span></td><td><a href="/api_methods/45-get-map" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps/{mapName}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Gets a map by name, along  with associated entries</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">List Maps</span></td><td><a href="/api_methods/46-list-maps" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>List all Maps by name</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Update Map</span></td><td><a href="/api_methods/62-update-map" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/maps/{mapName}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-warning">PUT</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Updates an existing map</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 </tbody>
 </table>
 
 
-<table class="table">	
-		<div class="lead">
-		Create Map
-	       <a href="/api_methods/44-create-map" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/44-create-map/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/44-create-map" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">POST</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Creates a Map</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Delete Entry
-	       <a href="/api_methods/48-delete-entry" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/48-delete-entry/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/48-delete-entry" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps/{mapName}/entries/{entryName}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">DELETE</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Deletes a single entry by name</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Delete Map
-	       <a href="/api_methods/63-delete-map" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/63-delete-map/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/63-delete-map" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps/{mapName}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">DELETE</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Deletes a map and all associated entries.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get List of Maps (Expanded)
-	       <a href="/api_methods/158-get-list-of-maps-expanded" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/158-get-list-of-maps-expanded/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/158-get-list-of-maps-expanded" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps?expand=true</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Returns an expanded view of all Maps in an Organization</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Map
-	       <a href="/api_methods/45-get-map" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/45-get-map/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/45-get-map" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps/{mapName}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Gets a map by name, along  with associated entries</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		List Maps
-	       <a href="/api_methods/46-list-maps" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/46-list-maps/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/46-list-maps" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>List all Maps by name</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Update Map
-	       <a href="/api_methods/62-update-map" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/62-update-map/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/62-update-map" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/maps/{mapName}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">PUT</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Updates an existing map</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-</table>
 
 
 <!-- Schema:

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
+<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -55,95 +55,48 @@
   <h1>Debug Sessions</h1>
 </div>
 <table class="table">
-	<tbody>
+
 		<tr>
   			<td class="lead">/debugsessions</td>
 		</tr>
 		<tr><td>A session configured on Apigee to record specified messages and associated processing for debugging purposes</td></tr>
   		<tr><td></td></tr>
-  <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+       <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
 
-</tr>
+		<tr><td><span class="lead">Create Debug Session</span></td><td><a href="/api_methods/41-create-debug-session" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName} /apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Creates a Debug session on Apigee</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Delete a debug session</span></td><td><a href="/api_methods/43-delete-a-debug-session" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Deletes a debug session previously generated in an environment</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Debug Session Data</span></td><td><a href="/api_methods/42-get-debug-session-data" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/apis/{apiName}/revisions/{revisionId/debugsessions/{debugSessionId}/data</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td></td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">List Debug Sessions</span></td><td><a href="/api_methods/7-list-debug-sessions" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environment/{environmentName}/debugsessions</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Get a list of debug sessions by ID within an environment</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 </tbody>
 </table>
 
 
-<table class="table">	
-		<div class="lead">
-		Create Debug Session
-	       <a href="/api_methods/41-create-debug-session" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/41-create-debug-session/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/41-create-debug-session" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName} /apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">POST</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Creates a Debug session on Apigee</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Delete a debug session
-	       <a href="/api_methods/43-delete-a-debug-session" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/43-delete-a-debug-session/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/43-delete-a-debug-session" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/apis/{apiName}/revisions/{revisionVersion}/debugsessions/{sessionID}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">DELETE</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Deletes a debug session previously generated in an environment</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Debug Session Data
-	       <a href="/api_methods/42-get-debug-session-data" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/42-get-debug-session-data/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/42-get-debug-session-data" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/apis/{apiName}/revisions/{revisionId/debugsessions/{debugSessionId}/data</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td></td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		List Debug Sessions
-	       <a href="/api_methods/7-list-debug-sessions" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/7-list-debug-sessions/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/7-list-debug-sessions" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environment/{environmentName}/debugsessions</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Get a list of debug sessions by ID within an environment</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-</table>
 
 
 <!-- Schema:

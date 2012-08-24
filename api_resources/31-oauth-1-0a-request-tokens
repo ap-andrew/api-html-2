@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
+<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -55,13 +55,13 @@
   <h1>Oauth 1.0a Request Tokens</h1>
 </div>
 <table class="table">
-	<tbody>
+
 		<tr>
   			<td class="lead">/oauth1/requesttokens/{requesttoken}</td>
 		</tr>
 		<tr><td>Oauth 1.0a Request Tokens</td></tr>
   		<tr><td></td></tr>
-  <!-- <td><div id="well"><pre>{
+       <!-- <td><div id="well"><pre>{
   &quot;app&quot; : &quot;myApp&quot;,
   &quot;attributes&quot; : [ {
     &quot;name&quot; : &quot;region&quot;,
@@ -80,126 +80,55 @@
   &quot;status&quot; : &quot;approved&quot;,
   &quot;token&quot; : &quot;1wXHJFNXLA0Haeg4lVMToZWJHaFM&quot;
 }</pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
 
-</tr>
+		<tr><td><span class="lead">Approve a Request Token</span></td><td><a href="/api_methods/147-approve-a-request-token" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/oauth/1/requesttokens/{requesttoken}?action=approve</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Approves an OAuth 1.0a Request Token</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Delete a Request Token</span></td><td><a href="/api_methods/146-delete-a-request-token" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/oauth/1/requesttokens/{requesttoken}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Deletes the request token specified</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get an Oauth 1.0a Request Token</span></td><td><a href="/api_methods/143-get-an-oauth-1-0a-request-token" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Gets the Oauth 1.0a Request Token for the speficied consumer key</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">List Request Tokens</span></td><td><a href="/api_methods/144-list-request-tokens" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/oauth/1/requesttokens</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Returns list of all Oauth 1.0a request tokens, with detail for each token</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Revoke a Request Token</span></td><td><a href="/api_methods/148-revoke-a-request-token" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/oauth/1/requesttokens/{requesttoken}?action=revoke</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td></td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Update a Request Token</span></td><td><a href="/api_methods/145-update-a-request-token" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/oauth2/requesttokens/{requesttoken}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-warning">PUT</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Updates a Request Token with new profile</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 </tbody>
 </table>
 
 
-<table class="table">	
-		<div class="lead">
-		Approve a Request Token
-	       <a href="/api_methods/147-approve-a-request-token" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/147-approve-a-request-token/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/147-approve-a-request-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/oauth/1/requesttokens/{requesttoken}?action=approve</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">POST</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Approves an OAuth 1.0a Request Token</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Delete a Request Token
-	       <a href="/api_methods/146-delete-a-request-token" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/146-delete-a-request-token/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/146-delete-a-request-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/oauth/1/requesttokens/{requesttoken}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">DELETE</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Deletes the request token specified</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get an Oauth 1.0a Request Token
-	       <a href="/api_methods/143-get-an-oauth-1-0a-request-token" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/143-get-an-oauth-1-0a-request-token/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/143-get-an-oauth-1-0a-request-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/oauth/1/requesttokens/{requesttoken}?consumerKey={consumerKey}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Gets the Oauth 1.0a Request Token for the speficied consumer key</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		List Request Tokens
-	       <a href="/api_methods/144-list-request-tokens" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/144-list-request-tokens/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/144-list-request-tokens" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/oauth/1/requesttokens</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Returns list of all Oauth 1.0a request tokens, with detail for each token</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Revoke a Request Token
-	       <a href="/api_methods/148-revoke-a-request-token" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/148-revoke-a-request-token/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/148-revoke-a-request-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/oauth/1/requesttokens/{requesttoken}?action=revoke</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">POST</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td></td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Update a Request Token
-	       <a href="/api_methods/145-update-a-request-token" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/145-update-a-request-token/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/145-update-a-request-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/oauth2/requesttokens/{requesttoken}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">PUT</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Updates a Request Token with new profile</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-</table>
 
 
 <!-- Schema:

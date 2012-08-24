@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
+<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -55,7 +55,7 @@
   <h1>Analytics</h1>
 </div>
 <table class="table">
-	<tbody>
+
 		<tr>
   			<td class="lead">/environments/{environmentName}/stats</td>
 		</tr>
@@ -86,127 +86,56 @@ response_size: Size of the response message
 request_processing_latency: Duratio nof processing by the Apigee request pipeline.
 total_response_time: Overall duration of processing for Apigee plus the backend service.
 is_error: Defines a message as an error</td></tr>
-  <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+       <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
 
-</tr>
+		<tr><td><span class="lead">Get API Statistics</span></td><td><a href="/api_methods/71-get-api-statistics" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{envname}/stats/apis?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}&amp;sortby={metrics}&amp;sort={order}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Use the GET method to retrieve metrics for all the APIs for an organization and environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for an Environment</span></td><td><a href="/api_methods/77-get-statistics-for-an-environment" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Gets statistics for a specified time range for the environment specified. Available staistics are message count, error count, and API count.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for Top APIs</span></td><td><a href="/api_methods/72-get-statistics-for-top-apis" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/apis</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Returns 5 APIs with the highest number of active end users (app end users with throughput) in the last 24 hours.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for top Apps</span></td><td><a href="/api_methods/74-get-statistics-for-top-apps" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/apps</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Use the GET method to retrieve the metrics for the first five apps for a given customer in a specific organization and environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics for top Developers</span></td><td><a href="/api_methods/75-get-statistics-for-top-developers" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/stats/devs</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Use the GET method to retrieve the metrics for developers in a specific organization and environment</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">Get Statistics on all API traffic</span></td><td><a href="/api_methods/76-get-statistics-on-all-api-traffic" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environment_name}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Retrieve the metrics for all the available APIs for a given customer in a specific organization and environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 </tbody>
 </table>
 
 
-<table class="table">	
-		<div class="lead">
-		Get API Statistics
-	       <a href="/api_methods/71-get-api-statistics" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/71-get-api-statistics/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/71-get-api-statistics" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{envname}/stats/apis?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}&amp;sortby={metrics}&amp;sort={order}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Use the GET method to retrieve metrics for all the APIs for an organization and environment.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Statistics for an Environment
-	       <a href="/api_methods/77-get-statistics-for-an-environment" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/77-get-statistics-for-an-environment/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/77-get-statistics-for-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Gets statistics for a specified time range for the environment specified. Available staistics are message count, error count, and API count.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Statistics for Top APIs
-	       <a href="/api_methods/72-get-statistics-for-top-apis" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/72-get-statistics-for-top-apis/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/72-get-statistics-for-top-apis" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/stats/apis</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Returns 5 APIs with the highest number of active end users (app end users with throughput) in the last 24 hours.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Statistics for top Apps
-	       <a href="/api_methods/74-get-statistics-for-top-apps" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/74-get-statistics-for-top-apps/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/74-get-statistics-for-top-apps" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/stats/apps</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Use the GET method to retrieve the metrics for the first five apps for a given customer in a specific organization and environment.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Statistics for top Developers
-	       <a href="/api_methods/75-get-statistics-for-top-developers" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/75-get-statistics-for-top-developers/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/75-get-statistics-for-top-developers" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/stats/devs</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Use the GET method to retrieve the metrics for developers in a specific organization and environment</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		Get Statistics on all API traffic
-	       <a href="/api_methods/76-get-statistics-on-all-api-traffic" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/76-get-statistics-on-all-api-traffic/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/76-get-statistics-on-all-api-traffic" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environment_name}/stats/?select={metrics}&amp;timeRange={startDate~endDate}&amp;timeUnit={unit}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Retrieve the metrics for all the available APIs for a given customer in a specific organization and environment.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-</table>
 
 
 <!-- Schema:

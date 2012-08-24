@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
+<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -55,57 +55,34 @@
   <h1>Virtual Hosts</h1>
 </div>
 <table class="table">
-	<tbody>
+
 		<tr>
   			<td class="lead">/virtualhosts</td>
 		</tr>
 		<tr><td>A named network configuration (including URL) for an environment</td></tr>
   		<tr><td>Provides the runtime network address for APIs managed by Apigee.</td></tr>
-  <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+       <!-- <td><div id="well"><pre></pre></div></td></tr> -->
+</table>
+	
+	<table class="table">
+<tbody>
 
-</tr>
+		<tr><td><span class="lead">Get a Virtual Host for an Environment</span></td><td><a href="/api_methods/23-get-a-virtual-host-for-an-environment" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/virtualhosts/{virtualhostName}</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Gets details for a named virtual host</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+<tbody>
+
+		<tr><td><span class="lead">List Virtual Hosts for an Environment</span></td><td><a href="/api_methods/22-list-virtual-hosts-for-an-environment" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/environments/{environmentName}/virtualhosts</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Get a list of named virual hosts for an environment.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 </tbody>
 </table>
 
 
-<table class="table">	
-		<div class="lead">
-		Get a Virtual Host for an Environment
-	       <a href="/api_methods/23-get-a-virtual-host-for-an-environment" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/23-get-a-virtual-host-for-an-environment/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/23-get-a-virtual-host-for-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/virtualhosts/{virtualhostName}</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Gets details for a named virtual host</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-
-<table class="table">	
-		<div class="lead">
-		List Virtual Hosts for an Environment
-	       <a href="/api_methods/22-list-virtual-hosts-for-an-environment" class="btn btn-mini">Detail</a>
-		   <!-- <a href="/api_methods/22-list-virtual-hosts-for-an-environment/edit" class="btn btn-mini">Edit</a> -->
-		    <!-- <a href="/api_methods/22-list-virtual-hosts-for-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-
-
-	    <div id="well"><pre>/environments/{environmentName}/virtualhosts</pre></div>	
-	
-		
-	    <tr><td><strong>Verb:</strong></td>
-		<td><span class="label label-info">GET</span></td></tr>
-		
-		<td><strong>Description:</strong></td>
-  		<td>Get a list of named virual hosts for an environment.</td></tr>
-  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
-
-</table>
 
 
 <!-- Schema:
