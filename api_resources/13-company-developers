@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">Developer and App Administration</div>
+            <div id="category">Developer and App Administration</div>
 
 
 <div class="page-header">
   <h1>Company Developers</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/companies/{companyName}/developers</td>
-
- <tr>
-	
-  <td>Developers grouped into a company entity</td></tr>
-  <td>A developer within an organization who is associated with a company. The company developer creates apps on behalf of the company, and any apps created by a company developer are associated with the company and known as 'company apps'.
+  			<td class="lead">/companies/{companyName}/developers</td>
+		</tr>
+		<tr><td>Developers grouped into a company entity</td></tr>
+  		<tr><td>A developer within an organization who is associated with a company. The company developer creates apps on behalf of the company, and any apps created by a company developer are associated with the company and known as 'company apps'.
 
 
 
@@ -85,81 +79,62 @@ Company developers are mapped to developers in your organization using the devel
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Add a Company Developer
 	       <a href="/api_methods/122-add-a-company-developer" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/122-add-a-company-developer/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/122-add-a-company-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/developers</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Adds a developer to a company</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/developers</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Adds a developer to a company</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List Developers in a Company
 	       <a href="/api_methods/124-list-developers-in-a-company" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/124-list-developers-in-a-company/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/124-list-developers-in-a-company" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyname}/developers/</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Lists all Developers associated with a Company</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyname}/developers/</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Lists all Developers associated with a Company</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Remove a Developer from a Company
 	       <a href="/api_methods/123-remove-a-developer-from-a-company" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/123-remove-a-developer-from-a-company/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/123-remove-a-developer-from-a-company" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyname}/developers/{developerEmail}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Removes the association of a Developer with a Company</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/companies/{companyname}/developers/{developerEmail}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Removes the association of a Developer with a Company</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

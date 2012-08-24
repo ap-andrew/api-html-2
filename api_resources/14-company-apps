@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">Developer and App Administration</div>
+            <div id="category">Developer and App Administration</div>
 
 
 <div class="page-header">
   <h1>Company Apps</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/companies/{companyName}/apps</td>
-
- <tr>
-	
-  <td>An app associated with a company</td></tr>
-  <td>An application can be associated with a company in the same way that an app can be associated with a developer. An app associated with a company is called a company app.
+  			<td class="lead">/companies/{companyName}/apps</td>
+		</tr>
+		<tr><td>An app associated with a company</td></tr>
+  		<tr><td>An application can be associated with a company in the same way that an app can be associated with a developer. An app associated with a company is called a company app.
 
 For more background information, see companies for a description of the distinction between organization developers and company developers. Also see Apps for details on the Developer Apps API.</td></tr>
   <!-- <td><div id="well"><pre>{
@@ -101,231 +95,176 @@ For more background information, see companies for a description of the distinct
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Create App for a Company
 	       <a href="/api_methods/98-create-app-for-a-company" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/98-create-app-for-a-company/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/98-create-app-for-a-company" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyname}/apps</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Creates an App for a Company</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyname}/apps</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Creates an App for a Company</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Create Company App
 	       <a href="/api_methods/64-create-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/64-create-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/64-create-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Create App for a Company</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Create App for a Company</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete a Company App
 	       <a href="/api_methods/67-delete-a-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/67-delete-a-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/67-delete-a-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes a company app</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Deletes a company app</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get count of API Resources for Company App
 	       <a href="/api_methods/66-get-count-of-api-resources-for-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/66-get-count-of-api-resources-for-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/66-get-count-of-api-resources-for-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps/{appname}?query=count&amp;entity=apiresources</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets the count API Resources for a Company App</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps/{appname}?query=count&amp;entity=apiresources</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets the count API Resources for a Company App</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List Company Apps
 	       <a href="/api_methods/68-list-company-apps" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/68-list-company-apps/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/68-list-company-apps" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>List Company Apps in an Organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>List Company Apps in an Organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List Company Apps (Expanded)
 	       <a href="/api_methods/69-list-company-apps-expanded" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/69-list-company-apps-expanded/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/69-list-company-apps-expanded" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps?expand=true</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets an expanded list Company Apps</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps?expand=true</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets an expanded list Company Apps</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update a Company App
 	       <a href="/api_methods/65-update-a-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/65-update-a-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/65-update-a-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">PUT</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Updates an existing Company App</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">PUT</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Updates an existing Company App</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update a company app with an additional API product
 	       <a href="/api_methods/132-update-a-company-app-with-an-additional-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/132-update-a-company-app-with-an-additional-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/132-update-a-company-app-with-an-additional-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps/{appName}/keys/{consumerKey}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Update existing app key with an API product. </td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps/{appName}/keys/{consumerKey}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Update existing app key with an API product. </td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update Company App
 	       <a href="/api_methods/99-update-company-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/99-update-company-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/99-update-company-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Updates an existing company app with a new profile</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/companies/{companyName}/apps/{appName}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">PUT</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Updates an existing company app with a new profile</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

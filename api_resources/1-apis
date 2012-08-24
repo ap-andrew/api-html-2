@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">API Configuration and Management</div>
+            <div id="category">API Configuration and Management</div>
 
 
 <div class="page-header">
   <h1>APIs</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/apis</td>
-
- <tr>
-	
-  <td>An API facade that acts as a managed proxy for a service</td></tr>
-  <td>An API to create and manage API facades, which act as a proxies for existing services.  In Apigee, an API facade is defined by a base URL, a backend service URL, and  a number of API resources (URIs).</td></tr>
+  			<td class="lead">/apis</td>
+		</tr>
+		<tr><td>An API facade that acts as a managed proxy for a service</td></tr>
+  		<tr><td>An API to create and manage API facades, which act as a proxies for existing services.  In Apigee, an API facade is defined by a base URL, a backend service URL, and  a number of API resources (URIs).</td></tr>
   <!-- <td><div id="well"><pre>{
   &quot;configurationVersion&quot; : {
     &quot;majorVersion&quot; : 4,
@@ -92,256 +86,195 @@
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Create an API
 	       <a href="/api_methods/15-create-an-api" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/15-create-an-api/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/15-create-an-api" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Creates an API facade (and an API proxy configuration) on Apigee</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Creates an API facade (and an API proxy configuration) on Apigee</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete an API
 	       <a href="/api_methods/3-delete-an-api" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/3-delete-an-api/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/3-delete-an-api" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiname}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes an API and all associated endpoints, policies,  resources, and revisions</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis/{apiname}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Deletes an API and all associated endpoints, policies,  resources, and revisions</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete an API Revision
 	       <a href="/api_methods/27-delete-an-api-revision" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/27-delete-an-api-revision/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/27-delete-an-api-revision" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiName}/revision/{revisionNumber}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes a specific revision of an API</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis/{apiName}/revision/{revisionNumber}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Deletes a specific revision of an API</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Deploy an API to an Environment
 	       <a href="/api_methods/25-deploy-an-api-to-an-environment" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/25-deploy-an-api-to-an-environment/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/25-deploy-an-api-to-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiName}/revisions/{revisionNumber}/deployments?action=deploy&amp;env={envName}&amp;basepath={/basepath}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Pushes an API to an environment (typically 'test' or 'prod') for execution</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis/{apiName}/revisions/{revisionNumber}/deployments?action=deploy&amp;env={envName}&amp;basepath={/basepath}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Pushes an API to an environment (typically 'test' or 'prod') for execution</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Export an API
 	       <a href="/api_methods/105-export-an-api" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/105-export-an-api/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/105-export-an-api" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiName}/revisions{revisionNumber}?format=bundle</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Exports an API from Apigee to the local machine a ZIP bundle of config and code files.</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis/{apiName}/revisions{revisionNumber}?format=bundle</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Exports an API from Apigee to the local machine a ZIP bundle of config and code files.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get an API
 	       <a href="/api_methods/104-get-an-api" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/104-get-an-api/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/104-get-an-api" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets an API, providing a pointer to existing revisions of the API.</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis/{apiName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets an API, providing a pointer to existing revisions of the API.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Import an API
 	       <a href="/api_methods/24-import-an-api" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/24-import-an-api/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/24-import-an-api" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis?action=import&amp;name={apiName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Uploads an API proxy from a local machine to Apigee</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis?action=import&amp;name={apiName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Uploads an API proxy from a local machine to Apigee</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List APIs
 	       <a href="/api_methods/1-list-apis" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/1-list-apis/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/1-list-apis" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets all APIs in an Organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets all APIs in an Organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Undeploy an API from an Environment
 	       <a href="/api_methods/26-undeploy-an-api-from-an-environment" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/26-undeploy-an-api-from-an-environment/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/26-undeploy-an-api-from-an-environment" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiName}/deployments?action=undeploy&amp;env={envName}&amp;revision={revision}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Removes an API from an environment (typically 'test' or 'prod')</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apis/{apiName}/deployments?action=undeploy&amp;env={envName}&amp;revision={revision}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Removes an API from an environment (typically 'test' or 'prod')</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update an API
 	       <a href="/api_methods/2-update-an-api" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/2-update-an-api/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/2-update-an-api" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apis/{apiName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Use the POST method to update a specific API proxy in an organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/apis/{apiName}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">PUT</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Use the POST method to update a specific API proxy in an organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

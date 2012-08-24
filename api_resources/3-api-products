@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">API Configuration and Management</div>
+            <div id="category">API Configuration and Management</div>
 
 
 <div class="page-header">
   <h1>API Products</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/apiproducts</td>
-
- <tr>
-	
-  <td>A bundle of API resources (URIs) plus rate limit settings and relevant metadata</td></tr>
-  <td>API products enable you to bundle and distribute your APIs to multiple developer groups simultaneously, without having to modify code. An APi product consists of a list of API resources (URIs) combined with a Service Plan (rate-limiting policy settings) plus any custom metadata required by the API provider.
+  			<td class="lead">/apiproducts</td>
+		</tr>
+		<tr><td>A bundle of API resources (URIs) plus rate limit settings and relevant metadata</td></tr>
+  		<tr><td>API products enable you to bundle and distribute your APIs to multiple developer groups simultaneously, without having to modify code. An APi product consists of a list of API resources (URIs) combined with a Service Plan (rate-limiting policy settings) plus any custom metadata required by the API provider.
 
 
 
@@ -111,181 +105,138 @@ API products provide the basis for access control in Apigee. As part of the app 
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Create an API Product
 	       <a href="/api_methods/16-create-an-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/16-create-an-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/16-create-an-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Create an API product to enable developers to access a set of API resources (URIs)</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apiproducts</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Create an API product to enable developers to access a set of API resources (URIs)</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete an API Product
 	       <a href="/api_methods/13-delete-an-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/13-delete-an-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/13-delete-an-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts/{apiproductName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes an API Product</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apiproducts/{apiproductName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Deletes an API Product</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get an API Product
 	       <a href="/api_methods/86-get-an-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/86-get-an-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/86-get-an-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets an API Product</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apiproducts</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets an API Product</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get count of keys/apps/developers/companies for API Product
 	       <a href="/api_methods/10-get-count-of-keys-apps-developers-companies-for-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/10-get-count-of-keys-apps-developers-companies-for-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/10-get-count-of-keys-apps-developers-companies-for-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts/{apiproductName}?query=count&amp;entity=keys/apps/developers/companies</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets a count of one of the entities (either keys/apps/developers/companies ) associated with a given API Product</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apiproducts/{apiproductName}?query=count&amp;entity=keys/apps/developers/companies</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets a count of one of the entities (either keys/apps/developers/companies ) associated with a given API Product</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get list of keys/apps/developers/companies for API Product
 	       <a href="/api_methods/11-get-list-of-keys-apps-developers-companies-for-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/11-get-list-of-keys-apps-developers-companies-for-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/11-get-list-of-keys-apps-developers-companies-for-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts/{apiproductName}?query=list&amp;entity=keys/apps/developers/companies</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets the List of keys/apps/developers for an API product of an organization </td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apiproducts/{apiproductName}?query=list&amp;entity=keys/apps/developers/companies</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets the List of keys/apps/developers for an API product of an organization </td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List API Products
 	       <a href="/api_methods/4-list-api-products" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/4-list-api-products/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/4-list-api-products" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Lists all API Products by name for an organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apiproducts</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Lists all API Products by name for an organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update API Product
 	       <a href="/api_methods/12-update-api-product" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/12-update-api-product/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/12-update-api-product" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apiproducts/{apiproductName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>This method updates an existing APi Product</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/apiproducts/{apiproductName}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">PUT</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>This method updates an existing APi Product</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">Developer and App Administration</div>
+            <div id="category">Developer and App Administration</div>
 
 
 <div class="page-header">
   <h1>Apps</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/apps</td>
-
- <tr>
-	
-  <td>Applications registered with an API provider's organization to consume the provider APIs</td></tr>
-  <td>Apps are APi consumer applications registered with an API provider's organization. Apps are registered with an organization to obtain credentials that enable access to one or more API products (or, a set of URIs). The default app profile can be extended by using custom attributes. Apps can be associated with developers (as developer apps) or with companies (company apps).</td></tr>
+  			<td class="lead">/apps</td>
+		</tr>
+		<tr><td>Applications registered with an API provider's organization to consume the provider APIs</td></tr>
+  		<tr><td>Apps are APi consumer applications registered with an API provider's organization. Apps are registered with an organization to obtain credentials that enable access to one or more API products (or, a set of URIs). The default app profile can be extended by using custom attributes. Apps can be associated with developers (as developer apps) or with companies (company apps).</td></tr>
   <!-- <td><div id="well"><pre>{
   &quot;accessType&quot; : &quot;read&quot;,
   &quot;appFamily&quot; : &quot;default&quot;,
@@ -99,106 +93,81 @@
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get Apps by App Family
 	       <a href="/api_methods/136-get-apps-by-app-family" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/136-get-apps-by-app-family/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/136-get-apps-by-app-family" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apps?appfamily={appFamily}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>List all Apps in an App Familty</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apps?appfamily={appFamily}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>List all Apps in an App Familty</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get Apps by Status
 	       <a href="/api_methods/134-get-apps-by-status" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/134-get-apps-by-status/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/134-get-apps-by-status" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apps?status={status}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Returns all apps with the status of approved,revoked,pending</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apps?status={status}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Returns all apps with the status of approved,revoked,pending</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get Apps by Type
 	       <a href="/api_methods/135-get-apps-by-type" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/135-get-apps-by-type/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/135-get-apps-by-type" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apps?apptype={appType}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>List all app by apptype, whether company app or developer app.</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/apps?apptype={appType}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>List all app by apptype, whether company app or developer app.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List Apps by Creation Date
 	       <a href="/api_methods/137-list-apps-by-creation-date" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/137-list-apps-by-creation-date/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/137-list-apps-by-creation-date" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/apps?createdat={createdAt}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>List all Apps created on the specified date</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/apps?createdat={createdAt}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>List all Apps created on the specified date</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

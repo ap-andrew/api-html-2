@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">Developer and App Administration</div>
+            <div id="category">Developer and App Administration</div>
 
 
 <div class="page-header">
   <h1>App Families</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/developers/{developerEmail}/appfamilies</td>
-
- <tr>
-	
-  <td>A collection of apps associated with a developer</td></tr>
-  <td>App families enable you to create functional groups of apps. A single app may be instantiated in several forms. For example, an app may have sandbox instance and a production instance. App families enable these app instances to be associated. You can do this by linking the instances of the app together in a an app family collection. Specify an app family name, associate that name with a developer or a company of your organization, and select one or more app IDs to add to the contents of the app family. You can create app families for developer apps or for company apps within your organization.</td></tr>
+  			<td class="lead">/developers/{developerEmail}/appfamilies</td>
+		</tr>
+		<tr><td>A collection of apps associated with a developer</td></tr>
+  		<tr><td>App families enable you to create functional groups of apps. A single app may be instantiated in several forms. For example, an app may have sandbox instance and a production instance. App families enable these app instances to be associated. You can do this by linking the instances of the app together in a an app family collection. Specify an app family name, associate that name with a developer or a company of your organization, and select one or more app IDs to add to the contents of the app family. You can create app families for developer apps or for company apps within your organization.</td></tr>
   <!-- <td><div id="well"><pre>{
   &quot;apps&quot; : [ &quot;weatherapp_sandbox&quot;, &quot;weatherapp_prod&quot; ],
   &quot;name&quot; : &quot;WeatherApps&quot;
@@ -77,181 +71,138 @@
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Create an App Family
 	       <a href="/api_methods/125-create-an-app-family" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/125-create-an-app-family/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/125-create-an-app-family" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/appfamilies</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Create an App Family for Developers</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/appfamilies</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Create an App Family for Developers</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete App Family
 	       <a href="/api_methods/129-delete-app-family" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/129-delete-app-family/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/129-delete-app-family" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developeremail}/appfamilies/{appFamily}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes an App Family and all Apps it contains</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developeremail}/appfamilies/{appFamily}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Deletes an App Family and all Apps it contains</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get App Family
 	       <a href="/api_methods/126-get-app-family" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/126-get-app-family/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/126-get-app-family" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/appfamilies/{appFamily}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets a developer's apps in an app family</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/appfamilies/{appFamily}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets a developer's apps in an app family</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List App Families
 	       <a href="/api_methods/130-list-app-families" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/130-list-app-families/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/130-list-app-families" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developeremail}/appFamilies</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>List all App Families in an Organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developeremail}/appFamilies</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>List all App Families in an Organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List App Families (Expanded)
 	       <a href="/api_methods/131-list-app-families-expanded" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/131-list-app-families-expanded/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/131-list-app-families-expanded" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developeremail}/appfamilies?expand=true</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>An expanded list of all App Families in an Organization, listing Apps in the collection </td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developeremail}/appfamilies?expand=true</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>An expanded list of all App Families in an Organization, listing Apps in the collection </td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Remove App from App Family
 	       <a href="/api_methods/128-remove-app-from-app-family" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/128-remove-app-from-app-family/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/128-remove-app-from-app-family" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/appfamilies/{appFamily}/app/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Removes an App from an App Family</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/appfamilies/{appFamily}/app/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Removes an App from an App Family</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update an App Family
 	       <a href="/api_methods/127-update-an-app-family" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/127-update-an-app-family/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/127-update-an-app-family" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/appfamilies/{appfamilyName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Updates an existing App Family</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/appfamilies/{appfamilyName}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Updates an existing App Family</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

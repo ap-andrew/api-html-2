@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">Developer and App Administration</div>
+            <div id="category">Developer and App Administration</div>
 
 
 <div class="page-header">
   <h1>Developer Apps</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/developers/{developerEmail}/apps</td>
-
- <tr>
-	
-  <td>An app that is associated with a developer</td></tr>
-  <td>In Apigee, Apps can belong to individual developers or to groups of developers (known as 'companies'). The Developer App is an App that belongs to a single developer. Apps are created in Apigee in order to obtain credentials to access API Products. So, a Developer App always has associated credentials, API Products, and other metadata (stored as attributes) that can be used for profile-based access control, Analytics, etc. Apps also have status, and may be approved or unapproved. By default Apps are created in the 'approved' state.</td></tr>
+  			<td class="lead">/developers/{developerEmail}/apps</td>
+		</tr>
+		<tr><td>An app that is associated with a developer</td></tr>
+  		<tr><td>In Apigee, Apps can belong to individual developers or to groups of developers (known as 'companies'). The Developer App is an App that belongs to a single developer. Apps are created in Apigee in order to obtain credentials to access API Products. So, a Developer App always has associated credentials, API Products, and other metadata (stored as attributes) that can be used for profile-based access control, Analytics, etc. Apps also have status, and may be approved or unapproved. By default Apps are created in the 'approved' state.</td></tr>
   <!-- <td><div id="well"><pre>{
   &quot;accessType&quot; : &quot;read&quot;,
   &quot;appFamily&quot; : &quot;default&quot;,
@@ -99,231 +93,176 @@
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Approve a Developer App
 	       <a href="/api_methods/88-approve-a-developer-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/88-approve-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/88-approve-a-developer-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Changes the status of a developer from 'unapproved' to 'approved'.</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Changes the status of a developer from 'unapproved' to 'approved'.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Create a Developer App
 	       <a href="/api_methods/14-create-a-developer-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/14-create-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/14-create-a-developer-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Creates an App associated with a Developer</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Creates an App associated with a Developer</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete a Developer App
 	       <a href="/api_methods/31-delete-a-developer-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/31-delete-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/31-delete-a-developer-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Delete a Developer's App</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Delete a Developer's App</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get a Developer App
 	       <a href="/api_methods/87-get-a-developer-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/87-get-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/87-get-a-developer-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Get the profile of a Developer App</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Get the profile of a Developer App</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Gets the count of API Resources  for a Developer App in an Organization
 	       <a href="/api_methods/133-gets-the-count-of-api-resources-for-a-developer-app-in-an-organization" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/133-gets-the-count-of-api-resources-for-a-developer-app-in-an-organization/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/133-gets-the-count-of-api-resources-for-a-developer-app-in-an-organization" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps/{appname}?query=count&amp;entity=apiresources</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets a count of all API Resources (URIs) in the API Products accessible by an App</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps/{appname}?query=count&amp;entity=apiresources</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets a count of all API Resources (URIs) in the API Products accessible by an App</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List Apps by Developer
 	       <a href="/api_methods/5-list-apps-by-developer" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/5-list-apps-by-developer/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/5-list-apps-by-developer" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Lists all apps created by a developer in an organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Lists all apps created by a developer in an organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		List Developer Apps (Expanded)
 	       <a href="/api_methods/96-list-developer-apps-expanded" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/96-list-developer-apps-expanded/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/96-list-developer-apps-expanded" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps?expand=true</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Provides an expanded view of a developer's collection of apps</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps?expand=true</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Provides an expanded view of a developer's collection of apps</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Revoke a Developer App
 	       <a href="/api_methods/97-revoke-a-developer-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/97-revoke-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/97-revoke-a-developer-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Revokes a Developer App, disabling access to all API Products</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Revokes a Developer App, disabling access to all API Products</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update a Developer App
 	       <a href="/api_methods/30-update-a-developer-app" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/30-update-a-developer-app/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/30-update-a-developer-app" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Updates the app to get a new set of consumer credentials. </td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/developers/{developerEmail}/apps/{appName}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">PUT</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Updates the app to get a new set of consumer credentials. </td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 

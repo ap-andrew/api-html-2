@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="VexyTcGSdcOA+ODv+vKaJm7MgVviPMf5o8ltogLQaVU=" name="csrf-token" />
+<meta content="yOAY9mfzpJl0v7JYl2bxgHKTe/ZLjcBkb1bs9ajM3Mc=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,25 +48,19 @@
            <div class="span12">
 			<div>
 </div>
-            
-<div id="category">Oauth</div>
+            <div id="category">Oauth</div>
 
 
 <div class="page-header">
   <h1>Oauth 2.0 Access Tokens</h1>
 </div>
-
-
- 
 <table class="table">
 	<tbody>
 		<tr>
-  <td class="lead">/oauth2/accesstokens</td>
-
- <tr>
-	
-  <td>Oauth 2 compliant Access Tokens managed by Apigee</td></tr>
-  <td></td></tr>
+  			<td class="lead">/oauth2/accesstokens</td>
+		</tr>
+		<tr><td>Oauth 2 compliant Access Tokens managed by Apigee</td></tr>
+  		<tr><td></td></tr>
   <!-- <td><div id="well"><pre>  {
   &quot;app&quot; : &quot;app1&quot;,
   &quot;attributes&quot; : [ ],
@@ -91,156 +85,119 @@
 </table>
 
 
-<table class="table">
-	<tbody>
-		
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Approve an Access Token
 	       <a href="/api_methods/115-approve-an-access-token" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/115-approve-an-access-token/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/115-approve-an-access-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/oauth2/accesstokens/{accesstoken}?action=approve</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td></td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/oauth2/accesstokens/{accesstoken}?action=approve</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td></td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Delete an Access Token
 	       <a href="/api_methods/114-delete-an-access-token" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/114-delete-an-access-token/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/114-delete-an-access-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/oauth2/accesstokens/{accesstoken}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">DELETE</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Deletes the Access Token specified</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/oauth2/accesstokens/{accesstoken}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">DELETE</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Deletes the Access Token specified</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get an Access Token
 	       <a href="/api_methods/109-get-an-access-token" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/109-get-an-access-token/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/109-get-an-access-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/oauth2/accesstokens/{accessToken}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Gets details of a specific Access Token </td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/oauth2/accesstokens/{accessToken}</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Gets details of a specific Access Token </td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Get count of AccessTokens
 	       <a href="/api_methods/110-get-count-of-accesstokens" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/110-get-count-of-accesstokens/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/110-get-count-of-accesstokens" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/oauth2/accesstokens</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">GET</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Get count of oauth 2.0 access tokens under an organization</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/oauth2/accesstokens</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">GET</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Get count of oauth 2.0 access tokens under an organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Revoke an Access Token
 	       <a href="/api_methods/116-revoke-an-access-token" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/116-revoke-an-access-token/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/116-revoke-an-access-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/oauth2/accesstokens/{accesstoken}?action=revoke</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
-
-	  <td><span class="label label-info">POST</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Revokes a specific access token</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
 
-<table class="table">
-	<tbody>
+	    <div id="well"><pre>/oauth2/accesstokens/{accesstoken}?action=revoke</pre></div>	
+	
 		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">POST</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Revokes a specific access token</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
+
+<table class="table">	
 		<div class="lead">
-		<hr />
 		Update Access Token
 	       <a href="/api_methods/111-update-access-token" class="btn btn-mini">Detail</a>
 		   <!-- <a href="/api_methods/111-update-access-token/edit" class="btn btn-mini">Edit</a> -->
 		    <!-- <a href="/api_methods/111-update-access-token" class="btn btn-mini" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a></div> -->
-		<div id="well"><pre>/oauth2/accesstokens/{accessToken}</pre></div>		
-		
-		<tr>
-  <tr>
-	
-	  <tr><td><strong>Verb:</strong></td>
-		
 
-	  <td><span class="label label-info">PUT</span></td></tr>
-	
-	
- <td><strong>Description:</strong></td>
-  <td>Updates the access token attributes.</td></tr>
-  <tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 
-</tbody>
+	    <div id="well"><pre>/oauth2/accesstokens/{accessToken}</pre></div>	
+	
+		
+	    <tr><td><strong>Verb:</strong></td>
+		<td><span class="label label-info">PUT</span></td></tr>
+		
+		<td><strong>Description:</strong></td>
+  		<td>Updates the access token attributes.</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+
 </table>
 
 
