@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
+<meta content="WH0CQO5KM/MeMdsQ8EQs0n6HvxJr06gCkTDHZgGTDUg=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -50,14 +50,12 @@
 </div>
             <div id="category">Oauth</div>
 
-
 <div class="page-header">
   <h1>Oauth 1.0a Access Tokens</h1>
 </div>
 <table class="table">
-
 		<tr>
-  			<td class="lead">/oauth1/accesstokens/{accesstoken}</td>
+  			<td class="lead">/oauth1/accesstokens</td>
 		</tr>
 		<tr><td>Oauth 1.0a Access Tokens</td></tr>
   		<tr><td>Apigee Enterprise validates the API key, retrieves the service profile associated with the API key, and checks to see that the quota has not been exceeded. When you apply OAuth to the API, Enterprise checks the request for an access token. Apigee Enterprise uses access tokens to define a user's permissions for modifying and using a specific API. If an access token is present, and the API is within the scope of the access token, you are allowed to access the API.

@@ -52,25 +52,25 @@
 
 
 <p>
-<h1>Approve a Developer App Key</h1> 
+<h1>Update Company App</h1> 
 </p>
 <div class="lead">
-/developers/{developerEmal}/apps/{appName}/keys/{consumerKey}
+/companies/{companyName}/apps/{appName}
 </div>
 <p>
-  Changes the status of a consumer key from 'pending' to 'approved'
+  Updates an existing company app with a new profile
 </p>
 
-<!-- <a href="/api_methods/93-approve-a-developer-app-key/edit" class="btn btn-mini">Edit</a> -->
+<!-- <a href="/api_methods/99-update-company-app/edit" class="btn btn-mini">Edit</a> -->
 
 <p>
  <b>API Resource:</b>
-  Developer App Keys
+  Company Apps
 </p> 
 
 <p>
 <b>Verb:</b>
-<span class="label label-success">POST</span>
+<span class="label label-warning">PUT</span>
 </p>
 
 <p>
@@ -78,15 +78,64 @@
 </p>
 <b>cURL:</b>
 
-<div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerEmail}/apps/{appName}/keys/{consumerkey}?action=approve</pre>
+<div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{companyName}/apps/{appName}</pre>
 </div>
 
 
+<b>Request Payload:</b> 
+<div class="well">
+	<pre>{
+  &quot;accessType&quot; : &quot;read&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;Platform&quot;,
+    &quot;value&quot; : &quot;iOS&quot;
+  }],
+  &quot;callbackUrl&quot; : &quot;login.company.com&quot;
+}
+</pre>
+</div>
 
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+</div>
 
 <b>Response Payload:</b> 
 <div class="well">
-	<pre>Success 204 with no response</pre>
+	<pre>{
+  &quot;accessType&quot; : &quot;read&quot;,
+  &quot;attributes&quot; : [ {
+    &quot;name&quot; : &quot;Language&quot;,
+    &quot;value&quot; : &quot;java-j2ee&quot;
+  } ],
+  &quot;callbackUrl&quot; : &quot;www.apigee.com&quot;,
+  &quot;createdAt&quot; : 1343050516114,
+  &quot;createdBy&quot; : &quot;Admin&quot;,
+  &quot;credentials&quot; : [ {
+    &quot;apiProducts&quot; : [ {
+      &quot;apiproduct&quot; : &quot;TestApiProduct&quot;,
+      &quot;status&quot; : &quot;approved&quot;
+    } ],
+    &quot;attributes&quot; : [ ],
+    &quot;consumerKey&quot; : &quot;N6S0jcOhgbsCJD3B7EGNFo0FYAZSpCez&quot;,
+    &quot;consumerSecret&quot; : &quot;BCJpVuK3uq9VuEgK&quot;,
+    &quot;status&quot; : &quot;approved&quot;
+  } ],
+  &quot;lastModifiedAt&quot; : 1343050516317,
+  &quot;lastModifiedBy&quot; : &quot;Admin&quot;,
+  &quot;name&quot; : &quot;sandboxTestApp&quot;,
+  &quot;status&quot; : &quot;approved&quot;
+}</pre>
 </div>
 
 <b>Response Payload Elements:</b>

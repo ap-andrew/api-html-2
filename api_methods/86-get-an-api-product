@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
+<meta content="WH0CQO5KM/MeMdsQ8EQs0n6HvxJr06gCkTDHZgGTDUg=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -80,6 +80,8 @@ Gets the profile for an API Product by name.
 
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/{apiProductName}</pre>
 </div>
+
+
 
 
 <b>Response Payload:</b> 

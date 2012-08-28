@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="of32z6V5OL1GX8mwAXdTcZOb9QcISyHPIk6L2PS4TFw=" name="csrf-token" />
+<meta content="WH0CQO5KM/MeMdsQ8EQs0n6HvxJr06gCkTDHZgGTDUg=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -50,14 +50,12 @@
 </div>
             <div id="category">Developer and App Administration</div>
 
-
 <div class="page-header">
   <h1>Developer App Keys</h1>
 </div>
 <table class="table">
-
 		<tr>
-  			<td class="lead">/developers/{developerEmail}/apps/{appName}/keys/{consumerkey}</td>
+  			<td class="lead">/developers/{developerEmail}/apps/{appName}/keys</td>
 		</tr>
 		<tr><td>The consumer key ( or 'API Key') provisioned for an app</td></tr>
   		<tr><td>Credential pairs consisting of consumer key and consumer secret provisioned by Apigee to apps for specific API products. Apigee maintains the relationship between consumer keys and API products, enabling APi products to be added to and removed from consumer keys. A single consumer key can be used to access multiple API products. Keys may be manually or automatically approved for API products--how they are issued depends on the API product configuration. A key must approved and approved for an API product to be capable of accessing any of the URIs defined in the API product.</td></tr>
