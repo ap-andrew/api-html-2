@@ -72,7 +72,7 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-info">POST</span>
+<span class="label label-success">POST</span>
 </p>
 
 <p>
@@ -83,26 +83,6 @@ Revokes the association of an app key (consumer key) with an API product, render
 <div class="well"><pre>curl -u myname:mypass &amp;quot;https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerEmail}/apps/{appName}/keys/{consumerkey}/apiproducts/{apiproduct_name}?action=revoke&amp;quot;</pre>
 </div>
 
-
-<b>Request Payload:</b> 
-<div class="well">
-	<pre></pre>
-</div>
-
-<b>Request Payload Elements:</b> 
-<div>
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Default</th>
-			<th>Required?</th>
-		</tr>
-		</thead>
-
-</table>
-</div>
 
 <b>Response Payload:</b> 
 <div class="well">
