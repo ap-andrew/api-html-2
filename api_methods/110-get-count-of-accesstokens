@@ -48,13 +48,13 @@
            <div class="span12">
 			<div>
 </div>
-            <h1>Get count of AccessTokens</h1> 
+            <h1>Get count of Access Tokens</h1> 
 </p>
 <div class="lead">
 /oauth2/accesstokens
 </div>
 <p>
-  Get count of oauth 2.0 access tokens under an organization
+  Get count of Oauth 2.0 access tokens under an organization
 </p>
 
 <!-- <a href="/api_methods/110-get-count-of-accesstokens/edit" class="btn btn-mini">Edit</a> -->
@@ -78,26 +78,7 @@
 
 
 
-<b>Request Payload:</b> 
-<div class="well">
-	<pre></pre>
-</div>
 
-<b>Request Payload Elements:</b> 
-<div>
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Default</th>
-			<th>Required?</th>
-		</tr>
-		</thead>
-
-</table>
-
-</div>
 
 <b>Response Payload:</b> 
 <div class="well">

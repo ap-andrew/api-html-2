@@ -74,14 +74,14 @@ Administration
 
 		<tr><td><span class="lead">Create a resource</span></td><td><a href="/api_methods/177-create-a-resource" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/resources</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Creates a resource</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>
 
 		<tr><td><span class="lead">Delete a resource</span></td><td><a href="/api_methods/180-delete-a-resource" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/resources/?path={resourceName}</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">DELETE</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Deletes a resource</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>

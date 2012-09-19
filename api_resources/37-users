@@ -74,35 +74,35 @@ Administration
 
 		<tr><td><span class="lead">Associate a user with a user role</span></td><td><a href="/api_methods/170-associate-a-user-with-a-user-role" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/users/{userEmail}/userroles</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Associates a user with one or more roles</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>
 
 		<tr><td><span class="lead">Creates a user</span></td><td><a href="/api_methods/160-creates-a-user" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/users</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Creates in an Apigee API Platform organization</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>
 
 		<tr><td><span class="lead">Delete a user</span></td><td><a href="/api_methods/165-delete-a-user" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/users/{userEmail}</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">DELETE</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Deletes an existing user profile</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>
 
 		<tr><td><span class="lead">Delete a user from an organization</span></td><td><a href="/api_methods/162-delete-a-user-from-an-organization" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/users/{userEmail}</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">DELETE</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Deletes a user and all associated roles from an organization</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>
 
 		<tr><td><span class="lead">Delete role for user</span></td><td><a href="/api_methods/175-delete-role-for-user" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/users/{userEmail}/userroles/{roleName}</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">DELETE</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-important">DELETE</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Removes a users role membership</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
 <tbody>

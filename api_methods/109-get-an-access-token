@@ -73,31 +73,12 @@
 
 </p>
 <b>cURL:</b>
-<div class="well"><pre>curl -u myname:mypass ttp://api.enterprise.apigee.com/v1/o/{myorg}/oauth2/accesstokens/{accessToken}</pre>
+<div class="well"><pre>curl -u myname:mypass http://api.enterprise.apigee.com/v1/o/{myorg}/oauth2/accesstokens/{accessToken}</pre>
 </div>
 
 
 
-<b>Request Payload:</b> 
-<div class="well">
-	<pre></pre>
-</div>
 
-<b>Request Payload Elements:</b> 
-<div>
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Default</th>
-			<th>Required?</th>
-		</tr>
-		</thead>
-
-</table>
-
-</div>
 
 <b>Response Payload:</b> 
 <div class="well">
