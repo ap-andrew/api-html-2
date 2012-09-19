@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -73,9 +73,9 @@
 
 </p>
 <b>cURL:</b>
-
-<div class="well"><pre>curl -X POST -d '{&quot;name&quot;:&quot;&lt;my_name&gt;&quot;, &quot;username&quot;:&quot;&lt;my_username&gt;&quot;, &quot;password&quot;:&quot;&lt;my_password&gt;&quot;}' https://api.usergrid.com/&lt;org_name&gt;/&lt;app_name&gt;/users {request body}</pre>
+<div class="well"><pre>curl -X POST https://api.usergrid.com/{org_name}/{app_name}/users -d '{request body}'</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -99,8 +99,6 @@
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_77">
 <td>username</td>
@@ -109,8 +107,6 @@
 <td>Yes</td>
 <!-- <td><a href="/request_elements/77" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -123,8 +119,6 @@
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_79">
 <td>name</td>
@@ -133,8 +127,6 @@
 <td>No</td>
 <!-- <td><a href="/request_elements/79" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -147,8 +139,6 @@
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_81">
 <td>middlename</td>
@@ -157,8 +147,6 @@
 <td>No</td>
 <!-- <td><a href="/request_elements/81" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -171,8 +159,6 @@
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_84">
 <td>picture</td>
@@ -183,11 +169,9 @@
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_83">
-<td>&lt;application-specific properties&gt;</td>
+<td>{application-specific properties}</td>
 <td>Application-specific properties specified for this user</td>
 <td>N/A</td>
 <td>No</td>
@@ -197,6 +181,7 @@
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 
@@ -249,6 +234,12 @@
 		</tr>
 		</thead>
 <tr>
+<div class="response_element" id="response_element_546">
+<td>uuid </td>
+<td>User's unique entity ID</td>
+<!-- <td><a href="/response_elements/546" class="btn btn-mini">Detail</a></td> -->
+<!-- <td><a href="/api_methods/186-create-a-new-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
+</div></tr><tr>
 <div class="response_element" id="response_element_547">
 <td>type </td>
 <td>Type of the entity (in this case, &quot;user&quot;)</td>
@@ -271,12 +262,6 @@
 <td>activated </td>
 <td>Whether the user account is activated (&quot;true&quot;) or not activated (&quot;false&quot;)</td>
 <!-- <td><a href="/response_elements/550" class="btn btn-mini">Detail</a></td> -->
-<!-- <td><a href="/api_methods/186-create-a-new-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
-</div></tr><tr>
-<div class="response_element" id="response_element_546">
-<td>uuid </td>
-<td>User's unique entity ID</td>
-<!-- <td><a href="/response_elements/546" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/186-create-a-new-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_551">
@@ -322,7 +307,7 @@
 <!-- <td><a href="/api_methods/186-create-a-new-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->
 </div></tr><tr>
 <div class="response_element" id="response_element_583">
-<td>&lt;application-specific properties&gt; </td>
+<td>{application-specific properties} </td>
 <td>Application-specific properties specified for this user</td>
 <!-- <td><a href="/response_elements/583" class="btn btn-mini">Detail</a></td> -->
 <!-- <td><a href="/api_methods/186-create-a-new-user?class=btn+btn-mini&amp;confirm=Are+you+sure%3F&amp;method=delete">Delete</a></td> -->

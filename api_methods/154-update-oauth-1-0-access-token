@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -66,16 +66,16 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-success">POST</span>
+<span class="label label-info">POST</span>
 </p>
 
 <p>
 Any portion of the access token profile may be updated using POST. In this example, we update the access token with custom attributes and a new scope. The entire updated access token profile is returned in the response.
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/organizations/{org}/oauth1/accesstokens/{accesstoken}</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -103,8 +103,6 @@ Any portion of the access token profile may be updated using POST. In this examp
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_48">
 <td>attributes</td>
@@ -113,8 +111,6 @@ Any portion of the access token profile may be updated using POST. In this examp
 <td>No</td>
 <!-- <td><a href="/request_elements/48" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -129,6 +125,7 @@ Any portion of the access token profile may be updated using POST. In this examp
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 

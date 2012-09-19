@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -66,7 +66,7 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-success">POST</span>
+<span class="label label-info">POST</span>
 </p>
 
 <p>
@@ -81,9 +81,9 @@ developer.quota.timeunit second/minute/hour/day/month)
 You can also use attributes to set any arbitrary metadata that you need for monitoring or analytics.
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -143,8 +143,6 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_1">
 <td>approvalType</td>
@@ -153,8 +151,6 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 <td>Yes</td>
 <!-- <td><a href="/request_elements/1" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -167,8 +163,6 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_3">
 <td>displayName</td>
@@ -177,8 +171,6 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 <td>Yes</td>
 <!-- <td><a href="/request_elements/3" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -191,8 +183,6 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_5">
 <td>apiResources</td>
@@ -201,8 +191,6 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 <td>Yes</td>
 <!-- <td><a href="/request_elements/5" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -217,6 +205,7 @@ You can also use attributes to set any arbitrary metadata that you need for moni
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 

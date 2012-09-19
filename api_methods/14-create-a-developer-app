@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -66,7 +66,7 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-success">POST</span>
+<span class="label label-info">POST</span>
 </p>
 
 <p>
@@ -77,9 +77,9 @@ Note:
 CallbackUrl can be ‘,’ separated multiple callback URLs’.
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerEmail}/apps</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -107,8 +107,6 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_36">
 <td>accessType</td>
@@ -117,8 +115,6 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 <td>No</td>
 <!-- <td><a href="/request_elements/36" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -131,8 +127,6 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_38">
 <td>callbackUrl</td>
@@ -143,8 +137,6 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 </div></tr>
 
 
-
-
 <tr>
 <div class="request_element" id="request_element_39">
 <td>name</td>
@@ -153,8 +145,6 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 <td>Yes</td>
 <!-- <td><a href="/request_elements/39" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -169,6 +159,7 @@ CallbackUrl can be ‘,’ separated multiple callback URLs’.
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 

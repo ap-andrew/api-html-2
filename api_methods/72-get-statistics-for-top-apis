@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -73,10 +73,31 @@
 Use the GET method along with the 'topk' parameter to view the first five top ranked apps with the highest number of active end users (app end users with throughput) in the last 24 hours. The graph lists the average daily throughput for these top APIs over the last 30 days for a given customer in a specific organization and environment.
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass http://api.enterprise.apigee.com/v1/o/myorg/environments/prod/stats/apis?select=message_count&amp;timeRange=7%2F1%2F2012%2000%3A00~8%2F1%2F2012%2000%3A00&amp;timeUnit=hour&amp;sortby=message_count&amp;sort=DESC&amp;topk=5</pre>
 </div>
 
+
+
+<b>Request Payload:</b> 
+<div class="well">
+	<pre></pre>
+</div>
+
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+
+</div>
 
 <b>Response Payload:</b> 
 <div class="well">

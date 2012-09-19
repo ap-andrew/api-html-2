@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -73,9 +73,9 @@
 Adds an API product to a Company, enabling the Company App to access the API resources (URIs) defined in the API product. Existing API products are merged with the API product added by this method. 
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/companies/{companyName}/apps/{appName}/keys/{consumerkey}</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -100,8 +100,6 @@ Adds an API product to a Company, enabling the Company App to access the API res
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_34">
 <td>apiProducts</td>
@@ -110,8 +108,6 @@ Adds an API product to a Company, enabling the Company App to access the API res
 <td>Yes</td>
 <!-- <td><a href="/request_elements/34" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -126,6 +122,7 @@ Adds an API product to a Company, enabling the Company App to access the API res
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -66,17 +66,38 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-important">DELETE</span>
+<span class="label label-info">DELETE</span>
 </p>
 
 <p>
 Deletes an API product from an organization. Note that deleting an API product will cause app requests to the resources URIs)  defined in the API product to fail. Make sure you create a new API product to serve existing apps (unless your intention is disable access to the resources defined in the API product.)
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/apiproducts/{apiproductName}</pre>
 </div>
 
+
+
+<b>Request Payload:</b> 
+<div class="well">
+	<pre></pre>
+</div>
+
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+
+</div>
 
 <b>Response Payload:</b> 
 <div class="well">

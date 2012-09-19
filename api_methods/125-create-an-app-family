@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -66,16 +66,16 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-success">POST</span>
+<span class="label label-info">POST</span>
 </p>
 
 <p>
 This method enables developer apps to be associated in a collection called an 'App Family&quot;. The association of such apps is entirely arbitrary. This is often used to associate a 'sandbox' version of an app with a 'production' version of an app. Apigee does no special processing on such collections, except to maintain the relationship among apps that are contained in the family that is created using this method. 
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerEmail}/appfamilies -X POST</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -94,8 +94,6 @@ This method enables developer apps to be associated in a collection called an 'A
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_46">
 <td>name</td>
@@ -104,8 +102,6 @@ This method enables developer apps to be associated in a collection called an 'A
 <td>Yes</td>
 <!-- <td><a href="/request_elements/46" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -120,6 +116,7 @@ This method enables developer apps to be associated in a collection called an 'A
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 

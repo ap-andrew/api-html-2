@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
+<meta content="58ugju5Y1aV1LPyW7yzvBPLCGPf+XFJ8/w8GNNsvbNE=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -66,7 +66,7 @@
 
 <p>
 <b>Verb:</b>
-<span class="label label-success">POST</span>
+<span class="label label-info">POST</span>
 </p>
 
 <p>
@@ -74,9 +74,9 @@ Updates an existing Developer App Key with the specified APi Product, enabling t
 The ApiProduct(s) specified in request payload will be merged with existing ApiProduct(s) for this key.
 </p>
 <b>cURL:</b>
-
 <div class="well"><pre>curl -u myname:mypass &amp;quot;https://api.enterprise.apigee.com/v1/o/{myorg}/developers/{developerEmail}/apps/{appName}/keys/{consumerKey}&amp;quot;</pre>
 </div>
+
 
 
 <b>Request Payload:</b> 
@@ -104,8 +104,6 @@ The ApiProduct(s) specified in request payload will be merged with existing ApiP
 			<th>Required?</th>
 		</tr>
 		</thead>
-
-
 <tr>
 <div class="request_element" id="request_element_40">
 <td>apiProducts</td>
@@ -114,8 +112,6 @@ The ApiProduct(s) specified in request payload will be merged with existing ApiP
 <td>Yes</td>
 <!-- <td><a href="/request_elements/40" class="btn btn-mini">Detail</a></td> -->
 </div></tr>
-
-
 
 
 <tr>
@@ -130,6 +126,7 @@ The ApiProduct(s) specified in request payload will be merged with existing ApiP
 
 
 </table>
+
 </div>
 
 <b>Response Payload:</b> 
