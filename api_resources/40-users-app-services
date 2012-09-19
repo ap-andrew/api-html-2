@@ -93,7 +93,7 @@
 
 		<tr><td><span class="lead">Set a user password</span></td><td><a href="/api_methods/187-set-a-user-password" class="btn btn-mini">Detail</a></td> 
 	    <tr><td  colspan="2"><span id="well"><pre>/users/&lt;user&gt;/password {request body}</pre></span></td></tr>
-		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">POST</span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-success">POST</span></td></tr>
 		<tr><td><strong>Description:</strong></td><td>Sets the password for a user.  A password should be set when a user is first created.  To protect password visibility, passwords are encrypted and stored separately in the sytem.</td></tr>
   		<tr><td><strong>Auth:</strong></td><td>Oauth 2.0</td></tr>
 </tbody>
