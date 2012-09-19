@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Gw/PhfD1XH8lmRJGVFf5FZra/fX7t0aUxCfAKLmNJC4=" name="csrf-token" />
+<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,19 +48,13 @@
            <div class="span12">
 			<div>
 </div>
-            
-
-<div id="breadcrumb">
-<a href="/apis/1">API Platform</a> > <a href="/categories/4-api-configuration-and-management">API Configuration and Management</a> > <a href="/api_resources/1-apis">APIs</a> > Update an API</div>
-<p>	
-	
-<h1>Update an API</h1> 
+            <h1>Update an API</h1> 
 </p>
 <div class="lead">
 /apis/{apiName}
 </div>
 <p>
-Updates an existing API proxy in an organization
+  Use the POST method to update a specific API proxy in an organization
 </p>
 
 <!-- <a href="/api_methods/2-update-an-api/edit" class="btn btn-mini">Edit</a> -->
@@ -72,7 +66,7 @@ Updates an existing API proxy in an organization
 
 <p>
 <b>Verb:</b>
-<span class="label label-warning">PUT</span>
+<span class="label label-info">PUT</span>
 </p>
 
 <p>

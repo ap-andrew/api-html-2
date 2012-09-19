@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apigee API Reference</title>
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Gw/PhfD1XH8lmRJGVFf5FZra/fX7t0aUxCfAKLmNJC4=" name="csrf-token" />
+<meta content="y/0xWGclDPTvVzC+ToavoZHf6UNTQwG+cdtO+BR8LfI=" name="csrf-token" />
     <link href="/assets/application-0c6218299f83f06968d4e869e32af93a.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/application-901be3a70ad8aca87d5e8622f22fa578.js" type="text/javascript"></script>
 	
@@ -48,13 +48,7 @@
            <div class="span12">
 			<div>
 </div>
-            
-
-<div id="breadcrumb">
-<a href="/apis/2">App Services</a> > <a href="/categories/12-app-service-management">App Service Management</a> > <a href="/api_resources/40-users-app-services">Users (App Services)</a> > Search for users</div>
-<p>	
-	
-<h1>Search for users</h1> 
+            <h1>Search for users</h1> 
 </p>
 <div class="lead">
 /users?ql=&amp;reversed=&amp;start=&amp;cursor=&amp;limit=&amp;permission=&amp;filter=
@@ -83,6 +77,26 @@
 <div class="well"><pre>curl -X GET &quot;https://api.usergrid.com/&lt;org_name&gt;/&lt;app_name&gt;/users?ql=&amp;reversed=&amp;start=&amp;cursor=&amp;limit=&amp;permission=&amp;filter=</pre>
 </div>
 
+
+<b>Request Payload:</b> 
+<div class="well">
+	<pre></pre>
+</div>
+
+<b>Request Payload Elements:</b> 
+<div>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Default</th>
+			<th>Required?</th>
+		</tr>
+		</thead>
+
+</table>
+</div>
 
 <b>Response Payload:</b> 
 <div class="well">

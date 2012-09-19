@@ -48,90 +48,48 @@
            <div class="span12">
 			<div>
 </div>
-            <h1>Update a user</h1> 
-</p>
-<div class="lead">
-/users/{userEmail}
-</div>
-<p>
-  Updates an existing user
-</p>
+            <div id="category">
 
-<!-- <a href="/api_methods/161-update-a-user/edit" class="btn btn-mini">Edit</a> -->
-
-<p>
- <b>API Resource:</b>
-  User roles
-</p> 
-
-<p>
-<b>Verb:</b>
-<span class="label label-info">PUT</span>
-</p>
-
-<p>
-
-</p>
-<b>cURL:</b>
-
-<div class="well"><pre>curl -u myname:mypass https://api.enterprise.apigee.com/v1/o/{myorg}/users/{userEmail}</pre>
+<div class="page-header">
+  <h1>Organizations</h1>
 </div>
 
+<!-- <div class=btn>
+<a href="/api_methods/new">Add an API Method</a>
+</div> -->
 
-<b>Request Payload:</b> 
-<div class="well">
-	<pre> &lt;User&gt;
- &lt;FirstName&gt;Lala&lt;/FirstName&gt;
- &lt;LastName&gt;Rai&lt;/LastName&gt;
- &lt;EmailId&gt;lala@apigee.com&lt;/EmailId&gt;
-&lt;/User&gt;</pre>
-</div>
-
-<b>Request Payload Elements:</b> 
-<div>
-<table class="table table-bordered">
-	<thead>
+<table class="table">
 		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Default</th>
-			<th>Required?</th>
+  			<td class="lead">/organizations</td>
 		</tr>
-		</thead>
-
+		<tr><td>The base account structure for Apigee</td></tr>
+  		<tr><td></td></tr>
+       <!-- <td><div id="well"><pre></pre></div></td></tr> -->
 </table>
+	
+<table class="table">
+<tbody>
+
+		<tr><td><span class="lead">Get Organization</span></td><td><a href="/api_methods/61-get-organization" class="btn btn-mini">Detail</a></td> 
+	    <tr><td  colspan="2"><span id="well"><pre>/o</pre></span></td></tr>
+		<tr><td><strong>Verb:</strong></td><td><span class="label label-info">GET</span></td></tr>
+		<tr><td><strong>Description:</strong></td><td>Gets the profile for an organization</td></tr>
+  		<tr><td><strong>Auth:</strong></td><td>Basic Auth</td></tr>
+</tbody>
+</table>
+
+
+
+
+<!-- Schema:
+
+<div id="well"><pre></pre></div> -->
+
+<div class="form-actions">
+  <a href="/api_resources" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.back">Back</span></a>
+  <!-- <a href="/api_resources/2-organizations/edit" class="btn"><span class="translation_missing" title="translation missing: en.helpers.links.edit">Edit</span></a>  -->
+
 </div>
-
-<b>Response Payload:</b> 
-<div class="well">
-	<pre> &lt;User&gt;
- &lt;FirstName&gt;Lala&lt;/FirstName&gt;
- &lt;LastName&gt;Rai&lt;/LastName&gt;
-  &lt;EmailId&gt;lala@apigee.com&lt;/EmailId&gt;
-&lt;/User&gt;</pre>
-</div>
-
-<b>Response Payload Elements:</b>
-<div><table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-		</tr>
-		</thead>
-
-</table></div>
-
-<b>Errors</b> 
-<div class="well">
-	<pre></pre>
-</div>
-
-<b>Auth:</b>
-Basic Auth
-</p>
-
-
 
             </div>
         </div><!--/row-->
